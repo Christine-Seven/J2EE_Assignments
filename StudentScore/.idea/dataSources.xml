@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="4051389923">
-    <data-source source="LOCAL" name="MySQL - jdbc:mysql://localhost:3306/jdbc/j2eeStudentScore" uuid="53335bdd-0988-4092-8963-fe4f45a93ef2">
+  <component name="DataSourceManagerImpl" format="xml" hash="653397663">
+    <data-source source="LOCAL" name="MySQL - jdbc:mysql://localhost:3306/jdbc/j2eeStudentScore" uuid="93035d96-92e9-4cff-a682-eac719d2c74b">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
