@@ -57,5 +57,17 @@
         }
 
     %>
+    <%
+        Integer onlineNum=(Integer)request.getServletContext().getAttribute("onlineNum");
+        Integer touristNum=(Integer) request.getServletContext().getAttribute("touristNum");
+        Integer loginNum=(Integer) request.getServletContext().getAttribute("loginNum");
+    %>
+    <p>在线人数：<%=onlineNum%></p>
+    <p>游客人数：<%=touristNum%></p>
+    <p>登录人数：<%=loginNum%></p>
+
+    <form action="/logout" method="post">
+        <input type="submit" name="logout" placeholder="退出">
+    </form>
 </body>
 </html>

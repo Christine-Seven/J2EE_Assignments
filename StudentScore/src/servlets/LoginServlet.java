@@ -8,6 +8,7 @@ import po.TestPO;
 
 import javax.naming.NamingException;
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -29,21 +30,16 @@ public class LoginServlet extends HttpServlet {
         String student_id=request.getParameter("id");
         String password=request.getParameter("password");
 
-//        TestEnquiresServiceImpl testEnquiresService=new TestEnquiresServiceImpl();
-//        try {
-//            ScorePO scorePO=testEnquiresService.getScorePO(student_id);
-//            request.setAttribute("scorePO",scorePO);
-//            RequestDispatcher dispatcher=request.getRequestDispatcher("/normal.jsp");
-//            dispatcher.forward(request, response);
-//
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-
         //verify user
         UserDataServiceImpl userDataService=new UserDataServiceImpl();
         try {
             if(userDataService.getUserByID(student_id,password)){
+                request.getSession().setAttribute("id",student_id);
+                ServletContext context=request.getSession().getServletContext();
+                Integer loginNum=(Integer) context.getAttribute("loginNum");
+                Integer touristNum=(Integer) context.getAttribute("touristNum");
+                context.setAttribute("loginNum",loginNum+1);
+                context.setAttribute("touristNum",touristNum-1);
                 //valid user
                 TestEnquiresServiceImpl testEnquiresService=new TestEnquiresServiceImpl();
                 ScorePO scorePO=testEnquiresService.getScorePO(student_id);
@@ -61,6 +57,9 @@ public class LoginServlet extends HttpServlet {
                 if(allTestTaken){
                         //the student has took all the tests
                         request.setAttribute("scorePO",scorePO);
+//                        request.setAttribute("loginNum",loginNum);
+//                        request.setAttribute("touristNum",touristNum);
+//                        request.setAttribute("onlineNum",context.getAttribute("onlineNum"));
                         RequestDispatcher dispatcher=request.getRequestDispatcher("/normal.jsp");
                         if(dispatcher!=null) {
                             dispatcher.forward(request, response);

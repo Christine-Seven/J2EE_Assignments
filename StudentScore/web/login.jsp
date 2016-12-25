@@ -11,6 +11,12 @@
     <title>Welcome To Score System</title>
 </head>
 <body>
+    <%
+        Integer onlineNum =(Integer) request.getSession().getServletContext().getAttribute("onlineNum");
+        Integer touristNum =(Integer) request.getSession().getServletContext().getAttribute("touristNum");
+        Integer loginNum =(Integer) request.getSession().getServletContext().getAttribute("loginNum");
+    %>
+
 
     <div class="login-box-body">
         <p class="login-box-msg">欢迎登录</p>
@@ -24,11 +30,15 @@
                 <input type="password" name="password" placeholder="请输入密码">
             </div>
 
-            <input type="submit" name="submit" value="提交" placeholder="登录">
+
+            <input type="submit" name="login" value="提交" placeholder="登录">
 
         </form>
     </div>
 
+    <p>在线人数：<%=onlineNum%></p>
+    <p>游客人数：<%=touristNum%></p>
+    <p>登录人数：<%=loginNum%></p>
 
 </body>
 </html>
