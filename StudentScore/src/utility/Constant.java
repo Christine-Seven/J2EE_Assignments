@@ -1,6 +1,6 @@
 package utility;
 
-import dataimpl.DBConnection;
+import serviceImpl.DBConnection;
 
 import java.sql.Connection;
 

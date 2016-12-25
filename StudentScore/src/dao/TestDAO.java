@@ -1,9 +1,9 @@
-package po;
+package dao;
 
 /**
  * Created by Seven on 2016/12/19.
  */
-public class TestPO {
+public class TestDAO {
 
     String course_id;
     String test_id;
@@ -11,7 +11,7 @@ public class TestPO {
     String date;
     int score;
 
-    public TestPO(String course_id,String test_id,String test_name,String date,int score){
+    public TestDAO(String course_id, String test_id, String test_name, String date, int score){
         this.course_id=course_id;
         this.test_id=test_id;
         this.test_name=test_name;

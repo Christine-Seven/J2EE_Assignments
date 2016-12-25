@@ -1,9 +1,9 @@
-package dataimpl;
+package serviceImpl;
 
-import po.CoursePO;
-import po.ScorePO;
-import po.StudentPO;
-import po.TestPO;
+import dao.CourseDAO;
+import dao.ScoreDAO;
+import dao.StudentDAO;
+import dao.TestDAO;
 import utility.Constant;
 
 import java.sql.Connection;
@@ -19,9 +19,9 @@ import java.util.List;
  */
 public class TestEnquiresServiceImpl {
 
-    public ScorePO getScorePO(String student_id) throws SQLException {
+    public ScoreDAO getScorePO(String student_id) throws SQLException {
         Connection connection = Constant.connection;
-        HashMap<CoursePO, List<TestPO>> courseScore = new HashMap<>();
+        HashMap<CourseDAO, List<TestDAO>> courseScore = new HashMap<>();
 
         Statement statement = connection.createStatement();
         //get student info
@@ -32,7 +32,7 @@ public class TestEnquiresServiceImpl {
         String grade=student_rs.getString("grade");
         String gender=student_rs.getString("gender");
         int age=student_rs.getInt("age");
-        StudentPO studentPO=new StudentPO(student_id,student_name,grade,gender,age);
+        StudentDAO studentDAO =new StudentDAO(student_id,student_name,grade,gender,age);
         //get selected course
         String getselection_sql = "SELECT course_id FROM selection " +
                 "WHERE student_id='" + student_id + "';";
@@ -44,15 +44,15 @@ public class TestEnquiresServiceImpl {
                     "WHERE course_id='" + course_id + "';";
             Statement statement2=connection.createStatement();
             ResultSet course_rs = statement2.executeQuery(getcourse_sql);
-            CoursePO coursePO;
+            CourseDAO courseDAO;
             if (course_rs.next()) {
                 String course_name = course_rs.getString("course_name");
-                coursePO = new CoursePO(course_id, course_name);
+                courseDAO = new CourseDAO(course_id, course_name);
                 //get test
                 String gettest_sql = "SELECT test_id,test_name,`date` FROM test WHERE course_id='" + course_id + "';";
                 Statement statement3=connection.createStatement();
                 ResultSet testid_rs = statement3.executeQuery(gettest_sql);
-                List<TestPO> testPOList = new ArrayList<>();
+                List<TestDAO> testDAOList = new ArrayList<>();
                 while (testid_rs.next()) {
                     String test_id = testid_rs.getString("test_id");
                     String test_name = testid_rs.getString("test_name");
@@ -63,18 +63,18 @@ public class TestEnquiresServiceImpl {
                     ResultSet score_rs = statement1.executeQuery(getscore_sql);
                     if (score_rs.next()) {
                         int score = score_rs.getInt("score");
-                        TestPO testPO = new TestPO(course_id, test_id, test_name, date, score);
-                        testPOList.add(testPO);
+                        TestDAO testDAO = new TestDAO(course_id, test_id, test_name, date, score);
+                        testDAOList.add(testDAO);
                     } else {
-                        TestPO testPO = null;
-                        testPOList.add(testPO);
+                        TestDAO testDAO = null;
+                        testDAOList.add(testDAO);
                     }
                 }
-                courseScore.put(coursePO,testPOList);
+                courseScore.put(courseDAO, testDAOList);
             }
         }
-        ScorePO scorePO=new ScorePO(studentPO,courseScore);
-        return scorePO;
+        ScoreDAO scoreDAO =new ScoreDAO(studentDAO,courseScore);
+        return scoreDAO;
     }
 
 

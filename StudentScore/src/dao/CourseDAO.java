@@ -1,14 +1,14 @@
-package po;
+package dao;
 
 /**
  * Created by Seven on 2016/12/19.
  */
-public class CoursePO {
+public class CourseDAO {
 
     String course_id;
     String course_name;
 
-    public CoursePO(String course_id,String course_name){
+    public CourseDAO(String course_id, String course_name){
         this.course_id=course_id;
         this.course_name=course_name;
     }

@@ -1,10 +1,10 @@
 package servlets;
 
-import dataimpl.TestEnquiresServiceImpl;
-import dataimpl.UserDataServiceImpl;
-import po.CoursePO;
-import po.ScorePO;
-import po.TestPO;
+import serviceImpl.TestEnquiresServiceImpl;
+import serviceImpl.UserDataServiceImpl;
+import dao.CourseDAO;
+import dao.ScoreDAO;
+import dao.TestDAO;
 
 import javax.naming.NamingException;
 import javax.servlet.RequestDispatcher;
@@ -42,21 +42,21 @@ public class LoginServlet extends HttpServlet {
                 context.setAttribute("touristNum",touristNum-1);
                 //valid user
                 TestEnquiresServiceImpl testEnquiresService=new TestEnquiresServiceImpl();
-                ScorePO scorePO=testEnquiresService.getScorePO(student_id);
-                HashMap<CoursePO,List<TestPO>> courseScore=scorePO.getCourseScore();
+                ScoreDAO scoreDAO =testEnquiresService.getScorePO(student_id);
+                HashMap<CourseDAO,List<TestDAO>> courseScore= scoreDAO.getCourseScore();
                 boolean allTestTaken=true;
-                for(CoursePO coursePO:courseScore.keySet()) {
-                    List<TestPO> testPOList = courseScore.get(coursePO);
+                for(CourseDAO courseDAO :courseScore.keySet()) {
+                    List<TestDAO> testDAOList = courseScore.get(courseDAO);
 
-                    for (TestPO testPO : testPOList) {
-                        if (testPO == null) {
+                    for (TestDAO testDAO : testDAOList) {
+                        if (testDAO == null) {
                             allTestTaken = false;
                         }
                     }
                 }
                 if(allTestTaken){
                         //the student has took all the tests
-                        request.setAttribute("scorePO",scorePO);
+                        request.setAttribute("scoreDAO", scoreDAO);
 //                        request.setAttribute("loginNum",loginNum);
 //                        request.setAttribute("touristNum",touristNum);
 //                        request.setAttribute("onlineNum",context.getAttribute("onlineNum"));
