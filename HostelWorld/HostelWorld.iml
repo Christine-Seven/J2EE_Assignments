@@ -21,7 +21,7 @@
     <facet type="hibernate" name="Hibernate">
       <configuration>
         <datasource-map>
-          <unit-entry name="hibernate.cfg.xml" value="cbdec35e-b107-440d-a4e4-505d1cbd1ad3" />
+          <unit-entry name="sessionFactory" value="cbdec35e-b107-440d-a4e4-505d1cbd1ad3" />
         </datasource-map>
         <naming-strategy-map />
         <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/hibernate.cfg.xml" />
@@ -45,5 +45,7 @@
     <orderEntry type="library" name="javax.servlet:servlet-api:3.0-alpha-1" level="project" />
     <orderEntry type="library" name="org.springframework:spring-web:4.3.6.RELEASE" level="project" />
     <orderEntry type="library" name="mysql:mysql-connector-java:6.0.5" level="project" />
+    <orderEntry type="library" name="org.apache.struts:struts2-spring-plugin:2.0.6" level="project" />
+    <orderEntry type="library" name="org.aspectj:aspectjweaver:1.8.10" level="project" />
   </component>
 </module>

@@ -2,22 +2,25 @@ package model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  * Created by Seven on 2017/2/14.
  */
 @Entity
+@Table(name="hostel")
 public class Hostel {
 
-    private int id;
+    @Id
     private String hostelNum;
     private String hostelPassword;
-    private int totalRoomNum;
-    private int spareRoomNum;
     private double profit;
+    private int level;
     private String province;
     private String city;
     private String address;
+    private String hostelInfo;
+    private String approvalState;
 
     public String getHostelNum() {
         return hostelNum;
@@ -35,37 +38,12 @@ public class Hostel {
         this.hostelPassword = hostelPassword;
     }
 
-    @Id
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public double getProfit() {
         return profit;
     }
 
     public void setProfit(double profit) {
         this.profit = profit;
-    }
-
-    public int getSpareRoomNum() {
-        return spareRoomNum;
-    }
-
-    public void setSpareRoomNum(int spareRoomNum) {
-        this.spareRoomNum = spareRoomNum;
-    }
-
-    public int getTotalRoomNum() {
-        return totalRoomNum;
-    }
-
-    public void setTotalRoomNum(int totalRoomNum) {
-        this.totalRoomNum = totalRoomNum;
     }
 
     public String getAddress() {
@@ -90,5 +68,29 @@ public class Hostel {
 
     public void setProvince(String province) {
         this.province = province;
+    }
+
+    public String getApprovalState() {
+        return approvalState;
+    }
+
+    public void setApprovalState(String approvalState) {
+        this.approvalState = approvalState;
+    }
+
+    public String getHostelInfo() {
+        return hostelInfo;
+    }
+
+    public void setHostelInfo(String hostelInfo) {
+        this.hostelInfo = hostelInfo;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
     }
 }

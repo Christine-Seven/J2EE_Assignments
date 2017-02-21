@@ -10,102 +10,292 @@
       <schema id="1" name="hostelworld"/>
       <table id="2" parent="1" name="hostel"/>
       <table id="3" parent="1" name="vip"/>
-      <column id="4" parent="2" name="id">
+      <table id="4" parent="1" name="currentSpareRoomInfo"/>
+      <table id="5" parent="1" name="roomPrice"/>
+      <table id="6" parent="1" name="order"/>
+      <table id="7" parent="1" name="lodgerInfo"/>
+      <table id="8" parent="1" name="checkInfo"/>
+      <table id="9" parent="1" name="balanceSettle"/>
+      <table id="10" parent="1" name="roomInfo"/>
+      <table id="11" parent="1" name="roomType"/>
+      <column id="12" parent="2" name="hostelNum">
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="13" parent="2" name="hostelPassword">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="14" parent="2" name="profit">
+        <data-type>double</data-type>
+      </column>
+      <column id="15" parent="2" name="province">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="16" parent="2" name="city">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="17" parent="2" name="address">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="18" parent="2" name="hostelInfo">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="19" parent="2" name="approvalState">
+        <data-type>enum(&apos;APPROVE&apos;, &apos;DISAPPROVE&apos;)</data-type>
+      </column>
+      <column id="20" parent="2" name="level">
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="21" parent="2" name="PRIMARY">
+        <columns>hostelNum</columns>
+        <primary>1</primary>
+      </key>
+      <column id="22" parent="3" name="vipNum">
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="23" parent="3" name="vipName">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="24" parent="3" name="vipPassword">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="25" parent="3" name="bankCard">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="26" parent="3" name="vipPoint">
+        <data-type>double</data-type>
+      </column>
+      <column id="27" parent="3" name="money">
+        <data-type>double</data-type>
+      </column>
+      <column id="28" parent="3" name="conditionChangeDate">
+        <data-type>date</data-type>
+      </column>
+      <column id="29" parent="3" name="condition">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <index id="30" parent="3" name="table_name_vipName_uindex">
+        <columns>vipName</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="31" parent="3" name="PRIMARY">
+        <columns>vipNum</columns>
+        <primary>1</primary>
+      </key>
+      <key id="32" parent="3" name="table_name_vipName_uindex">
+        <columns>vipName</columns>
+        <underlying-index>table_name_vipName_uindex</underlying-index>
+      </key>
+      <column id="33" parent="4" name="hostelNum">
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="34" parent="4" name="spareNum">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="35" parent="4" name="roomTypeId">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="36" parent="4" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="37" parent="4" name="currentSpareRoomInfo_roomType_id_fk">
+        <columns>roomTypeId</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="38" parent="4" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="39" parent="4" name="currentSpareRoomInfo_roomType_id_fk">
+        <columns>roomTypeId</columns>
+        <ref-key>~.roomType.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="40" parent="5" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
         <sequence-identity>1</sequence-identity>
       </column>
-      <column id="5" parent="2" name="hostelNum">
-        <mandatory>1</mandatory>
+      <column id="41" parent="5" name="hostelNum">
         <data-type>varchar(7)</data-type>
       </column>
-      <column id="6" parent="2" name="hostelPassword">
-        <data-type>varchar(20)</data-type>
-      </column>
-      <column id="7" parent="2" name="totalRoomNum">
-        <data-type>int(11)</data-type>
-      </column>
-      <column id="8" parent="2" name="spareRoomNum">
-        <data-type>int(11)</data-type>
-      </column>
-      <column id="9" parent="2" name="profit">
-        <data-type>double</data-type>
-      </column>
-      <column id="10" parent="2" name="province">
-        <data-type>varchar(20)</data-type>
-      </column>
-      <column id="11" parent="2" name="city">
-        <data-type>varchar(20)</data-type>
-      </column>
-      <column id="12" parent="2" name="address">
-        <data-type>varchar(50)</data-type>
-      </column>
-      <index id="13" parent="2" name="hostel_hostelNum_uindex">
-        <columns>hostelNum</columns>
-        <desc-columns></desc-columns>
-        <unique>1</unique>
-      </index>
-      <key id="14" parent="2" name="hostel_hostelNum_uindex">
-        <columns>hostelNum</columns>
-        <underlying-index>hostel_hostelNum_uindex</underlying-index>
-      </key>
-      <key id="15" parent="2" name="PRIMARY">
-        <columns>id</columns>
-        <primary>1</primary>
-      </key>
-      <column id="16" parent="3" name="id">
-        <mandatory>1</mandatory>
-        <data-type>int(11)</data-type>
-      </column>
-      <column id="17" parent="3" name="vipNum">
-        <mandatory>1</mandatory>
-        <data-type>varchar(7)</data-type>
-      </column>
-      <column id="18" parent="3" name="vipName">
-        <data-type>varchar(20)</data-type>
-      </column>
-      <column id="19" parent="3" name="vipPassword">
-        <data-type>varchar(20)</data-type>
-      </column>
-      <column id="20" parent="3" name="bankCard">
-        <data-type>varchar(20)</data-type>
-      </column>
-      <column id="21" parent="3" name="vipPoint">
-        <data-type>double</data-type>
-      </column>
-      <column id="22" parent="3" name="vipLevel">
-        <data-type>int(11)</data-type>
-      </column>
-      <column id="23" parent="3" name="money">
-        <data-type>double</data-type>
-      </column>
-      <column id="24" parent="3" name="conditionDate">
+      <column id="42" parent="5" name="startDate">
         <data-type>date</data-type>
       </column>
-      <column id="25" parent="3" name="condition">
-        <data-type>varchar(20)</data-type>
+      <column id="43" parent="5" name="endDate">
+        <data-type>date</data-type>
       </column>
-      <index id="26" parent="3" name="table_name_vipName_uindex">
-        <columns>vipName</columns>
+      <column id="44" parent="5" name="roomTypeId">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="45" parent="5" name="roomPrice">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="46" parent="5" name="roomPrice_roomType_id_fk">
+        <columns>roomTypeId</columns>
         <desc-columns></desc-columns>
-        <unique>1</unique>
       </index>
-      <index id="27" parent="3" name="table_name_vipNum_uindex">
-        <columns>vipNum</columns>
-        <desc-columns></desc-columns>
-        <unique>1</unique>
-      </index>
-      <key id="28" parent="3" name="PRIMARY">
+      <key id="47" parent="5" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>
-      <key id="29" parent="3" name="table_name_vipName_uindex">
-        <columns>vipName</columns>
-        <underlying-index>table_name_vipName_uindex</underlying-index>
+      <foreign-key id="48" parent="5" name="roomPrice_roomType_id_fk">
+        <columns>roomTypeId</columns>
+        <ref-key>~.roomType.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="49" parent="6" name="orderNum">
+        <mandatory>1</mandatory>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="50" parent="6" name="hostelNum">
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="51" parent="6" name="vipNum">
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="52" parent="6" name="roomTypeId">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="53" parent="6" name="roomNum">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="54" parent="6" name="requiredMoney">
+        <data-type>double</data-type>
+      </column>
+      <column id="55" parent="6" name="paidMoney">
+        <data-type>double</data-type>
+      </column>
+      <column id="56" parent="6" name="orderCondition">
+        <data-type>enum(&apos;BOOK&apos;, &apos;CHECKIN&apos;, &apos;CHECKOUT&apos;, &apos;OVERDUE&apos;)</data-type>
+      </column>
+      <column id="57" parent="6" name="checkinDate">
+        <data-type>date</data-type>
+      </column>
+      <column id="58" parent="6" name="checkoutDate">
+        <data-type>date</data-type>
+      </column>
+      <index id="59" parent="6" name="order_roomType_id_fk">
+        <columns>roomTypeId</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="60" parent="6" name="PRIMARY">
+        <columns>orderNum</columns>
+        <primary>1</primary>
       </key>
-      <key id="30" parent="3" name="table_name_vipNum_uindex">
-        <columns>vipNum</columns>
-        <underlying-index>table_name_vipNum_uindex</underlying-index>
+      <foreign-key id="61" parent="6" name="order_roomType_id_fk">
+        <columns>roomTypeId</columns>
+        <ref-key>~.roomType.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="62" parent="7" name="lodgerNum">
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="63" parent="7" name="lodgerName">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="64" parent="7" name="idNum">
+        <data-type>varchar(22)</data-type>
+      </column>
+      <column id="65" parent="7" name="gender">
+        <data-type>enum(&apos;MALE&apos;, &apos;FEMALE&apos;)</data-type>
+      </column>
+      <key id="66" parent="7" name="PRIMARY">
+        <columns>lodgerNum</columns>
+        <primary>1</primary>
+      </key>
+      <column id="67" parent="8" name="hostelNum">
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="68" parent="8" name="lodgerNum">
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="69" parent="8" name="paidMoney">
+        <data-type>double</data-type>
+      </column>
+      <column id="70" parent="8" name="checkCondition">
+        <data-type>enum(&apos;CHECKIN&apos;, &apos;CHECKOUT&apos;)</data-type>
+      </column>
+      <column id="71" parent="8" name="checkinDate">
+        <data-type>date</data-type>
+      </column>
+      <column id="72" parent="8" name="checkoutDate">
+        <data-type>date</data-type>
+      </column>
+      <column id="73" parent="8" name="checkNum">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <key id="74" parent="8" name="PRIMARY">
+        <columns>checkNum</columns>
+        <primary>1</primary>
+      </key>
+      <column id="75" parent="9" name="settleNum">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="76" parent="9" name="settleDate">
+        <data-type>date</data-type>
+      </column>
+      <column id="77" parent="9" name="balance">
+        <data-type>double</data-type>
+      </column>
+      <column id="78" parent="9" name="settleCondition">
+        <data-type>enum(&apos;SETTLED&apos;, &apos;WAIT&apos;)</data-type>
+      </column>
+      <key id="79" parent="9" name="PRIMARY">
+        <columns>settleNum</columns>
+        <primary>1</primary>
+      </key>
+      <column id="80" parent="10" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="81" parent="10" name="hostelNum">
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="82" parent="10" name="roomTypeId">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="83" parent="10" name="roomNum">
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="84" parent="10" name="roomInfo_roomType_id_fk">
+        <columns>roomTypeId</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="85" parent="10" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="86" parent="10" name="roomInfo_roomType_id_fk">
+        <columns>roomTypeId</columns>
+        <ref-key>~.roomType.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="87" parent="11" name="id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="88" parent="11" name="roomType">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <key id="89" parent="11" name="PRIMARY">
+        <columns>id</columns>
+        <primary>1</primary>
       </key>
     </database-model>
   </data-source>

@@ -7,11 +7,13 @@
 <struts>
     <constant name="struts.i18n.encoding" value="utf-8"></constant>
     <include file="struts-default.xml"/>
-    <package name="struts" extends="struts-default">
-        <action name="vipregister" class="action.VipRegisterAction" method="">
-            <result name="input">jsp/vipregister.jsp</result>
-            <result name="success">jsp/success.jsp</result>
-            <result name="">jsp/fail.jsp</result>
+    <package name="struts2" extends="struts-default">
+
+        <action name="login" class="action.LoginAction">
+            <result name="relogin">/jsp/login.jsp</result>
+            <result name="register">/jsp/vipregister.jsp</result>
+            <result name="success">/jsp/success.jsp</result>
+            <result name="fail">/jsp/fail.jsp</result>
         </action>
 
         <action name="" class="" method="">

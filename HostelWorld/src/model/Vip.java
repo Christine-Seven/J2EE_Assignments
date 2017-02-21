@@ -2,21 +2,24 @@ package model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
+import java.io.Serializable;
 
 /**
  * Created by Seven on 2017/2/15.
  */
 @Entity
-public class Vip {
-    private int id;
+@Table(name="vip")
+public class Vip implements Serializable {
+
+    @Id
     private String vipNum;
     private String vipName;
     private String vipPassword;
     private String bankCard;
     private double vipPoint;
-    private int vipLevel;
     private double money;
-    private String conditionDate;
+    private String conditionChangeDate;
     private String condition;
 
     public String getBankCard() {
@@ -43,23 +46,6 @@ public class Vip {
         this.condition = condition;
     }
 
-    public String getConditionDate() {
-        return conditionDate;
-    }
-
-    public void setConditionDate(String conditionDate) {
-        this.conditionDate = conditionDate;
-    }
-
-    @Id
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public double getMoney() {
         return money;
     }
@@ -68,12 +54,12 @@ public class Vip {
         this.money = money;
     }
 
-    public int getVipLevel() {
-        return vipLevel;
+    public String getConditionChangeDate() {
+        return conditionChangeDate;
     }
 
-    public void setVipLevel(int vipLevel) {
-        this.vipLevel = vipLevel;
+    public void setConditionChangeDate(String conditionChangeDate) {
+        this.conditionChangeDate = conditionChangeDate;
     }
 
     public String getVipNum() {
