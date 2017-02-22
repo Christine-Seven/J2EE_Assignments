@@ -8,26 +8,79 @@ import java.util.List;
  * Created by Seven on 2017/2/14.
  */
 public interface HostelDao {
-    //检查是否存在该客栈
+    /**
+     * 验证客栈是否存在
+     * @param hostelNum
+     * @return
+     */
     public boolean checkHostel(String hostelNum);
 
-    //检查用户名与密码是否正确
+    /**
+     * 验证客栈是否被审批通过
+     * @param hostelNum
+     * @return
+     */
+    public boolean checkApprove(String hostelNum);
+
+    /**
+     * 验证客栈编号与密码正确
+     * @param hostelNum
+     * @param hostelPassword
+     * @return
+     */
     public boolean checkPassword(String hostelNum,String hostelPassword);
 
-    //添加客栈
-    public boolean addHostel(Hostel hostel);
+    /**
+     * 新增客栈
+     * @param hostel
+     */
+    public void addHostel(Hostel hostel);
 
-    //删除客栈
-    public boolean deleteHostel(String hostelNum);
+    /**
+     * 根据客栈id删除客栈
+     * @param hostelNum
+     */
+    public void deleteHostel(String hostelNum);
 
-    //修改客栈信息
-    public boolean updateHostel(Hostel hostel);
+    /**
+     * 修改客栈信息
+     * @param hostel
+     */
+    public void updateHostel(Hostel hostel);
 
-    //查询客栈
+    /**
+     * 根据省市查找客栈
+     * @param province
+     * @return
+     */
     public List<Hostel> queryHostelByProvince(String province);
     public List<Hostel> queryHostelByCity(String city);
+
+    /**
+     * 根据客栈名查找客栈
+     * @param hostelName
+     * @return
+     */
+    public List<Hostel> queryHostelByName(String hostelName);
+
+
+    /**
+     * 根据客栈编号查找客栈
+     * @param hostelNum
+     * @return
+     */
     public Hostel queryHostelByNum(String hostelNum);
 
-    //获得所有客栈
+    /**
+     * 根据客栈等级筛选客栈
+     * @param level
+     * @return
+     */
+    public List<Hostel> queryHostelByLevel(int level);
+
+    /**
+     * 获得所有客栈
+     * @return
+     */
     public List<Hostel> queryAll();
 }

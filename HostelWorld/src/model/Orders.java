@@ -8,8 +8,8 @@ import javax.persistence.Table;
  * Created by Seven on 2017/2/21.
  */
 @Entity
-@Table(name = "order")
-public class Order {
+@Table(name = "orders")
+public class Orders {
 
     @Id
     private String orderNum;

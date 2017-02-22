@@ -19,13 +19,13 @@ public class BaseDaoImpl implements BaseDao{
     @Autowired
     protected SessionFactory sessionFactory;
 
-    public SessionFactory getSessionFactory(){
-        return sessionFactory;
-    }
-
-    public void setSessionFactory(SessionFactory sessionFactory){
-        this.sessionFactory=sessionFactory;
-    }
+//    public SessionFactory getSessionFactory(){
+//        return sessionFactory;
+//    }
+//
+//    public void setSessionFactory(SessionFactory sessionFactory){
+//        this.sessionFactory=sessionFactory;
+//    }
 
     @Override
     public Session getSession() {
@@ -102,6 +102,14 @@ public class BaseDaoImpl implements BaseDao{
             session.close();
     }
 
+    @Override
+    public void delete(Class c,String id){
+        Object obj=getSession().get(c,id);
+        if(obj!=null){
+            getSession().delete(obj);
+        }
+    }
+
     @SuppressWarnings("rawtypes")
     @Override
     public void delete(Class c, String[] ids) {
@@ -138,6 +146,7 @@ public class BaseDaoImpl implements BaseDao{
     public int excuteBySql(String sql) {
         int result;
         Session session=getSession();
+        @SuppressWarnings("deprecation")
         SQLQuery query=session.createSQLQuery(sql);
         result=query.executeUpdate();
         return result;

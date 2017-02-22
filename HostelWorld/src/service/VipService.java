@@ -16,6 +16,15 @@ public interface VipService {
     public void registerVip(Vip vip);
 
     /**
+     * 缴纳会费大于1000即可激活会员卡
+     * @param money
+     * @return
+     */
+    public boolean activiateVip(double money);
+
+    
+
+    /**
      * 修改会员信息
      * @param vip
      */

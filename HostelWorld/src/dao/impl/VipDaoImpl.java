@@ -18,13 +18,13 @@ public class VipDaoImpl implements VipDao {
     @Autowired
     private BaseDao baseDao;
 
-    public void setBaseDao(BaseDao baseDao) {
-        this.baseDao = baseDao;
-    }
-
-    public BaseDao getBaseDao() {
-        return baseDao;
-    }
+//    public void setBaseDao(BaseDao baseDao) {
+//        this.baseDao = baseDao;
+//    }
+//
+//    public BaseDao getBaseDao() {
+//        return baseDao;
+//    }
 
     @Override
     public void save(Vip vip) {
@@ -44,6 +44,29 @@ public class VipDaoImpl implements VipDao {
     public Vip find(String vipNum) {
         Vip vip=(Vip)baseDao.load(Vip.class,vipNum);
         return vip;
+    }
+
+    @Override
+    public boolean isExist(String vipNum) {
+        if(this.find(vipNum)!=null){
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public boolean checkPassword(String vipNum, String password) {
+        Vip vip=this.find(vipNum);
+        if(vip.getVipPassword().equals(password)){
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public List<Vip> queryByName(String vipName) {
+        String sql="select * from hostelworld.vip v where v.vipName=\""+vipName+"\";";
+        return baseDao.querySQL(sql);
     }
 
     @Override

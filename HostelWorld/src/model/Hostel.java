@@ -13,6 +13,7 @@ public class Hostel {
 
     @Id
     private String hostelNum;
+    private String hostelName;
     private String hostelPassword;
     private double profit;
     private int level;
@@ -28,6 +29,14 @@ public class Hostel {
 
     public void setHostelNum(String hostelNum) {
         this.hostelNum = hostelNum;
+    }
+
+    public String getHostelName() {
+        return hostelName;
+    }
+
+    public void setHostelName(String hostelName) {
+        this.hostelName = hostelName;
     }
 
     public String getHostelPassword() {

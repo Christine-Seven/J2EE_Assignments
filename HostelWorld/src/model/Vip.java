@@ -16,18 +16,19 @@ public class Vip implements Serializable {
     private String vipNum;
     private String vipName;
     private String vipPassword;
-    private String bankCard;
+    private String bankCardId;
     private double vipPoint;
     private double money;
     private String conditionChangeDate;
     private String condition;
+    private String activateDate;
 
     public String getBankCard() {
-        return bankCard;
+        return bankCardId;
     }
 
-    public void setBankCard(String bankCard) {
-        this.bankCard = bankCard;
+    public void setBankCard(String bankCardId) {
+        this.bankCardId = bankCardId;
     }
 
     public String getVipName() {
@@ -84,5 +85,13 @@ public class Vip implements Serializable {
 
     public void setVipPoint(double vipPoint) {
         this.vipPoint = vipPoint;
+    }
+
+    public String getActivateDate() {
+        return activateDate;
+    }
+
+    public void setActivateDate(String activateDate) {
+        this.activateDate = activateDate;
     }
 }

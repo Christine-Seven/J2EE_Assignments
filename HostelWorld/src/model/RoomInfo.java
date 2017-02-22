@@ -16,6 +16,33 @@ public class RoomInfo {
     private String hostelNum;
     private int roomTypeId;
     private int roomNum;
+    private double roomPrice;
+    private String startDate;
+    private String endDate;
+
+    public String getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(String endDate) {
+        this.endDate = endDate;
+    }
+
+    public double getRoomPrice() {
+        return roomPrice;
+    }
+
+    public void setRoomPrice(double roomPrice) {
+        this.roomPrice = roomPrice;
+    }
+
+    public String getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(String startDate) {
+        this.startDate = startDate;
+    }
 
     public String getHostelNum() {
         return hostelNum;
