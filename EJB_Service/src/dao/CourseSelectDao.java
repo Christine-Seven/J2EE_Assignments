@@ -4,11 +4,13 @@ import model.Course;
 import model.CourseSelect;
 import model.Student;
 
+import javax.ejb.Remote;
 import java.util.List;
 
 /**
  * Created by Seven on 2017/2/20.
  */
+@Remote
 public interface CourseSelectDao {
 
     public void save(CourseSelect courseSelect);

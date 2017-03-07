@@ -4,14 +4,26 @@ package model;
  * Created by Seven on 2017/2/20.
  */
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name="course")
-public class Course {
+public class Course  implements Serializable{
+    @Id
+    int id;
+    @Column
     String course_id;
+    @Column
     String course_name;
 
-    @Id
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String getCourse_id() {
         return course_id;
     }

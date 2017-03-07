@@ -1,23 +1,29 @@
 package model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.io.Serializable;
 
 /**
  * Created by Seven on 2017/2/20.
  */
 @Entity
-@Table(name="course_select")
-public class CourseSelect {
-
+@Table(name="selection")
+public class CourseSelect implements Serializable {
+    @Id
     int id;
+    @Column
     String course_id;
+    @Column
     String student_id;
+    @Column
     String year;
+    @Column
     int score;
 
-    @Id
+
     public int getId() {
         return id;
     }

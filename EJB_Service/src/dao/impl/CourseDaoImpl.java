@@ -12,6 +12,7 @@ import javax.persistence.PersistenceContext;
  */
 @Stateless
 public class CourseDaoImpl implements CourseDao {
+
     @PersistenceContext
     protected EntityManager em;
 
