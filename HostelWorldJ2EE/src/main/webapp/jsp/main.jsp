@@ -150,11 +150,16 @@
     </form>
 </div>
 
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
 <script>
     function reserve() {
-        var city=Document.getElementById("city").value;
-        var checkinDate=Document.getElementById("checkinDate").value;
-        var checkoutDate=Document.getElementById("checkoutDate").value;
+        var city=document.getElementById("city").value;
+        var checkinDate=document.getElementById("checkinDate").value;
+        var checkoutDate=document.getElementById("checkoutDate").value;
         $.ajax({
             type: "post",
             url : "",
@@ -173,38 +178,39 @@
         });
     }
 
-    function login() {
-        var name=Document.getElementById("name").value;
-        var password=Document.getElementById("password").value;
+        console.log(1);
 
+
+    function login() {
+
+        console.log(1111);
+
+        var name=document.getElementById("name").value;
+        var password=document.getElementById("password").value;
+
+        console.log(name,password);
         $.ajax({
             type: "post",
-            url : "/login",
-            async:true,
-            dataType:'json',
+            url : "/hotelworld/login.action",
+            dataType:"json",
             data: {"name":name,"password":password},
             success: function(data){
-                if(data.result=="notFindVip"){
-                    $("#result").html(" 没有找到该会员 ");
-                }else if(data.result=="wrongPassword"){
-                    $("#result").html(" 密码错误 ");
-                }else if(data.result=="success"){
-                    window.location="vipInfo.html";
-                }
-            },
-            error:function (XMLHttpRequest, textStatus, errorThrown) {
-                alert("error");
-//                       alert(XMLHttpRequest);
-//                      alert(textStatus);
-//                       alert(errorThrown);
+//                alert(data);
+                console.log(data)
+                window.location="jsp/hotelSearch.jsp";
+//                alert(data);
+//                if(data.jsonString=="notFindVip"){
+//                    $("#result").html(" 没有找到该会员 ");
+//                }else if(data.jsonString=="wrongPassword"){
+//                    $("#result").html(" 密码错误 ");
+//                }else if(data.jsonString=="success"){
+//                    window.location="vipInfo.html";
+//                }
             }
         });
     }
 </script>
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.min.js"></script>
+
 </body>
 </html>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="2812655497">
+    <data-source source="LOCAL" name="dataSource" uuid="808a5b3b-761b-4897-8e25-60a9d974fd3d">
+      <driver-ref>123456</driver-ref>
+      <imported>true</imported>
+      <configured-by-url>true</configured-by-url>
+      <remarks>$PROJECT_DIR$/src/main/resources/applicationContext.xml</remarks>
+      <jdbc-driver>null</jdbc-driver>
+      <jdbc-url>com.mysql.jdbc.Driver</jdbc-url>
+      <explain-plan-config>
+        <provider>com.intellij.database.plan.ExplainPlanProvider.NullExplainPlanProvider</provider>
+      </explain-plan-config>
+    </data-source>
+    <data-source source="LOCAL" name="MySQL - hostelworld@localhost" uuid="24d74b96-a60f-4995-8eeb-94037dbc7fb1">
+      <driver-ref>mysql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/hostelworld</jdbc-url>
+      <driver-properties>
+        <property name="autoReconnect" value="true" />
+        <property name="zeroDateTimeBehavior" value="convertToNull" />
+        <property name="tinyInt1isBit" value="false" />
+        <property name="characterEncoding" value="utf8" />
+        <property name="characterSetResults" value="utf8" />
+        <property name="yearIsDateType" value="false" />
+      </driver-properties>
+    </data-source>
+  </component>
+</project>

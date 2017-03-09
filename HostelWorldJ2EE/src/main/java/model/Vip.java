@@ -22,7 +22,7 @@ public class Vip implements Serializable {
     private String state;
     private String activateDate;
     private String validDate;
-    private int vipLevel;
+    private Integer vipLevel;
 
     public String getVipName() {
         return vipName;
@@ -96,11 +96,11 @@ public class Vip implements Serializable {
         this.validDate = validDate;
     }
 
-    public int getVipLevel() {
+    public Integer getVipLevel() {
         return vipLevel;
     }
 
-    public void setVipLevel(int vipLevel) {
+    public void setVipLevel(Integer vipLevel) {
         this.vipLevel = vipLevel;
     }
 

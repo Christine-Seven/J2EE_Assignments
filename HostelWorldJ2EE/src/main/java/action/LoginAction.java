@@ -27,6 +27,15 @@ public class LoginAction extends BaseAction{
 
     private String name;
     private String password;
+    private String jsonString;
+
+    public String getJsonString() {
+        return jsonString;
+    }
+
+    public void setJsonString(String jsonString) {
+        this.jsonString = jsonString;
+    }
 
     public String getName() {
         return name;
@@ -48,32 +57,40 @@ public class LoginAction extends BaseAction{
     public String execute() throws Exception{
 
         if(name.length()==0||password.length()==0){
-            return "relogin";
+            JSONObject jsonObject=new JSONObject();
+            jsonObject.put("result","notFindVip");
+            jsonString="not find";
+            return SUCCESS;
         }else{
             //以编号开头的字母区分会员与客栈
             char first= name.charAt(0);
             switch (first){
                 case 'V':
                     //会员
-                    if(vipService.isExist(name)){
+                    if(!vipService.isExist(name)){
                         System.out.println("Cannot find the vip");
                         JSONObject jsonObject=new JSONObject();
                         jsonObject.put("result","notFindVip");
-                        return jsonObject.toJSONString();
+                        jsonString=jsonObject.toString();
+                        return SUCCESS;
                     }else if(!vipService.checkPassword(name,password)){
                         System.out.println("Wrong password!");
                         JSONObject jsonObject=new JSONObject();
                         jsonObject.put("result","wrongPassword");
-                        return jsonObject.toJSONString();
+                        jsonString="Wrong Password";
+                        return SUCCESS;
                     }else{
                         //成功登录
                         Vip vip=vipService.findVipById(name);
+                        System.out.println("Find the vip");
                         HttpSession session=request.getSession(true);
                         session.setAttribute("type",vip);
                         session.setAttribute("id", name);
-                        JSONObject jsonObject=new JSONObject();
-                        jsonObject.put("result","success");
-                        return jsonObject.toJSONString();
+//                        JSONObject jsonObject=new JSONObject();
+//                        jsonObject.put("result","success");
+//                        jsonString=jsonObject.toString();
+                        jsonString="success";
+                        return SUCCESS;
                     }
                 case 'H':
                     //客栈
@@ -109,7 +126,7 @@ public class LoginAction extends BaseAction{
                     }
                 default:
                     //不存在该编号
-                    return "wrongnumber";
+                    return ERROR;
             }
 
         }

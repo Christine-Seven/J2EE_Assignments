@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="dataSource" uuid="808a5b3b-761b-4897-8e25-60a9d974fd3d">
+      <first-sync>true</first-sync>
+      <user-name>jdbc:mysql://localhost:3306/hostelworld?characterEncoding=utf8</user-name>
+      <user-password>dfd8dfc5dfc5dfde</user-password>
+    </data-source>
+    <data-source name="MySQL - hostelworld@localhost" uuid="24d74b96-a60f-4995-8eeb-94037dbc7fb1">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+    </data-source>
+  </component>
+</project>

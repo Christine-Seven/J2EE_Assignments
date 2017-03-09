@@ -6,21 +6,20 @@
 
 <struts>
     <constant name="struts.i18n.encoding" value="utf-8"></constant>
+    <constant name="struts.devMode" value="false"/>
+
     <include file="struts-default.xml"/>
 
-    <package name="struts2" extends="json-default">
+    <package name="struts2" namespace="/" extends="json-default,struts-default">
 
         <action name="login" class="action.LoginAction">
-            <result type="json"></result>
-            <!--<result name="relogin">/jsp/login.jsp</result>-->
-            <!--<result name="register">/jsp/vipregister.jsp</result>-->
-            <!--<result name="success">/jsp/success.jsp</result>-->
-            <!--<result name="fail">/jsp/fail.jsp</result>-->
+            <result type="json">
+                <!--<param name="root">jsonString</param>-->
+            </result>
         </action>
 
-        <action name="" class="" method="">
-            <result name="">/.jsp</result>
-
+        <action name="hotelsearch" class="action.VipReserveAction">
+            <result type="json"></result>
         </action>
 
         <action name="" class="" method="">
