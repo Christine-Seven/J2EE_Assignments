@@ -1,0 +1,131 @@
+<%@ page import="model.Vip" %><%--
+  Created by IntelliJ IDEA.
+  User: Seven
+  Date: 12/03/2017
+  Time: 11:26
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Vip Info</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" style="margin-left: -50px">Hostel World</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="main.action">首页</a></li>
+                <li><a href="searchHostel.action">预订客栈</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <!--<li id="notLogin" data-toggle="modal" data-target="#login"><a href="#">登录/注册</a></li>-->
+                <li><a href="#">我要开店</a></li>
+            </ul>
+
+            <div id="memberDiv"
+                 style="position: absolute;top: 15px;left: 950px;width: 150px;height: 30px;color: black">
+                <label>会员名:</label>
+                <p id="name" style="position:absolute;top:0px;left:50px;width:70px;height:20px">${id}</p>
+            </div>
+
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+
+<div class="navbar navbar-default navbar-fixed" style="width: 150px;height: 620px;top: 50px">
+    <ul class="nav nav-pills nav-stacked" style="margin-top: 50px;">
+        <li role="presentation" class="active"><a href="vipInfo.action"><h5>我的资料</h5></a></li>
+        <li role="presentation"><a href="vipOrder.action"><h5>我的订单</h5></a></li>
+    </ul>
+</div>
+
+<div style="position:absolute;top:50px;width: 500px;height: 620px;font-size: 16px">
+    <div class="col-md-8" style="position: absolute;margin-left:180px; width:600px;height:500px">
+        <fieldset style="margin: 50px">
+            <legend>基本信息</legend>
+            <%
+                Vip vip=(Vip) session.getAttribute("type");
+            %>
+            <label style="margin: 20px">会员编号:</label><label><%=vip.getVipNum()%></label>
+            <br>
+            <label style="margin: 20px">会员名:</label><label><%=vip.getVipName()%></label>
+            <br>
+            <div class="row">
+                <div class="col-xs-8">
+                    <label style="margin: 20px">银行卡号:</label><label><%=vip.getBankCardId()%></label>
+                </div>
+                <div class="col-xs-3" style="margin: 15px;height: 20px">
+                    <button class="btn btn-default btn-primary">解绑</button>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset style="margin: 50px">
+            <legend>会员卡信息</legend>
+            <div class="row">
+                <div class="col-xs-8">
+                    <label style="margin: 20px">会员积分:</label><label><%=vip.getVipPoint()%></label>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-xs-8">
+                    <label style="margin: 20px">会员卡余额:</label><label><%=vip.getMoney()%></label>
+                </div>
+                <div class="col-xs-3" style="margin: 15px;height: 20px">
+                    <button class="btn btn-default btn-primary">充值</button>
+                </div>
+            </div>
+
+            <br>
+            <div class="row">
+                <div class="col-xs-8">
+                    <label style="margin: 20px">会员卡状态:</label><label><%=vip.getState()%></label>
+                </div>
+                <div class="col-xs-3" style="margin: 15px;height: 20px">
+                    <button class="btn btn-default btn-primary">停止</button>
+                </div>
+            </div>
+            <br>
+        </fieldset>
+    </div>
+    <div class="col-md-4" style="position: absolute;width: 200px;height: 620px;margin-left:900px;top:50px ">
+        <img src="../img/pic03.jpg" style="position: relative;width: 200px;height: 200px;margin: 50px">
+        <input type="file" style="margin-left:50px ">
+    </div>
+</div>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

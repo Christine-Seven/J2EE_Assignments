@@ -6,6 +6,7 @@ import model.CurrentSpareRoomInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -43,7 +44,21 @@ public class CurrentSpareRoomInfoDaoImpl implements CurrentSpareRoomInfoDao {
 
     @Override
     public List<CurrentSpareRoomInfo> getInfoByHostel(String hostelNum) {
-        String sql="select * from hostelworld.currentSpareRoomInfo as csri where csri.hostelNum=\""+hostelNum+"\";";
-        return baseDao.querySQL(sql);
+        String sql="select * from hostelworld.currentSpareRoomInfo as csri where csri.hostelNum='"+hostelNum+"';";
+        List<Object[]> objects=baseDao.querySQL(sql);
+        return this.getCurrentSpareRoomInfo(objects);
+    }
+
+    private List<CurrentSpareRoomInfo> getCurrentSpareRoomInfo(List<Object[]> objects){
+        List<CurrentSpareRoomInfo> currentSpareRoomInfos=new ArrayList<>();
+        for(Object[] object:objects){
+            CurrentSpareRoomInfo currentSpareRoomInfo=new CurrentSpareRoomInfo();
+            currentSpareRoomInfo.setHostelNum(String.valueOf(object[0]));
+            currentSpareRoomInfo.setSpareNum((int)object[1]);
+            currentSpareRoomInfo.setId((int)object[2]);
+            currentSpareRoomInfo.setRoomTypeId((int)object[3]);
+            currentSpareRoomInfos.add(currentSpareRoomInfo);
+        }
+        return currentSpareRoomInfos;
     }
 }

@@ -75,8 +75,7 @@
         <property name="baseDao" ref="baseDao"></property>
     </bean>
 
-    <bean id="roomInfoDao" class="dao.impl.RoomInfoDaoImpl">
-        <property name="baseDao" ref="baseDao"></property>
+    <bean id="roomInfoDao" class="RoomTypeDao       <property name="baseDao" ref="baseDao"></property>
     </bean>
 
     <bean id="roomPriceDao" class="dao.impl.RoomPriceDaoImpl">

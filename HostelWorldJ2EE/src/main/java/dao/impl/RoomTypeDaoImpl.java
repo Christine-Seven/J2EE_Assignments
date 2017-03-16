@@ -6,6 +6,7 @@ import model.RoomType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -15,14 +16,6 @@ import java.util.List;
 public class RoomTypeDaoImpl implements RoomTypeDao {
     @Autowired
     private BaseDao baseDao;
-
-//    public void setBaseDao(BaseDao baseDao) {
-//        this.baseDao = baseDao;
-//    }
-//
-//    public BaseDao getBaseDao() {
-//        return baseDao;
-//    }
 
     @Override
     public void save(RoomType roomType) {
@@ -36,15 +29,15 @@ public class RoomTypeDaoImpl implements RoomTypeDao {
 
     @Override
     public RoomType find(int id) {
-        RoomType roomType=(RoomType)baseDao.load(RoomType.class,String.valueOf(id));
+        RoomType roomType =(RoomType)baseDao.load(RoomType.class,id);
         return roomType;
     }
 
     @Override
     public RoomType queryByType(String type) {
         String sql="select * from hostelworld.roomType rt where rt.roomType=\""+type+"\";";
-        List<RoomType> roomTypes=baseDao.querySQL(sql);
-        return roomTypes.get(0);
+        List<Object[]> objects =baseDao.querySQL(sql);
+        return this.getRoomType(objects).get(0);
     }
 
     @Override
@@ -64,4 +57,16 @@ public class RoomTypeDaoImpl implements RoomTypeDao {
     public long getNextId() {
         return baseDao.getTotalCount(RoomType.class)+1;
     }
+
+    private List<RoomType> getRoomType(List<Object[]> objects){
+        List<RoomType> roomTypes=new ArrayList<>();
+        for(Object[] object:objects){
+            RoomType roomType=new RoomType();
+            roomType.setId((int)object[0]);
+            roomType.setRoomType(String.valueOf(object[1]));
+            roomTypes.add(roomType);
+        }
+        return roomTypes;
+    }
+
 }

@@ -1,7 +1,9 @@
 package service.impl;
 
 import dao.HostelDao;
+import dao.RoomTypeDao;
 import model.Hostel;
+import model.RoomType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import service.HostelService;
@@ -15,6 +17,8 @@ import java.util.List;
 public class HostelServiceImpl implements HostelService {
     @Autowired
     private HostelDao hostelDao;
+    @Autowired
+    private RoomTypeDao roomTypeDao;
     @Override
     public boolean checkHostel(String hostelNum) {
         return hostelDao.checkHostel(hostelNum);
@@ -79,4 +83,5 @@ public class HostelServiceImpl implements HostelService {
     public List<Hostel> queryAll() {
         return hostelDao.queryAll();
     }
+
 }

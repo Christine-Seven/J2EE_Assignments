@@ -91,4 +91,5 @@ public interface HostelService {
      * @return
      */
     public List<Hostel> queryAll();
+
 }

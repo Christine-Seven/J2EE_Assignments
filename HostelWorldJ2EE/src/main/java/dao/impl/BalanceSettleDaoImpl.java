@@ -37,19 +37,19 @@ public class BalanceSettleDaoImpl implements BalanceSettleDao {
 
     @Override
     public List<BalanceSettle> getBalanceSettleByDate(String date) {
-        String sql="select * from hostelworld.balanceSettle as bs where bs.settleDate=\""+date+"\";";
+        String sql="select * from hostelworld.balanceSettle as bs where bs.settleDate='"+date+"';";
         return baseDao.querySQL(sql);
     }
 
     @Override
     public List<BalanceSettle> getBalanceSettleByHostel(String hostelNum) {
-        String sql="select * from hostelworld.balanceSettle as bs where bs.hostelNum=\""+hostelNum+"\";";
+        String sql="select * from hostelworld.balanceSettle as bs where bs.hostelNum='"+hostelNum+"';";
         return baseDao.querySQL(sql);
     }
 
     @Override
     public List<BalanceSettle> getBalanceSettleByCondition(String condition) {
-        String sql="select * from hostelworld.balanceSettle as bs where bs.settleCondition=\""+condition+"\";";
+        String sql="select * from hostelworld.balanceSettle as bs where bs.settleCondition='"+condition+"';";
         return baseDao.querySQL(sql);
     }
 }

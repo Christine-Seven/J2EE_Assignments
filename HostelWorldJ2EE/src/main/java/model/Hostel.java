@@ -24,6 +24,13 @@ public class Hostel {
     private String approvalState;
     private String applyDate;
 
+    public String getApplyDate() {
+        return applyDate;
+    }
+
+    public void setApplyDate(String applyDate) {
+        this.applyDate = applyDate;
+    }
 
     public String getHostelNum() {
         return hostelNum;

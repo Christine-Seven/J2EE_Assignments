@@ -77,7 +77,7 @@ public class ManagerServiceImpl implements ManagerService {
 
     @Override
     public List<BalanceSettle> settleBalance(String date) throws ParseException {
-        List<Orders> orderses=ordersDao.queryByCondition(OrderConditionEnum.checkout.toString());
+        List<Orders> orderses=ordersDao.queryByCondition(OrderConditionEnum.CHECKOUT.toString());
         SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
         Date d=sdf.parse(date);
         for(Orders orders:orderses){

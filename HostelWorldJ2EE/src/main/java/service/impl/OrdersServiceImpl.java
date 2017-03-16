@@ -42,8 +42,17 @@ public class OrdersServiceImpl implements OrdersService {
         if(null!=orders){
             double requiredMoney=orders.getRequiredMoney();
             if(money==requiredMoney){
+                Vip vip=vipDao.find(orders.getVipNum());
+                double curmoney=vip.getMoney();
+                if(curmoney>=money){
+                    curmoney=curmoney-money;
+                    vip.setMoney(curmoney);
+                    vipDao.update(vip);
+                }else{
+                    return false;
+                }
                 orders.setPaidMoney(money);
-                orders.setOrderCondition(OrderConditionEnum.valid.toString());
+                orders.setOrderCondition(OrderConditionEnum.VALID.toString());
                 ordersDao.update(orders);
                 return true;
             }
@@ -54,13 +63,13 @@ public class OrdersServiceImpl implements OrdersService {
     @Override
     public boolean cancel(String orderNum) {
         Orders orders=ordersDao.find(orderNum);
-        if(null!=orders&&orders.getOrderCondition().equals(OrderConditionEnum.valid)){
+        if(null!=orders&&orders.getOrderCondition().equals(OrderConditionEnum.VALID)){
             double requiredMoney=orders.getRequiredMoney();
             double paidMoney=orders.getPaidMoney();
             if(paidMoney==requiredMoney){
                 //收取30%的手续费，其他费用退还
                 orders.setPaidMoney(paidMoney-requiredMoney*0.7);
-                orders.setOrderCondition(OrderConditionEnum.cancel.toString());
+                orders.setOrderCondition(OrderConditionEnum.CANCEL.toString());
                 ordersDao.update(orders);
                 Vip vip=vipDao.find(orders.getVipNum());
                 if(null!=vip){

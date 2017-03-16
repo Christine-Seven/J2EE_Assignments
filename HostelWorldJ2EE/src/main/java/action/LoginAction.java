@@ -1,6 +1,5 @@
 package action;
 
-import com.alibaba.fastjson.JSONObject;
 import model.Hostel;
 import model.Manager;
 import model.Vip;
@@ -25,110 +24,60 @@ public class LoginAction extends BaseAction{
     @Autowired
     private ManagerService managerService;
 
-    private String name;
-    private String password;
-    private String jsonString;
-
-    public String getJsonString() {
-        return jsonString;
-    }
-
-    public void setJsonString(String jsonString) {
-        this.jsonString = jsonString;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
     @Override
     public String execute() throws Exception{
-
-        if(name.length()==0||password.length()==0){
-            JSONObject jsonObject=new JSONObject();
-            jsonObject.put("result","notFindVip");
-            jsonString="not find";
-            return SUCCESS;
-        }else{
+            String name=request.getParameter("name");
+            String password=request.getParameter("password");
             //以编号开头的字母区分会员与客栈
             char first= name.charAt(0);
             switch (first){
                 case 'V':
                     //会员
-                    if(!vipService.isExist(name)){
+                    Vip vip=vipService.findVipById(name);
+                    if(vip==null){
                         System.out.println("Cannot find the vip");
-                        JSONObject jsonObject=new JSONObject();
-                        jsonObject.put("result","notFindVip");
-                        jsonString=jsonObject.toString();
-                        return SUCCESS;
-                    }else if(!vipService.checkPassword(name,password)){
-                        System.out.println("Wrong password!");
-                        JSONObject jsonObject=new JSONObject();
-                        jsonObject.put("result","wrongPassword");
-                        jsonString="Wrong Password";
-                        return SUCCESS;
+                        return "relogin";
                     }else{
                         //成功登录
-                        Vip vip=vipService.findVipById(name);
-                        System.out.println("Find the vip");
-                        HttpSession session=request.getSession(true);
-                        session.setAttribute("type",vip);
-                        session.setAttribute("id", name);
-//                        JSONObject jsonObject=new JSONObject();
-//                        jsonObject.put("result","success");
-//                        jsonString=jsonObject.toString();
-                        jsonString="success";
-                        return SUCCESS;
+                        if(vipService.checkPassword(name,password)) {
+                            System.out.println("Find the vip");
+                            HttpSession session = request.getSession(true);
+                            session.setAttribute("type", vip);
+                            session.setAttribute("id", name);
+                            return "vip";
+                        }else{
+                            return "relogin";
+                        }
                     }
                 case 'H':
                     //客栈
-                    if(!hostelService.checkHostel(name)){
+                    Hostel hostel=hostelService.queryHostelByNum(name);
+                    if(hostel==null){
                         System.out.println("Cannot find the hostel");
-                        JSONObject jsonObject=new JSONObject();
-
-                        return "relogin";
-                    }else if(!hostelService.checkPassword(name,password)){
-                        System.out.println("Wrong password!");
                         return "relogin";
                     }else{
-                        Hostel hostel=hostelService.queryHostelByNum(name);
+                        System.out.println("Find the hostel");
                         HttpSession session=request.getSession(true);
                         session.setAttribute("type",hostel);
                         session.setAttribute("id", name);
-                        return "hostelLogin";
+                        return "hostel";
                     }
                 case 'M':
                     //经理
-                    if(!managerService.checkManager(name)){
+                    Manager manager=managerService.queryByNum(name);
+                    if(manager==null){
                         System.out.println("Cannot find the manager");
                         return "relogin";
-                    }else if(!managerService.checkPassword(name,password)){
-                        System.out.println("Wrong password!");
-                        return "relogin";
                     }else{
-                        Manager manager=managerService.queryByNum(name);
                         HttpSession session=request.getSession(true);
                         session.setAttribute("type",manager);
                         session.setAttribute("id", name);
-                        return "managerLogin";
+                        return "manager";
                     }
                 default:
                     //不存在该编号
-                    return ERROR;
+                    return "relogin";
             }
 
-        }
     }
 }

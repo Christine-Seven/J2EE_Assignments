@@ -16,7 +16,6 @@ public class CurrentSpareRoomInfo {
     private int roomTypeId;
     private int spareNum;
 
-
     public String getHostelNum() {
         return hostelNum;
     }

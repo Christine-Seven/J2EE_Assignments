@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 import util.OrderConditionEnum;
 
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -61,8 +62,8 @@ public class OrdersDaoImpl implements OrdersDao {
     @Override
     public List<Orders> queryByVip(String vipNum) {
         String sql="select * from hostelworld.orders as o where o.vipNum=\""+vipNum+"\";";
-        List<Orders> orderses=baseDao.querySQL(sql);
-        return orderses;
+        List<Object[]> orderses=baseDao.querySQL(sql);
+        return this.getOrders(orderses);
     }
 
     @Override
@@ -75,7 +76,7 @@ public class OrdersDaoImpl implements OrdersDao {
     @Override
     public List<Orders> queryByHostelAndCheckout(String hostelNum, String checkoutDate) {
         String sql="select * from hostelworld.orders as o where o.hostelNum=\""+hostelNum+"\" and o.checkoutDate=\""+checkoutDate+"\" and o.orderCondition=\"" +
-                OrderConditionEnum.checkout+"\";";
+                OrderConditionEnum.CHECKOUT+"\";";
         List<Orders> orderses=baseDao.querySQL(sql);
         return orderses;
     }
@@ -86,5 +87,25 @@ public class OrdersDaoImpl implements OrdersDao {
                 orderCondition+"\";";
         List<Orders> orderses=baseDao.querySQL(sql);
         return orderses;
+    }
+
+    private List<Orders> getOrders(List<Object[]> objects){
+        List<Orders> ordersList=new ArrayList<>();
+        for(Object[] object:objects){
+            Orders orders=new Orders();
+            orders.setOrderNum((String.valueOf(object[0])));
+            orders.setHostelNum(String.valueOf(object[1]));
+            orders.setVipNum(String.valueOf(object[2]));
+            orders.setRoomTypeId((int) object[3]);
+            orders.setRoomNum((int)object[4]);
+            orders.setRequiredMoney((double)object[5]);
+            orders.setRequiredMoney((double)object[6]);
+            orders.setOrderCondition(String.valueOf(object[7]));
+            orders.setCheckinDate(String.valueOf(object[8]));
+            orders.setCheckoutDate(String.valueOf(object[9]));
+            orders.setPayMethod(String.valueOf(object[10]));
+            ordersList.add(orders);
+        }
+        return ordersList;
     }
 }

@@ -137,7 +137,7 @@ public class BaseDaoImpl implements BaseDao{
     @Override
     public List querySQL(String sql) {
         Session session=getSession();
-        return session.createQuery(sql).list();
+        return session.createSQLQuery(sql).list();
     }
 
     @Override

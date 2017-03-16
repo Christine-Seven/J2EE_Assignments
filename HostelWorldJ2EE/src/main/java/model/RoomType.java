@@ -13,6 +13,33 @@ public class RoomType {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String roomType;
+//    private String roomNum;
+//    private String hostelNum;
+//    private String roomState;
+//
+//    public String getRoomState() {
+//        return roomState;
+//    }
+//
+//    public void setRoomState(String roomState) {
+//        this.roomState = roomState;
+//    }
+//
+//    public String getHostelNum() {
+//        return hostelNum;
+//    }
+//
+//    public void setHostelNum(String hostelNum) {
+//        this.hostelNum = hostelNum;
+//    }
+//
+//    public String getRoomNum() {
+//        return roomNum;
+//    }
+//
+//    public void setRoomNum(String roomNum) {
+//        this.roomNum = roomNum;
+//    }
 
     public int getId() {
         return id;

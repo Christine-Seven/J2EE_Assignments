@@ -10,21 +10,45 @@
 
     <include file="struts-default.xml"/>
 
-    <package name="struts2" namespace="/" extends="json-default,struts-default">
+    <package name="struts2" namespace="/" extends="struts-default">
 
+        <action name="main" class="action.MainAction">
+            <result name="main">/jsp/main.jsp</result>
+        </action>
+
+        <action name="vipInfo" class="action.VipInfoAction">
+            <result>/jsp/vipInfo.jsp</result>
+        </action>
         <action name="login" class="action.LoginAction">
-            <result type="json">
-                <!--<param name="root">jsonString</param>-->
-            </result>
+            <result name="relogin">/jsp/main.jsp</result>
+            <result name="vip">/jsp/vipInfo.jsp</result>
+            <result name="hostel">/jsp/hostelInfo.jsp</result>
+            <result name="manager">/jsp/managerInfo.jsp</result>
         </action>
 
-        <action name="hotelsearch" class="action.VipReserveAction">
-            <result type="json"></result>
+        <action name="vipRegister" class="action.VipRegisterAction">
+            <result name="success">/jsp/vipInfo.jsp</result>
+            <result name="error">/jsp/main.jsp</result>
         </action>
 
-        <action name="" class="" method="">
-            <result name="">/.jsp</result>
+        <action name="searchHostel" class="action.VipReserveAction" method="hostelSearch">
+            <result name="hostels">/jsp/hotelSearch.jsp</result>
+            <result name="notFound">/jsp/main.jsp</result>
+        </action>
 
+        <action name="searchRoom" class="action.VipReserveAction" method="roomSearch">
+            <result name="rooms">/jsp/hotelReserve.jsp</result>
+            <result name="notFound">/jsp/hotelSearch.jsp</result>
+        </action>
+
+        <action name="reserveHostel" class="action.VipReserveAction" method="hostelReserve">
+            <result name="orders" type="chain">vipOrder</result>
+            <result name="notEnoughMoney">/jsp/alert.html</result>
+        </action>
+
+
+        <action name="vipOrder" class="action.VipOrderAction" method="getVipOrders">
+            <result name="orders">/jsp/vipOrder.jsp</result>
         </action>
 
         <action name="" class="" method="">

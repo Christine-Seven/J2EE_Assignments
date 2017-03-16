@@ -30,7 +30,7 @@ public class ApprovalDaoImpl implements ApprovalDao{
 
     @Override
     public List<Approval> queryByState(String state) {
-        String sql="select * from hostelworld.approval as a where a.approvalState=\""+state+"\";";
+        String sql="select * from hostelworld.approval as a where a.approvalState='"+state+"';";
         List<Approval> approvals=baseDao.querySQL(sql);
         return approvals;
     }
@@ -38,14 +38,14 @@ public class ApprovalDaoImpl implements ApprovalDao{
 
     @Override
     public List<Approval> queryByType(String type) {
-        String sql="select * from hostelworld.approval as a where a.approvalType=\""+type+"\";";
+        String sql="select * from hostelworld.approval as a where a.approvalType='"+type+"';";
         List<Approval> approvals=baseDao.querySQL(sql);
         return approvals;
     }
 
     @Override
     public List<Approval> queryByHostel(String hostelNum) {
-        String sql="select * from hostelworld.approval as a where a.hostelNum=\""+hostelNum+"\";";
+        String sql="select * from hostelworld.approval as a where a.hostelNum='"+hostelNum+"';";
         List<Approval> approvals=baseDao.querySQL(sql);
         return approvals;
     }

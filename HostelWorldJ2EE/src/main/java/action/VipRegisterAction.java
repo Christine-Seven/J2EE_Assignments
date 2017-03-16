@@ -1,43 +1,39 @@
 package action;
 
 import model.Vip;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import service.VipService;
-import service.impl.VipServiceImpl;
-
-import static com.opensymphony.xwork2.Action.ERROR;
-import static com.opensymphony.xwork2.Action.SUCCESS;
+import util.VipStateEnum;
 
 /**
  * Created by Seven on 2017/2/15.
  */
-public class VipRegisterAction {
-
-    private Vip vip;
+@Controller
+public class VipRegisterAction extends BaseAction{
+    @Autowired
     private VipService vipService;
-
-    public Vip getVip() {
-        return vip;
-    }
-
-    public void setVip(Vip vip) {
-        this.vip = vip;
-    }
-
-    public VipService getVipService() {
-        return vipService;
-    }
-
-    public void setVipService(VipService vipService) {
-        this.vipService = vipService;
-    }
 
     public String execute(){
         try{
-            this.setVipService(new VipServiceImpl());
+            String vipName=request.getParameter("vipName");
+            String passwd=request.getParameter("passwd");
+            String bankCardId=request.getParameter("bankCardId");
+            Vip vip=new Vip();
+            vip.setVipNum(vipService.getVipNum());
+            vip.setVipName(vipName);
+            vip.setVipPassword(passwd);
+            vip.setBankCardId(bankCardId);
+            vip.setState(VipStateEnum.register.toString());
+            vip.setVipPoint(0);
+            vip.setMoney(0);
             vipService.registerVip(vip);
-            return SUCCESS;
+            request.getSession().setAttribute("id",vip.getVipNum());
+            request.getSession().setAttribute("type",vip);
+            return "success";
         }catch (Exception e){
-            return ERROR;
+            e.printStackTrace();
+            return "error";
         }
     }
 }

@@ -2,8 +2,8 @@ package service.impl;
 
 import dao.RoomPlanDao;
 import dao.RoomTypeDao;
-import model.RoomPlan;
 import model.RoomType;
+import model.RoomPlan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import service.RoomPlanService;
@@ -46,10 +46,10 @@ public class RoomPlanServiceImpl implements RoomPlanService {
 
     @Override
     public List<RoomPlan> queryNewestRoomPlan(String hostelNum) {
-        List<RoomType> roomTypes=roomTypeDao.getAllType();
+        List<RoomType> roomTypes = roomTypeDao.getAllType();
         List<RoomPlan> roomPlans=new ArrayList<>();
-        for(RoomType roomType:roomTypes){
-            String type=roomType.getRoomType();
+        for(RoomType roomType : roomTypes){
+            String type= roomType.getRoomType();
             RoomPlan roomPlan=this.queryNewestPlanByType(hostelNum,type);
             roomPlans.add(roomPlan);
         }
@@ -58,7 +58,7 @@ public class RoomPlanServiceImpl implements RoomPlanService {
 
     @Override
     public RoomPlan queryNewestPlanByType(String hostelNum, String roomType) {
-        int roomTypeId=roomTypeDao.queryByType(roomType).getId();
+        int roomTypeId= roomTypeDao.queryByType(roomType).getId();
         List<RoomPlan> roomPlans=roomPlanDao.queryByHostelAndType(hostelNum,roomTypeId);
         SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
         RoomPlan newestPlan=roomPlans.get(0);

@@ -16,11 +16,29 @@ public class Orders {
     private String hostelNum;
     private String vipNum;
     private int roomTypeId;
+    private int roomNum;
     private double requiredMoney;
     private double paidMoney;
     private String orderCondition;
     private String checkinDate;
     private String checkoutDate;
+    private String payMethod;
+
+    public String getPayMethod() {
+        return payMethod;
+    }
+
+    public void setPayMethod(String payMethod) {
+        this.payMethod = payMethod;
+    }
+
+    public int getRoomNum() {
+        return roomNum;
+    }
+
+    public void setRoomNum(int roomNum) {
+        this.roomNum = roomNum;
+    }
 
     public String getCheckinDate() {
         return checkinDate;
