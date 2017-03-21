@@ -8,6 +8,14 @@ import java.util.List;
  * Created by Seven on 2017/2/25.
  */
 public interface ApprovalService {
+
+    /**
+     * 查找申请
+     * @param approvalNum
+     * @return
+     */
+    public Approval find(int approvalNum);
+
     /**
      * 新增申请
      * @param approval

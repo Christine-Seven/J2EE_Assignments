@@ -12,10 +12,19 @@ public class Approval {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int approvalNum;
     private String hostelNum;
-    private String approveType;
+    private String approvalType;
     private String approveState;
     private String approveDate;
     private String applyDate;
+
+
+    public String getApprovalType() {
+        return approvalType;
+    }
+
+    public void setApprovalType(String approvalType) {
+        this.approvalType = approvalType;
+    }
 
     public String getApplyDate() {
         return applyDate;
@@ -47,14 +56,6 @@ public class Approval {
 
     public void setApproveState(String approveState) {
         this.approveState = approveState;
-    }
-
-    public String getApproveType() {
-        return approveType;
-    }
-
-    public void setApproveType(String approveType) {
-        this.approveType = approveType;
     }
 
     public String getHostelNum() {

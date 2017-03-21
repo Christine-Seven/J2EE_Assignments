@@ -31,4 +31,9 @@ public class CurrentSpareRoomServiceImpl implements CurrentSpareRoomService {
     public void update(CurrentSpareRoomInfo currentSpareRoomInfo) {
         currentSpareRoomInfoDao.update(currentSpareRoomInfo);
     }
+
+    @Override
+    public CurrentSpareRoomInfo getCurrentSpareRoomByRoomType(String hostelNum, int roomTypeId) {
+        return currentSpareRoomInfoDao.getInfoByHostelAndRoomType(hostelNum,roomTypeId);
+    }
 }

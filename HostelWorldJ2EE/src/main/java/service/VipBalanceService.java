@@ -12,7 +12,7 @@ public interface VipBalanceService {
      * @param money
      * @return
      */
-    public boolean activiateVip(String vipNum,double money);
+    public boolean activateVip(String vipNum,double money);
 
     /**
      * 根据消费金额获取积分并升级

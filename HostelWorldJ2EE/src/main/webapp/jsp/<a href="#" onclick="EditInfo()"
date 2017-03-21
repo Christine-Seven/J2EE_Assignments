@@ -1,0 +1,36 @@
+					<a href="#" onclick="EditInfo()"
+						style="color: #824220; float: right; margin-right: 60px;"
+						class="sys-bold">编辑</a>
+
+					<form>
+						<ul style="margin-top: 40px;">
+							<li style="margin-top: 20px;"><span class="sys-ch-bold">联系电话：</span>
+								<span id="tel" class="sys-ch" style="color: #1B0D00"><%=user.getTel()%></span>
+								<input id="tel_input" value="<%=user.getTel()%>"
+								style="position: absolute; left: 130px; width: 200px; visibility: hidden;">
+							</li>
+							<li><span class="sys-ch-bold">年&emsp;&emsp;龄：</span> <span
+								id="age" class="sys-ch" style="color: #1B0D00"><%=user.getAge()%></span>
+								<input id="age_input" value="<%=user.getAge()%>"
+								style="position: absolute; left: 130px; width: 230px; visibility: hidden;">
+							</li>
+							<li><span class="sys-ch-bold">地&emsp;&emsp;址：</span> <span
+								id="ad" class="sys-ch" style="color: #1B0D00"><%=user.getAddress()%></span>
+								<input id="ad_input" value="<%=user.getAddress()%>"
+								style="position: absolute; left: 130px; width: 300px; height: 40px; visibility: hidden;">
+							</li>
+						</ul>
+						<a id="editSub" class="ghbutton pink" href="#"
+							onclick="SubmitInfo()"
+							style="visibility: hidden; margin-top: 40px; margin-left: 40px; width: 100px; height: 20px; font-size: 14px;">确认</a>
+					</form>
+					
+function EditInfo() {
+	document.getElementById("tel").style.visibility = "hidden";
+	document.getElementById("age").style.visibility = "hidden";
+	document.getElementById("ad").style.visibility = "hidden";
+	document.getElementById("tel_input").style.visibility = "";
+	document.getElementById("age_input").style.visibility = "";
+	document.getElementById("ad_input").style.visibility = "";
+	document.getElementById("editSub").style.visibility = "";
+}

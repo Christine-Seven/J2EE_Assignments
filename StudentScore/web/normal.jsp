@@ -1,8 +1,8 @@
-<%@ page import="dao.StudentDAO" %>
-<%@ page import="dao.ScoreDAO" %>
+<%@ page import="model.Student" %>
+<%@ page import="model.Score" %>
 <%@ page import="java.util.HashMap" %>
-<%@ page import="dao.CourseDAO" %>
-<%@ page import="dao.TestDAO" %>
+<%@ page import="model.Course" %>
+<%@ page import="model.Test" %>
 <%@ page import="java.util.List" %>
 <%--
   Created by IntelliJ IDEA.
@@ -18,12 +18,12 @@
 </head>
 <body>
     <%
-        ScoreDAO scoreDAO =(ScoreDAO) request.getAttribute("scoreDAO");
-        StudentDAO studentDAO = scoreDAO.getStudentDAO();
+        Score scoreDAO =(Score) request.getAttribute("scoreDAO");
+        Student student = scoreDAO.getStudent();
         //student info
-        String student_id= studentDAO.getStudent_id();
-        String student_name= studentDAO.getStudent_name();
-        String grade= studentDAO.getGrade();
+        String student_id= student.getStudent_id();
+        String student_name= student.getStudent_name();
+        String grade= student.getGrade();
     %>
     <div>
         <h3>学号:<%=student_id%></h3>
@@ -33,20 +33,20 @@
 
     <%
         //course info
-        HashMap<CourseDAO,List<TestDAO>> courseScore= scoreDAO.getCourseScore();
-        for(CourseDAO courseDAO :courseScore.keySet()){
-            String course_id= courseDAO.getCourse_id();
-            String course_name= courseDAO.getCourse_name();
+        HashMap<Course,List<Test>> courseScore= scoreDAO.getCourseScore();
+        for(Course course :courseScore.keySet()){
+            String course_id= course.getCourse_id();
+            String course_name= course.getCourse_name();
     %>
         <h4>科目ID:<%=course_id%></h4>
         <h4>科目名称:<%=course_name%></h4>
     <%
-            List<TestDAO> testDAOList =courseScore.get(courseDAO);
-            for(TestDAO testDAO : testDAOList){
-                String test_id= testDAO.getTest_id();
-                String test_name= testDAO.getTest_name();
-                String date= testDAO.getDate();
-                int score= testDAO.getScore();
+            List<Test> testList =courseScore.get(course);
+            for(Test test : testList){
+                String test_id= test.getTest_id();
+                String test_name= test.getTest_name();
+                String date= test.getDate();
+                int score= test.getScore();
     %>
         <p>测验ID:<%=test_id%></p>
         <p>测验名称<%=test_name%></p>

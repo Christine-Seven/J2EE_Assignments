@@ -6,7 +6,9 @@ import model.Orders;
 import model.Vip;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import service.CurrentSpareRoomService;
 import service.OrdersService;
+import service.VipBalanceService;
 import util.OrderConditionEnum;
 
 import java.util.List;
@@ -20,6 +22,10 @@ public class OrdersServiceImpl implements OrdersService {
     private OrdersDao ordersDao;
     @Autowired
     private VipDao vipDao;
+    @Autowired
+    VipBalanceService vipBalanceService;
+    @Autowired
+    CurrentSpareRoomService currentSpareRoomService;
 
     @Override
     public void saveOrders(Orders orders) {
@@ -44,17 +50,14 @@ public class OrdersServiceImpl implements OrdersService {
             if(money==requiredMoney){
                 Vip vip=vipDao.find(orders.getVipNum());
                 double curmoney=vip.getMoney();
-                if(curmoney>=money){
-                    curmoney=curmoney-money;
-                    vip.setMoney(curmoney);
-                    vipDao.update(vip);
+                if(vipBalanceService.withdraw(vip.getVipNum(),money)>=0){
+                    orders.setPaidMoney(money);
+                    orders.setOrderCondition(OrderConditionEnum.VALID.toString());
+                    ordersDao.update(orders);
+                    return true;
                 }else{
                     return false;
                 }
-                orders.setPaidMoney(money);
-                orders.setOrderCondition(OrderConditionEnum.VALID.toString());
-                ordersDao.update(orders);
-                return true;
             }
         }
         return false;
@@ -63,7 +66,7 @@ public class OrdersServiceImpl implements OrdersService {
     @Override
     public boolean cancel(String orderNum) {
         Orders orders=ordersDao.find(orderNum);
-        if(null!=orders&&orders.getOrderCondition().equals(OrderConditionEnum.VALID)){
+        if(null!=orders&&(orders.getOrderCondition().equals(OrderConditionEnum.VALID.toString())||(orders.getOrderCondition().equals(OrderConditionEnum.BOOK.toString())))){
             double requiredMoney=orders.getRequiredMoney();
             double paidMoney=orders.getPaidMoney();
             if(paidMoney==requiredMoney){
@@ -78,7 +81,11 @@ public class OrdersServiceImpl implements OrdersService {
                     vipDao.update(vip);
                     return true;
                 }
+            }else{
+                orders.setOrderCondition(OrderConditionEnum.CANCEL.toString());
+                ordersDao.update(orders);
             }
+            return true;
         }
         return false;
     }
@@ -106,5 +113,10 @@ public class OrdersServiceImpl implements OrdersService {
     @Override
     public List<Orders> queryByHostelAndCheckout(String hostelNum, String checkoutDate) {
         return ordersDao.queryByHostelAndCheckout(hostelNum, checkoutDate);
+    }
+
+    @Override
+    public List<Orders> queryByState(String state) {
+        return ordersDao.queryByCondition(state);
     }
 }

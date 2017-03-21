@@ -33,4 +33,12 @@ public interface CurrentSpareRoomInfoDao {
      * @return
      */
     public List<CurrentSpareRoomInfo> getInfoByHostel(String hostelNum);
+
+    /**
+     * 根据客栈编号和房间类型获得空房数量
+     * @param hostelNum
+     * @param roomTypeId
+     * @return
+     */
+    public CurrentSpareRoomInfo getInfoByHostelAndRoomType(String hostelNum,int roomTypeId);
 }

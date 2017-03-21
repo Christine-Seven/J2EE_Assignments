@@ -25,25 +25,32 @@ public class VipBalanceServiceImpl implements VipBalanceService {
     private BankCardDao bankCardDao;
 
     @Override
-    public boolean activiateVip(String vipNum, double money) {
+    public boolean activateVip(String vipNum, double money) {
 
         Vip vip = vipDao.find(vipNum);
-        if(vip!=null&&money>1000){
-            double currentMoney=vip.getMoney();
-            vip.setMoney(currentMoney+money);
-            vip.setState(VipStateEnum.activate.toString());
-            //获得当前日期
-            Calendar calendar=Calendar.getInstance();
-            SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
-            Date date=calendar.getTime();
-            // 设置激活日期
-            vip.setActivateDate(sdf.format(date));
-            //设置有效日期
-            calendar.add(Calendar.YEAR,1);
-            date=calendar.getTime();
-            vip.setValidDate(sdf.format(date));
-            vipDao.update(vip);
-            return true;
+        BankCard bankCard=bankCardDao.find(vip.getBankCardId());
+        double balance=bankCard.getBalance();
+        if(vip!=null&&null!=bankCard){
+            if(balance>=1000&&money>=1000) {
+                double currentMoney = vip.getMoney();
+                vip.setMoney(currentMoney + money);
+                vip.setState(VipStateEnum.ACTIVATE.toString());
+                //获得当前日期
+                Calendar calendar = Calendar.getInstance();
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+                Date date = calendar.getTime();
+                // 设置激活日期
+                vip.setActivateDate(sdf.format(date));
+                //设置有效日期
+                calendar.add(Calendar.YEAR, 1);
+                date = calendar.getTime();
+                vip.setValidDate(sdf.format(date));
+                vipDao.update(vip);
+                bankCard.setBalance(balance-money);
+                bankCardDao.update(bankCard);
+
+                return true;
+            }
         }
         return false;
     }
@@ -68,11 +75,16 @@ public class VipBalanceServiceImpl implements VipBalanceService {
             double currentMoney=vip.getMoney();
             double currentPoint=vip.getVipPoint();
             double money=point/10;
-            vip.setMoney(currentMoney+money);
-            vip.setVipPoint(currentPoint-point);
-            vipDao.update(vip);
+            if(currentPoint>point) {
+                vip.setMoney(currentMoney + money);
+                vip.setVipPoint(currentPoint - point);
+                vipDao.update(vip);
+                return currentMoney+money;
+            }else{
+                return -1;
+            }
         }
-        return 0;
+        return -1;
     }
 
 //    @Override
@@ -92,15 +104,16 @@ public class VipBalanceServiceImpl implements VipBalanceService {
         BankCard bankCard=bankCardDao.find(vip.getBankCardId());
         if(null!=vip && null!=bankCard){
             double currentBalance=bankCard.getBalance();
+            System.out.println("balance="+currentBalance);
             if(currentBalance>=money) {
-                if (vip.getState().equals(VipStateEnum.suspend)) {
+                if (vip.getState().equals(VipStateEnum.SUSPEND.toString())) {
                     //暂停态会员
                     bankCard.setBalance(currentBalance-money);
                     bankCardDao.update(bankCard);
                     double currentMoney = vip.getMoney();
                     vip.setMoney(currentMoney + money);
-                    if ((currentMoney + money) > 1000) {
-                        vip.setState(VipStateEnum.activate.toString());
+                    if ((currentMoney + money) >= 1000) {
+                        vip.setState(VipStateEnum.ACTIVATE.toString());
                         //获得有效期
                         Calendar calendar = Calendar.getInstance();
                         calendar.add(Calendar.YEAR, 1);
@@ -108,36 +121,37 @@ public class VipBalanceServiceImpl implements VipBalanceService {
                         Date date = calendar.getTime();
                         vip.setValidDate(sdf.format(date));
                         vipDao.update(vip);
+                        return true;
                     }
-                } else if (vip.getState().equals(VipStateEnum.activate)) {
+                } else if (vip.getState().equals(VipStateEnum.ACTIVATE.toString())) {
                     //激活态会员
+                    System.out.println("ACTIVATE");
                     bankCard.setBalance(currentBalance-money);
                     bankCardDao.update(bankCard);
                     double currentMoney = vip.getMoney();
                     vip.setMoney(currentMoney + money);
                     vipDao.update(vip);
+                    return true;
                 } else {
                     return false;
                 }
             }
         }
-        return false;
+      return false;
     }
 
     @Override
     public double withdraw(String vipNum, double money) {
         Vip vip=vipDao.find(vipNum);
         if(null!=vip){
-            if(vip.getState().equals(VipStateEnum.activate.toString())) {
+            if(vip.getState().equals(VipStateEnum.ACTIVATE.toString())) {
                 double currentMoney = vip.getMoney();
                 if (currentMoney >= money) {
                     vip.setMoney(currentMoney - money);
-                    vipDao.update(vip);
                     int vipLevel=this.addCredit(vipNum,money);
-                    if(vipLevel!=vip.getVipLevel()){
-                        vip.setVipLevel(vipLevel);
-                        vipDao.update(vip);
-                    }
+                    vip.setVipLevel(vipLevel);
+                    vipDao.update(vip);
+                    return vipLevel;
                 } else {
                     return -1;
                 }

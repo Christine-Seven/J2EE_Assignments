@@ -1,10 +1,10 @@
 package servlets;
 
+import model.Course;
+import model.Test;
 import serviceImpl.TestEnquiresServiceImpl;
 import serviceImpl.UserDataServiceImpl;
-import dao.CourseDAO;
-import dao.ScoreDAO;
-import dao.TestDAO;
+import model.Score;
 
 import javax.naming.NamingException;
 import javax.servlet.RequestDispatcher;
@@ -42,14 +42,14 @@ public class LoginServlet extends HttpServlet {
                 context.setAttribute("touristNum",touristNum-1);
                 //valid user
                 TestEnquiresServiceImpl testEnquiresService=new TestEnquiresServiceImpl();
-                ScoreDAO scoreDAO =testEnquiresService.getScorePO(student_id);
-                HashMap<CourseDAO,List<TestDAO>> courseScore= scoreDAO.getCourseScore();
+                Score scoreDAO =testEnquiresService.getScorePO(student_id);
+                HashMap<Course,List<Test>> courseScore= scoreDAO.getCourseScore();
                 boolean allTestTaken=true;
-                for(CourseDAO courseDAO :courseScore.keySet()) {
-                    List<TestDAO> testDAOList = courseScore.get(courseDAO);
+                for(Course course :courseScore.keySet()) {
+                    List<Test> testList = courseScore.get(course);
 
-                    for (TestDAO testDAO : testDAOList) {
-                        if (testDAO == null) {
+                    for (Test test : testList) {
+                        if (test == null) {
                             allTestTaken = false;
                         }
                     }

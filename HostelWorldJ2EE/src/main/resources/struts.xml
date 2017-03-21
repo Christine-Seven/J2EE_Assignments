@@ -16,14 +16,39 @@
             <result name="main">/jsp/main.jsp</result>
         </action>
 
-        <action name="vipInfo" class="action.VipInfoAction">
+        <action name="vipInfo" class="action.VipInfoAction" method="jump2vipInfo">
             <result>/jsp/vipInfo.jsp</result>
         </action>
+
+        <action name="cancelVip" class="action.VipInfoAction" method="cancelVip">
+            <result name="cancel">/jsp/vipInfo.jsp</result>
+            <result name="fail">/html/alert.html</result>
+        </action>
+
+        <action name="convertCredit" class="action.VipInfoAction" method="convertCredit">
+            <result name="convert">/jsp/vipInfo.jsp</result>
+            <result name="fail">/html/alert.html</result>
+        </action>
+        
+        <action name="activateVip" class="action.VipInfoAction" method="activateVip">
+            <result name="activate">/jsp/vipInfo.jsp</result>
+            <result name="fail">/html/alert.html</result>
+        </action>
+
+        <action name="modifyVip" class="action.VipInfoAction" method="modifyVip">
+            <result name="modify">/jsp/vipInfo.jsp</result>
+        </action>
+
+        <action name="topUp" class="action.VipInfoAction" method="topUp">
+            <result name="topup">/jsp/vipInfo.jsp</result>
+            <result name="fail">/html/alert.html</result>
+        </action>
+
         <action name="login" class="action.LoginAction">
             <result name="relogin">/jsp/main.jsp</result>
-            <result name="vip">/jsp/vipInfo.jsp</result>
-            <result name="hostel">/jsp/hostelInfo.jsp</result>
-            <result name="manager">/jsp/managerInfo.jsp</result>
+            <result name="vip" type="chain">vipInfo</result>
+            <result name="hostel" type="chain">hostelRegister_getInfo</result>
+            <result name="manager" type="chain">manager_getApply</result>
         </action>
 
         <action name="vipRegister" class="action.VipRegisterAction">
@@ -43,16 +68,47 @@
 
         <action name="reserveHostel" class="action.VipReserveAction" method="hostelReserve">
             <result name="orders" type="chain">vipOrder</result>
-            <result name="notEnoughMoney">/jsp/alert.html</result>
+            <result name="notEnoughMoney">/html/alert.html</result>
         </action>
-
 
         <action name="vipOrder" class="action.VipOrderAction" method="getVipOrders">
             <result name="orders">/jsp/vipOrder.jsp</result>
         </action>
 
-        <action name="" class="" method="">
-            <result name="">/.jsp</result>
+        <action name="cancelOrder" class="action.VipOrderAction" method="cancelOrder">
+            <result name="cancel">/jsp/vipOrder.jsp</result>
+            <result name="fail">/html/alert.html</result>
+        </action>
+
+        <action name="vipSta" class="action.VipInfoAction" method="vipSta">
+            <result name="vipSta">/jsp/vipSta.jsp</result>
+        </action>
+
+        <action name="hostelRegister_*" class="action.HostelRegisterAction" method="{1}">
+            <result name="{1}">/jsp/{1}.jsp</result>
+            <result name="modified">/jsp/hostelInfo.jsp</result>
+            <result name="info">/jsp/hostelInfo.jsp</result>
+
+        </action>
+
+        <action name="manager_*" class="action.ManagerAction" method="{1}">
+            <result name="{1}">/jsp/{1}.jsp</result>
+            <result name="apply">/jsp/managerApproval.jsp</result>
+            <result name="settle">/jsp/managerSettle.jsp</result>
+            <result name="statistic">/jsp/managerStatistic.jsp</result>
+            <result name="fail">/html/alert.html</result>
+        </action>
+
+        <action name="hostel_*" class="action.HostelAction" method="{1}">
+            <result name="{1}">/jsp/{1}.jsp</result>
+            <result name="plan">/jsp/hostelPlan.jsp</result>
+            <result name="check">/jsp/checkInfo.jsp</result>
+            <result name="vipOrder">/jsp/checkInfo.jsp</result>
+            <result name="out">/jsp/checkInfo.jsp</result>
+        </action>
+
+        <action name="worldSta" class="action.WorldStaInfoAction" method="worldSta">
+            <result name="worldSta">/jsp/worldSta.jsp</result>
 
         </action>
     </package>

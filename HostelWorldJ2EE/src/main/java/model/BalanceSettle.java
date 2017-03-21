@@ -8,20 +8,20 @@ import javax.persistence.*;
 @Entity
 @Table(name="balanceSettle")
 public class BalanceSettle {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private int settleNum;
     private String settleDate;
     private double balance;
-    private String hosetlNum;
+    private String hostelNum;
     private String settleCondition;
 
-    public String getHosetlNum() {
-        return hosetlNum;
+    public String getHostelNum() {
+        return hostelNum;
     }
 
-    public void setHosetlNum(String hosetlNum) {
-        this.hosetlNum = hosetlNum;
+    public void setHostelNum(String hosetlNum) {
+        this.hostelNum = hosetlNum;
     }
 
     public double getBalance() {

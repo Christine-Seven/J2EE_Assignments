@@ -17,6 +17,11 @@ public class ApprovalServiceImpl implements ApprovalService{
     private ApprovalDao approvalDao;
 
     @Override
+    public Approval find(int approvalNum) {
+        return approvalDao.find(approvalNum);
+    }
+
+    @Override
     public void save(Approval approval) {
         approvalDao.save(approval);
     }

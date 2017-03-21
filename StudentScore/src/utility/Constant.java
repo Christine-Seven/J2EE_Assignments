@@ -1,7 +1,5 @@
 package utility;
 
-import serviceImpl.DBConnection;
-
 import java.sql.Connection;
 
 /**

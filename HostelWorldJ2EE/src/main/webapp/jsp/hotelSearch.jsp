@@ -40,7 +40,8 @@
     <nav class="navbar navbar-default navbar-fixed-top" style="color: #d0e9c6">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -52,31 +53,21 @@
                 <ul class="nav navbar-nav">
                     <li><a href="main.action">首页</a></li>
                     <li class="active"><a href="searchHostel.action">预订客栈</a></li>
-                    <li><a href="#">联系我们</a></li>
                 </ul>
-                <ul  class="nav navbar-nav navbar-right">
-                    <%--<li id="notLogin" data-toggle="modal" data-target="#login"><a href="#">登录/注册</a></li>--%>
-                    <li><a href="#">我要开店</a></li>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="vipInfo.action">会员名: ${id}</a></li>
+                    <li><a href="hostelRegister_hostelRegister.action">我要开店</a></li>
                 </ul>
-
-                <div id="memberDiv" style="position: absolute;top: 15px;left: 950px;width: 150px;height: 30px;color:black;">
-                    <label>会员名:</label><p id="name" style="position:absolute;top:0px;left:50px;width:70px;height:20px">${id}</p>
-                </div>
 
             </div><!--/.nav-collapse -->
         </div>
     </nav>
 </div>
-
 <%
-    SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
-    Date date=new Date();
-    String checkinDate=sdf.format(date);
-    Calendar c=Calendar.getInstance();
-    c.add(Calendar.DATE,2);
-    String checkoutDate=sdf.format(c.getTime());
+    String checkinDate = String.valueOf(request.getAttribute("checkinDate"));
+    String checkoutDate = String.valueOf(request.getAttribute("checkoutDate"));
 %>
-<img src="img/pic01.jpg" style="width: 100%;height: 300px;z-index: -1" >
+<img src="img/pic01.jpg" style="width: 100%;height: 300px;z-index: -1">
 <div style="position: absolute;top: 220px;height:80px;width:100%;background-color: rgba(0,0,0,0.2);"></div>
 <div id="filterDiv" style="position: absolute;top: 33%;left: 20%;width:100%;height:30px;margin-top: 3%;color: white">
     <form action="searchHostel" method="post">
@@ -96,29 +87,33 @@
 
 <table style="position:relative;left:10%;top:50px;">
     <%
-        List<Hostel> hostelList=(ArrayList<Hostel>) request.getAttribute("hostels");
-        System.out.println(hostelList);
-        for(int i=0;i<hostelList.size();i++){
-            Hostel hostel=hostelList.get(i);
+        List<Hostel> hostelList = (ArrayList<Hostel>) request.getAttribute("hostels");
+        for (int i = 0; i < hostelList.size(); i++) {
+            Hostel hostel = hostelList.get(i);
+            int j = i + 1;
+            String url = "img/room" + j + ".png";
     %>
     <tr>
         <td style="padding: 50px">
-            <img src="img/pic03.jpg" style="height: 150px;width: 150px">
+            <img src="<%=url%>" style="height: 150px;width: 200px">
         </td>
         <td style="padding-bottom: 50px">
-            <h3><a href=""></a><%=hostel.getHostelName()%></h3>
-            <p style="width: 500px;height: 50px"><%=hostel.getHostelInfo()%></p>
+            <h3><a href=""></a><%=hostel.getHostelName()%>
+            </h3>
+            <p style="width: 500px;height: 50px"><%=hostel.getHostelInfo()%>
+            </p>
         </td>
         <td style="padding:50px;">
-            <h3>¥300</h3>
-            <form action="/hostelworld/searchRoom" method="post">
+            <form action="searchRoom" method="post">
+                <input type="hidden" name="checkinDate" value="<%=checkinDate%>">
+                <input type="hidden" name="checkoutDate" value="<%=checkoutDate%>">
                 <input type="hidden" name="hostelNum" value=<%=hostel.getHostelNum()%>>
                 <button type="submit" class="btn btn-default btn-primary">戳戳店铺</button>
             </form>
         </td>
     </tr>
     <%
-    }
+        }
     %>
 </table>
 
@@ -126,13 +121,6 @@
 <script src="js/jquery-3.1.1.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
-<script>
-
-    $(document).ready(function(){
-
-    });
-
-</script>
 
 </body>
 </html>

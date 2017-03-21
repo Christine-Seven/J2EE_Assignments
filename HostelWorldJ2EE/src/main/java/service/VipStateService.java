@@ -1,8 +1,11 @@
 package service;
 
+import org.springframework.stereotype.Service;
+
 /**
  * Created by Seven on 2017/2/22.
  */
+
 public interface VipStateService {
     /**
      * 更改会员卡状态

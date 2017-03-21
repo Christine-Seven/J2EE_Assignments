@@ -19,17 +19,20 @@ public class VipRegisterAction extends BaseAction{
             String vipName=request.getParameter("vipName");
             String passwd=request.getParameter("passwd");
             String bankCardId=request.getParameter("bankCardId");
+
             Vip vip=new Vip();
             vip.setVipNum(vipService.getVipNum());
             vip.setVipName(vipName);
             vip.setVipPassword(passwd);
             vip.setBankCardId(bankCardId);
-            vip.setState(VipStateEnum.register.toString());
+            vip.setState(VipStateEnum.REGISTER.toString());
             vip.setVipPoint(0);
             vip.setMoney(0);
+            vip.setVipLevel(0);
             vipService.registerVip(vip);
+
             request.getSession().setAttribute("id",vip.getVipNum());
-            request.getSession().setAttribute("type",vip);
+            request.getSession().setAttribute("type",vipService.findVipById(vip.getVipNum()));
             return "success";
         }catch (Exception e){
             e.printStackTrace();

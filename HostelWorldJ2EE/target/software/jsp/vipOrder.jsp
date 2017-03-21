@@ -3,7 +3,9 @@
 <%@ page import="java.util.DoubleSummaryStatistics" %>
 <%@ page import="util.OrderConditionEnum" %>
 <%@ page import="java.util.HashMap" %>
-<%@ page import="util.PayMethod" %><%--
+<%@ page import="util.PayMethod" %>
+<%@ page import="util.OrderVO" %>
+<%@ page import="java.util.ArrayList" %><%--
   Created by IntelliJ IDEA.
   User: Seven
   Date: 13/03/2017
@@ -51,15 +53,9 @@
                 <li><a href="searchHostel.action">预订客栈</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <!--<li id="notLogin" data-toggle="modal" data-target="#login"><a href="#">登录/注册</a></li>-->
-                <li><a href="#">我要开店</a></li>
+                <li><a href="vipInfo.action">会员名: ${id}</a></li>
+                <li><a href="hostelRegister_hostelRegister.action">我要开店</a></li>
             </ul>
-
-            <div id="memberDiv"
-                 style="position: absolute;top: 15px;left: 950px;width: 150px;height: 30px;color: black">
-                <label>会员名:</label>
-                <p id="name" style="position:absolute;top:0px;left:50px;width:70px;height:20px">${id}</p>
-            </div>
 
         </div><!--/.nav-collapse -->
     </div>
@@ -69,6 +65,8 @@
     <ul class="nav nav-pills nav-stacked" style="margin-top: 50px;">
         <li role="presentation"><a href="vipInfo.action"><h5 style="padding-left: 15px">我的资料</h5></a></li>
         <li role="presentation" class="active"><a href="vipOrder.action"><h5 style="padding-left: 15px">我的订单</h5></a></li>
+        <li role="presentation"><a href="vipSta.action"><h5 style="padding-left: 15px">统计信息</h5></a></li>
+
     </ul>
 </div>
 
@@ -95,10 +93,10 @@
         </thead>
         <tbody>
         <%
-            HashMap<Orders,String> ordersMap=(HashMap<Orders,String>) request.getAttribute("orders");
+            List<OrderVO> ordersMap=(ArrayList<OrderVO>) request.getAttribute("orders");
             int index=1;
-            for(Orders orders:ordersMap.keySet()){
-                String hostelName=ordersMap.get(orders);
+            for(OrderVO orders:ordersMap){
+                String hostelName=orders.getHostelName();
                 String checkinDate=orders.getCheckinDate();
                 String checkoutDate=orders.getCheckoutDate();
                 Double requiredMoney= orders.getRequiredMoney();
@@ -136,9 +134,13 @@
                 if(cancel){
             %>
             <td>
-                <button class="btn btn-default btn-primary btn-xs">
-                    取消
-                </button>
+                <form action="cancelOrder" method="post">
+                    <input type="hidden" name="orderNum" value=<%=orders.getOrderNum()%>>
+                    <button class="btn btn-default btn-primary btn-xs" type="submit">
+                        取消
+                    </button>
+                </form>
+
             </td>
             <%
                 }else{

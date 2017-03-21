@@ -92,4 +92,11 @@ public interface HostelService {
      */
     public List<Hostel> queryAll();
 
+    /**
+     * 根据审批状态获得订单
+     * @param approveState
+     * @return
+     */
+    public List<Hostel> queryByApprove(String approveState);
+
 }

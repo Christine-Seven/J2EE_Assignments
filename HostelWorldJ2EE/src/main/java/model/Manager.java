@@ -15,6 +15,15 @@ public class Manager {
     private String managerNum;
     private String managerName;
     private String managerPassword;
+    private double profit;
+
+    public double getProfit() {
+        return profit;
+    }
+
+    public void setProfit(double profit) {
+        this.profit = profit;
+    }
 
     public String getManagerName() {
         return managerName;

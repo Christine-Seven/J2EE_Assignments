@@ -10,6 +10,12 @@ import java.util.List;
 public interface ApprovalDao {
 
     /**
+     * 查找申请
+     * @return
+     */
+    public Approval find(int approvalNum);
+
+    /**
      * 新增申请
      * @param approval
      */

@@ -56,11 +56,15 @@ public class LoginAction extends BaseAction{
                         System.out.println("Cannot find the hostel");
                         return "relogin";
                     }else{
+                        if(hostelService.checkPassword(name,password)){
                         System.out.println("Find the hostel");
                         HttpSession session=request.getSession(true);
-                        session.setAttribute("type",hostel);
+                        session.setAttribute("hostel",hostel);
                         session.setAttribute("id", name);
                         return "hostel";
+                        }else {
+                            return "relogin";
+                        }
                     }
                 case 'M':
                     //经理
@@ -69,15 +73,20 @@ public class LoginAction extends BaseAction{
                         System.out.println("Cannot find the manager");
                         return "relogin";
                     }else{
-                        HttpSession session=request.getSession(true);
-                        session.setAttribute("type",manager);
-                        session.setAttribute("id", name);
-                        return "manager";
+                        if(managerService.checkPassword(name,password)) {
+                            HttpSession session = request.getSession(true);
+                            session.setAttribute("manager", manager);
+                            session.setAttribute("id", name);
+                            return "manager";
+                        }else {
+                            return "relogin";
+                        }
                     }
                 default:
                     //不存在该编号
                     return "relogin";
             }
+
 
     }
 }

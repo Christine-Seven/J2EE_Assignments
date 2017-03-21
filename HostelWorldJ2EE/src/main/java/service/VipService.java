@@ -39,10 +39,9 @@ public interface VipService {
     /**
      * 会员主动取消资格，删除该会员卡
      * @param vipNum
-     * @param password
      * @return
      */
-    public boolean cancelVip(String vipNum,String password);
+    public boolean cancelVip(String vipNum);
 
     /**
      * 修改会员信息

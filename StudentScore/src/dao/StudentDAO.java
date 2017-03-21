@@ -1,40 +1,15 @@
 package dao;
 
+import model.Student;
+
 /**
- * Created by Seven on 2016/12/19.
+ * Created by Seven on 19/03/2017.
  */
-public class StudentDAO {
-    String student_id;
-    String student_name;
-    String grade;
-    String gender;
-    int age;
+public interface StudentDao {
 
-    public StudentDAO(String student_id, String student_name, String grade, String gender, int age){
-        this.student_id=student_id;
-        this.student_name=student_name;
-        this.grade=grade;
-        this.gender=gender;
-        this.age=age;
-    }
+    public void save(Student student);
 
-    public String getStudent_id() {
-        return student_id;
-    }
+    public void update(Student student);
 
-    public String getStudent_name() {
-        return student_name;
-    }
-
-    public String getGrade() {
-        return grade;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public int getAge() {
-        return age;
-    }
+    public Student find(String column, String value);
 }

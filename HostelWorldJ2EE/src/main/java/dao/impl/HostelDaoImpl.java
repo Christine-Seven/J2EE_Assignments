@@ -40,7 +40,7 @@ public class HostelDaoImpl implements HostelDao {
     @Override
     public boolean checkApprove(String hostelNum) {
         Hostel hostel=this.queryHostelByNum(hostelNum);
-        if(hostel.getApprovalState().equals(ApprovalStateEnum.approve.toString())){
+        if(hostel.getApprovalState().equals(ApprovalStateEnum.APPROVE.toString())){
             return true;
         }
         return false;
@@ -87,7 +87,7 @@ public class HostelDaoImpl implements HostelDao {
 
     @Override
     public List<Hostel> queryHostelByCity(String city) {
-        String sql="select * from hostelworld.hostel as h where h.city='"+city+"';";
+        String sql="select * from hostelworld.hostel as h where h.city='"+city+"' and h.approvalState='"+ApprovalStateEnum.APPROVE.toString()+"';";
         List<Object[]> objects=baseDao.querySQL(sql);
         List<Hostel> hostels=this.getHostels(objects);
         return hostels;
@@ -119,6 +119,14 @@ public class HostelDaoImpl implements HostelDao {
         return baseDao.getAllList(Hostel.class);
     }
 
+    @Override
+    public List<Hostel> queryByApprove(String approveState) {
+        String sql="select * from hostelworld.hostel as h where h.approvalState='"+approveState+"';";
+        List<Object[]> objects=baseDao.querySQL(sql);
+        List<Hostel> hostels=this.getHostels(objects);
+        return hostels;
+    }
+
     private List<Hostel> getHostels(List<Object[]> objects){
         List<Hostel> hostels=new ArrayList<Hostel>();
         for(Object[] object:objects){
@@ -138,5 +146,6 @@ public class HostelDaoImpl implements HostelDao {
         }
         return hostels;
     }
+
 
 }

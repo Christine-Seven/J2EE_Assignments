@@ -55,8 +55,8 @@ public class OrdersDaoImpl implements OrdersDao {
     @Override
     public List<Orders> queryByHostel(String hostelNum) {
         String sql="select * from hostelworld.orders as o where o.hostelNum=\""+hostelNum+"\";";
-        List<Orders> orderses=baseDao.querySQL(sql);
-        return orderses;
+        List<Object[]> orderses=baseDao.querySQL(sql);
+        return this.getOrders(orderses);
     }
 
     @Override
@@ -69,24 +69,24 @@ public class OrdersDaoImpl implements OrdersDao {
     @Override
     public List<Orders> queryByHostelAndCheckin(String hostelNum, String checkinDate) {
         String sql="select * from hostelworld.orders as o where o.hostelNum=\""+hostelNum+"\" and o.checkinDate=\""+checkinDate+"\";";
-        List<Orders> orderses=baseDao.querySQL(sql);
-        return orderses;
+        List<Object[]> orderses=baseDao.querySQL(sql);
+        return this.getOrders(orderses);
     }
 
     @Override
     public List<Orders> queryByHostelAndCheckout(String hostelNum, String checkoutDate) {
         String sql="select * from hostelworld.orders as o where o.hostelNum=\""+hostelNum+"\" and o.checkoutDate=\""+checkoutDate+"\" and o.orderCondition=\"" +
                 OrderConditionEnum.CHECKOUT+"\";";
-        List<Orders> orderses=baseDao.querySQL(sql);
-        return orderses;
+        List<Object[]> orderses=baseDao.querySQL(sql);
+        return this.getOrders(orderses);
     }
 
     @Override
     public List<Orders> queryByCondition(String orderCondition) {
         String sql="select * from hostelworld.orders as o where o.orderCondition=\"" +
                 orderCondition+"\";";
-        List<Orders> orderses=baseDao.querySQL(sql);
-        return orderses;
+        List<Object[]> orderses=baseDao.querySQL(sql);
+        return this.getOrders(orderses);
     }
 
     private List<Orders> getOrders(List<Object[]> objects){
@@ -99,7 +99,7 @@ public class OrdersDaoImpl implements OrdersDao {
             orders.setRoomTypeId((int) object[3]);
             orders.setRoomNum((int)object[4]);
             orders.setRequiredMoney((double)object[5]);
-            orders.setRequiredMoney((double)object[6]);
+            orders.setPaidMoney((double)object[6]);
             orders.setOrderCondition(String.valueOf(object[7]));
             orders.setCheckinDate(String.valueOf(object[8]));
             orders.setCheckoutDate(String.valueOf(object[9]));

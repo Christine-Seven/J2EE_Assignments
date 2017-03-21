@@ -1,23 +1,17 @@
 package dao;
 
+import model.Course;
+
 /**
- * Created by Seven on 2016/12/19.
+ * Created by Seven on 19/03/2017.
  */
-public class CourseDAO {
 
-    String course_id;
-    String course_name;
+public interface CourseDao {
 
-    public CourseDAO(String course_id, String course_name){
-        this.course_id=course_id;
-        this.course_name=course_name;
-    }
 
-    public String getCourse_id() {
-        return course_id;
-    }
+    public void save(Course course);
 
-    public String getCourse_name() {
-        return course_name;
-    }
+    public Course find(String column, String value);
+
+    public void updateByCourseId(Course course);
 }

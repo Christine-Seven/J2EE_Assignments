@@ -49,6 +49,13 @@ public class CurrentSpareRoomInfoDaoImpl implements CurrentSpareRoomInfoDao {
         return this.getCurrentSpareRoomInfo(objects);
     }
 
+    @Override
+    public CurrentSpareRoomInfo getInfoByHostelAndRoomType(String hostelNum, int roomTypeId) {
+        String sql="select * from hostelworld.currentSpareRoomInfo as csri where csri.hostelNum='"+hostelNum+"' and csri.roomTypeId="+roomTypeId+";";
+        List<Object[]> objects=baseDao.querySQL(sql);
+        return this.getCurrentSpareRoomInfo(objects).get(0);
+    }
+
     private List<CurrentSpareRoomInfo> getCurrentSpareRoomInfo(List<Object[]> objects){
         List<CurrentSpareRoomInfo> currentSpareRoomInfos=new ArrayList<>();
         for(Object[] object:objects){

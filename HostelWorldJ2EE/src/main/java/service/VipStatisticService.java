@@ -1,7 +1,5 @@
 package service;
 
-import model.VipStaVO;
-
 /**
  * Created by Seven on 2017/2/24.
  */

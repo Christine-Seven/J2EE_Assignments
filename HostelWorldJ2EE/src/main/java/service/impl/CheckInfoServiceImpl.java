@@ -22,6 +22,11 @@ public class CheckInfoServiceImpl implements CheckInfoService {
     }
 
     @Override
+    public CheckInfo find(int checkNum) {
+        return checkInfoDao.find(checkNum);
+    }
+
+    @Override
     public void update(CheckInfo checkInfo) {
         checkInfoDao.update(checkInfo);
     }

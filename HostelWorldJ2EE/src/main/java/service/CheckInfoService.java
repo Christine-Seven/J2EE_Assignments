@@ -16,6 +16,13 @@ public interface CheckInfoService {
     public void save(CheckInfo checkInfo);
 
     /**
+     * 查找一条入离店记录
+     * @param checkNum
+     * @return
+     */
+    public CheckInfo find(int checkNum);
+
+    /**
      * 修改一条入离店记录
      * @param checkInfo
      */

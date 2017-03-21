@@ -4,5 +4,5 @@ package util;
  * Created by Seven on 2017/2/21.
  */
 public enum SettleConditionEnum {
-    settled,wait
+    SETTLED,WAIT
 }

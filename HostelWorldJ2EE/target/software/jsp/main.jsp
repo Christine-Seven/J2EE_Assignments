@@ -46,8 +46,7 @@
                     <li class="active"><a href="main.action">首页</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li data-toggle="modal" data-target="#login"><a href="#">登录/注册</a></li>
-                    <li><a href="#">我要开店</a></li>
+                    <li><a href="hostelRegister_hostelRegister.action">我要开店</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
@@ -64,7 +63,7 @@
                 <h4 class="modal-title" style="align-items: center;padding-left: 3%">注册新会员</h4>
             </div>
             <div class="modal-body">
-                <form action="/hostelworld/vipRegister" method="post" onsubmit="return toRegister()">
+                <form action="vipRegister" method="post" onsubmit="return toRegister()">
                     <div class="form-group">
                         <input type="text" name="vipName" id="vipName" class="form-control" placeholder="请输入会员名">
                     </div>
@@ -75,7 +74,7 @@
                         <input type="password" name="confirmpwd" id="cpwd" class="form-control" placeholder="请再次输入密码">
                     </div>
                     <div class="form-group">
-                        <input type="number" name="bandCardId" id="bankCardId" class="form-control"
+                        <input type="number" name="bankCardId" id="bankCardId" class="form-control"
                                placeholder="请输入银行卡号">
                     </div>
                     <div class="row">
@@ -96,10 +95,10 @@
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
-<div class="col-md-4 row" style="margin-top:20%;margin-left:7%;background-color: rgba(163, 166, 157, 0.67);">
-    <h4 class="modal-title" style="align-items: center;padding-left: 3%;padding-top: 3%">欢迎登录</h4>
+<div class="col-md-4 row" style="margin-top:15%;margin-left:10%;background-color: rgba(0,0,0,0.6);">
+    <h4 class="modal-title" style="align-items: center;padding-left: 3%;padding-top: 3%;color: #1ab7ea">欢迎登录</h4>
     <div class="modal-body">
-            <form action="/hostelworld/login" method="post" onsubmit="return toLogin()">
+            <form action="login" method="post" onsubmit="return toLogin()">
                 <div class="form-group">
                     <input type="name" id="name" name="name" class="form-control" placeholder="请输入会员名">
                 </div>

@@ -16,6 +16,12 @@ public interface BalanceSettleDao {
     public void save(BalanceSettle balanceSettle);
 
     /**
+     * 获得结算历史
+     * @return
+     */
+    public List<BalanceSettle> getAll();
+
+    /**
      * 更新结算历史
      * @param balanceSettle
      */
@@ -40,4 +46,12 @@ public interface BalanceSettleDao {
      * @return
      */
     public List<BalanceSettle> getBalanceSettleByCondition(String condition);
+
+    /**
+     * 根据客栈编号和结算状态获得记录
+     * @param hostelNum
+     * @param condition
+     * @return
+     */
+    public BalanceSettle getByHostelAndCondition(String hostelNum,String condition);
 }

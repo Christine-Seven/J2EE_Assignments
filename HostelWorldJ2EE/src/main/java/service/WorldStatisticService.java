@@ -1,9 +1,5 @@
 package service;
 
-import model.WorldBalanceStaVO;
-import model.WorldCheckInStaVO;
-import model.WorldVipStaVO;
-
 /**
  * Created by Seven on 2017/2/25.
  */

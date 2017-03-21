@@ -65,10 +65,16 @@ public interface ManagerService {
     public void approve(List<Approval> approvals);
 
     /**
+     * 获得所有截止日期之前的待结算信息
+     * @param date
+     * @return
+     */
+    public List<BalanceSettle> getWaitSettle(String date) throws ParseException;
+    /**
      * 结算
      * 将balanceSettle中所有截止日期之前的待结算款项都结算给各个分店
      * @return
      */
-    public List<BalanceSettle> settleBalance(String date) throws ParseException;
+    public List<BalanceSettle> settleBalance(String date,String managerNum) throws ParseException;
 
 }

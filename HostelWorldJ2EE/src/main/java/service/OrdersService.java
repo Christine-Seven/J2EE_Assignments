@@ -38,6 +38,11 @@ public interface OrdersService {
      */
     public boolean pay(String orderNum, double money);
 
+    /**
+     * 取消订单
+     * @param orderNum
+     * @return
+     */
     public boolean cancel(String orderNum);
 
     /**
@@ -76,6 +81,13 @@ public interface OrdersService {
      * @return
      */
     public List<Orders> queryByHostelAndCheckout(String hostelNum, String checkoutDate);
+
+    /**
+     * 根据订单状态查询订单
+     * @param state
+     * @return
+     */
+    public List<Orders> queryByState(String state);
 
 
 }

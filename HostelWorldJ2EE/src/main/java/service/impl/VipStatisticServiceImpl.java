@@ -1,6 +1,5 @@
 package service.impl;
 
-import model.VipStaVO;
 import org.springframework.stereotype.Service;
 import service.VipStatisticService;
 

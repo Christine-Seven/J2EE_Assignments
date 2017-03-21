@@ -1,20 +1,19 @@
 package action;
 
-import model.CurrentSpareRoomInfo;
+import model.CheckInfo;
 import model.Hostel;
 import model.Orders;
+import model.RoomPlan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import service.CurrentSpareRoomService;
-import service.HostelService;
-import service.OrdersService;
-import service.RoomTypeService;
+import service.*;
+import util.ApprovalStateEnum;
 import util.OrderConditionEnum;
 import util.PayMethod;
+import util.RoomVO;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 /**
  * Created by Seven on 2017/3/2.
@@ -30,16 +29,34 @@ public class VipReserveAction extends BaseAction {
     RoomTypeService roomTypeService;
     @Autowired
     OrdersService ordersService;
+    @Autowired
+    CheckInfoService checkInfoService;
+    @Autowired
+    RoomPlanService roomPlanService;
 
     public String hostelSearch() throws Exception {
+        SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
+        Date date=new Date();
+        String d1=sdf.format(date);
+        Calendar c=Calendar.getInstance();
+        c.add(Calendar.DATE,1);
+        String d2=sdf.format(c.getTime());
+
         String checkinDate = request.getParameter("checkinDate");
+        if(checkinDate==null){
+            checkinDate=d1;
+        }
         String checkoutDate = request.getParameter("checkoutDate");
+        if(checkoutDate==null){
+            checkoutDate=d2;
+        }
+
         String city = request.getParameter("city");
         List<Hostel> hostelList;
         if (city != null) {
             hostelList = hostelService.queryHostelByCity(city);
         } else {
-            hostelList = hostelService.queryAll();
+            hostelList = hostelService.queryByApprove(ApprovalStateEnum.APPROVE.toString());
         }
         if (hostelList != null) {
             request.setAttribute("hostels", hostelList);
@@ -56,45 +73,70 @@ public class VipReserveAction extends BaseAction {
 
     public String roomSearch() throws Exception {
         String hostelNum = request.getParameter("hostelNum");
-        List<CurrentSpareRoomInfo> currentSpareRoomInfos = currentSpareRoomService.getCurrentSpareRoom(hostelNum);
-        if (currentSpareRoomInfos != null) {
-            Map<String, Integer> roomMap = new HashMap<>();
-            for (CurrentSpareRoomInfo currentSpareRoomInfo : currentSpareRoomInfos) {
-                int typeId = currentSpareRoomInfo.getRoomTypeId();
-
-                String type = roomTypeService.find(typeId).getRoomType();
-                System.out.println(typeId+"  "+type);
-                if (!roomMap.containsKey(type)) {
-                    roomMap.put(type, currentSpareRoomInfo.getSpareNum());
-                }
+        String checkinDate = request.getParameter("checkinDate");
+        String checkoutDate = request.getParameter("checkoutDate");
+        SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
+        int days=(int)((sdf.parse(checkoutDate).getTime()-sdf.parse(checkinDate).getTime())/86400000);
+        System.out.println("day "+days);
+        List<CheckInfo> checkInfos = checkInfoService.getCheckInfoBetween(checkinDate, checkoutDate);
+        HashMap<String, Integer> rooms = new HashMap<>();
+        for (CheckInfo checkInfo : checkInfos) {
+            String roomType = roomTypeService.find(checkInfo.getRoomTypeId()).getRoomType();
+            if (rooms.keySet().contains(roomType)) {
+                int roomNum = rooms.get(roomType) + 1;
+                rooms.replace(roomType, roomNum);
+            } else {
+                rooms.put(roomType, 1);
             }
-            request.setAttribute("rooms", roomMap);
+        }
+        //获得客栈计划
+        List<RoomVO> roomVOs = new ArrayList<>();
+        List<RoomPlan> roomPlans = roomPlanService.queryNewestRoomPlan(hostelNum);
+        if(roomPlans!=null) {
+            for (RoomPlan roomPlan : roomPlans) {
+                RoomVO roomVO = new RoomVO();
+                String roomType = roomTypeService.find(roomPlan.getRoomTypeId()).getRoomType();
+                roomVO.setRoomType(roomType);
+                if (rooms.keySet().contains(roomType)) {
+                    roomVO.setNum(roomPlan.getRoomNum() - rooms.get(roomType));
+                    roomVO.setPrice(roomPlan.getRoomPrice());
+                } else {
+                    roomVO.setNum(roomPlan.getRoomNum());
+                    roomVO.setPrice(roomPlan.getRoomPrice());
+                }
+                roomVO.setRequiredMoney(roomVO.getPrice()*days);
+                roomVOs.add(roomVO);
+            }
+
+            request.setAttribute("rooms", roomVOs);
             Hostel hostel = hostelService.queryHostelByNum(hostelNum);
             request.setAttribute("hostelName", hostel.getHostelName());
             request.setAttribute("hostelInfo", hostel.getHostelInfo());
+            request.setAttribute("checkinDate", checkinDate);
+            request.setAttribute("checkoutDate", checkoutDate);
             request.setAttribute("hostelNum", hostelNum);
             return "rooms";
-        } else {
+        }else {
             return "notFound";
         }
-    }
+}
 
-    public String hostelReserve() throws Exception{
-        String hostelNum=request.getParameter("hostelNum");
-        String vipNum=request.getParameter("vipNum");
-        String roomNum=request.getParameter("roomNum");
-        String roomType=request.getParameter("roomType");
-        String requiredMoney=request.getParameter("requiredMoney");
-        String checkinDate=request.getParameter("checkinDate");
-        String checkoutDate=request.getParameter("checkoutDate");
-        String payMethod=request.getParameter("payMethod");
-        Orders orders=new Orders();
-        String orderNum=ordersService.getOrderNum(hostelNum);
+    public String hostelReserve() throws Exception {
+        String hostelNum = request.getParameter("hostelNum");
+        String vipNum = request.getParameter("vipNum");
+        int roomNum = 1;
+        String roomType = request.getParameter("roomType");
+        String requiredMoney = request.getParameter("requiredMoney");
+        String checkinDate = request.getParameter("checkinDate");
+        String checkoutDate = request.getParameter("checkoutDate");
+        String payMethod = request.getParameter("payMethod");
+        Orders orders = new Orders();
+        String orderNum = ordersService.getOrderNum(hostelNum);
         orders.setOrderNum(orderNum);
         orders.setRoomTypeId(roomTypeService.queryByType(roomType).getId());
         orders.setHostelNum(hostelNum);
         orders.setVipNum(vipNum);
-        orders.setRoomNum(Integer.valueOf(roomNum));
+        orders.setRoomNum(roomNum);
         orders.setRequiredMoney(Double.valueOf(requiredMoney));
         orders.setOrderCondition(OrderConditionEnum.BOOK.toString());
         orders.setCheckinDate(checkinDate);
@@ -102,10 +144,10 @@ public class VipReserveAction extends BaseAction {
         orders.setPayMethod(payMethod);
         ordersService.saveOrders(orders);
 
-        if(payMethod.equals(PayMethod.CARD.toString())){
-            if(ordersService.pay(orderNum,Double.valueOf(requiredMoney))){
+        if (payMethod.equals(PayMethod.CARD.toString())) {
+            if (ordersService.pay(orderNum, Double.valueOf(requiredMoney))) {
                 return "orders";
-            }else{
+            } else {
                 return "notEnoughMoney";
             }
         }

@@ -1,6 +1,7 @@
 package serviceImpl;
 
 
+import dao.StudentDao;
 import utility.Constant;
 
 import javax.naming.NamingException;
@@ -11,7 +12,11 @@ import java.sql.Statement;
 /**
  * Created by Seven on 2016/12/19.
  */
+@Service
 public class UserDataServiceImpl {
+
+    @Autowired
+    StudentDao studentDao;
 
     public boolean getUserByID(String id,String password) throws NamingException, SQLException {
 

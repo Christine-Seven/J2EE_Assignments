@@ -89,4 +89,11 @@ public interface HostelDao {
      * @return
      */
     public List<Hostel> queryAll();
+
+    /**
+     * 根据审批情况获得客栈信息
+     * @param approveState
+     * @return
+     */
+    public List<Hostel> queryByApprove(String approveState);
 }

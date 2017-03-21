@@ -1,9 +1,5 @@
 package service;
 
-import model.HostelBalanceStaVO;
-import model.HostelCheckInStaVO;
-import model.HostelVipStaVO;
-
 /**
  * Created by Seven on 2017/2/24.
  */

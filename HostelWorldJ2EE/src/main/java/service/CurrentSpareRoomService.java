@@ -28,5 +28,11 @@ public interface CurrentSpareRoomService {
      */
     public void update(CurrentSpareRoomInfo currentSpareRoomInfo);
 
-
+    /**
+     *
+     * @param hostelNum
+     * @param roomTypeId
+     * @return
+     */
+    public CurrentSpareRoomInfo getCurrentSpareRoomByRoomType(String hostelNum,int roomTypeId);
 }

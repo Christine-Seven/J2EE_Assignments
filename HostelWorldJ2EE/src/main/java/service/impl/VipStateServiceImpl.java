@@ -33,7 +33,7 @@ public class VipStateServiceImpl implements VipStateService {
         Date date=calendar.getTime();
         //判断哪些会员到有效期了且卡上费用小于1000的
         for(Vip vip:vips){
-            if(vip.getState().equals(VipStateEnum.activate.toString())) {
+            if(vip.getState().equals(VipStateEnum.ACTIVATE.toString())) {
                 try {
                     Date validDate = sdf.parse(vip.getValidDate());
                     //判断今天是否是激活态会员卡的到期日
@@ -42,7 +42,7 @@ public class VipStateServiceImpl implements VipStateService {
                         if(vip.getMoney()<1000) {
                             //会员余额不足，会员卡转为暂停状态,有效期延后一年
                             calendar.add(Calendar.YEAR,1);
-                            vip.setState(VipStateEnum.suspend.toString());
+                            vip.setState(VipStateEnum.SUSPEND.toString());
                             vip.setValidDate(sdf.format(calendar.getTime()));
                             vipDao.update(vip);
                         }else {
@@ -57,13 +57,13 @@ public class VipStateServiceImpl implements VipStateService {
                     return false;
                 }
 
-            }else if(vip.getState().equals(VipStateEnum.suspend.toString())){
+            }else if(vip.getState().equals(VipStateEnum.SUSPEND.toString())){
                 try {
                     Date validDate=sdf.parse(vip.getValidDate());
                     //判断是否是暂停态会员卡的到期日
                     if(!date.before(validDate)){
                         //已经到了暂停日子的有效期限,停止该会员卡
-                        vip.setState(VipStateEnum.cancel.toString());
+                        vip.setState(VipStateEnum.CANCEL.toString());
                         vipDao.update(vip);
                     }
                 } catch (ParseException e) {

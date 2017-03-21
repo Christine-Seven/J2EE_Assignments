@@ -14,6 +14,7 @@ public class Vip implements Serializable {
 
     @Id
     private String vipNum;
+
     private String vipName;
     private String vipPassword;
     private String bankCardId;

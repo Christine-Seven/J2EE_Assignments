@@ -13,12 +13,30 @@ public class CheckInfo {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int checkNum;
     private String hostelNum;
-    private String lodgerNum;
+    private String lodgerName;
     private double paidMoney;
     private String checkCondition;
     private String checkinDate;
     private String checkoutDate;
     private int roomTypeId;
+    private String roomNum;
+    private String orderNum;
+
+    public String getOrderNum() {
+        return orderNum;
+    }
+
+    public void setOrderNum(String orderNum) {
+        this.orderNum = orderNum;
+    }
+
+    public String getRoomNum() {
+        return roomNum;
+    }
+
+    public void setRoomNum(String roomNum) {
+        this.roomNum = roomNum;
+    }
 
     public int getRoomTypeId() {
         return roomTypeId;
@@ -68,12 +86,12 @@ public class CheckInfo {
         this.hostelNum = hostelNum;
     }
 
-    public String getLodgerNum() {
-        return lodgerNum;
+    public String getLodgerName() {
+        return lodgerName;
     }
 
-    public void setLodgerNum(String lodgerNum) {
-        this.lodgerNum = lodgerNum;
+    public void setLodgerName(String lodgerName) {
+        this.lodgerName =lodgerName;
     }
 
     public double getPaidMoney() {

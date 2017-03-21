@@ -3,7 +3,6 @@ package service.impl;
 import dao.HostelDao;
 import dao.RoomTypeDao;
 import model.Hostel;
-import model.RoomType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import service.HostelService;
@@ -82,6 +81,11 @@ public class HostelServiceImpl implements HostelService {
     @Override
     public List<Hostel> queryAll() {
         return hostelDao.queryAll();
+    }
+
+    @Override
+    public List<Hostel> queryByApprove(String approveState){
+        return hostelDao.queryByApprove(approveState);
     }
 
 }

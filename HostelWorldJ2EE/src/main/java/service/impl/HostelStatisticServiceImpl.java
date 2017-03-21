@@ -1,8 +1,5 @@
 package service.impl;
 
-import model.HostelBalanceStaVO;
-import model.HostelCheckInStaVO;
-import model.HostelVipStaVO;
 import org.springframework.stereotype.Service;
 import service.HostelStatisticService;
 
