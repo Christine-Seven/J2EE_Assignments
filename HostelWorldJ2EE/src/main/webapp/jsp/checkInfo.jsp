@@ -107,6 +107,7 @@
                 <tr style="background-color: rgba(190, 188, 198, 0.67)">
                     <td>#</td>
                     <td>会员编号</td>
+                    <td>入住人姓名</td>
                     <td>入住日期</td>
                     <td>离店日期</td>
                     <td>房间号</td>
@@ -129,6 +130,20 @@
                         <td>
                             <input type="hidden" value="<%=orders.getVipNum()%>" name="lodgerName">
                             <%=orders.getVipNum()%>
+                        </td>
+                        <td>
+                        <%
+                            if(orders.getRoomTypeId()==3){
+                        %>
+                            <input name="lodger1">
+                        <%
+                            }else{
+                        %>
+                        <input name="lodger1">
+                        <input name="lodger2">
+                        <%
+                            }
+                        %>
                         </td>
                         <td>
                             <input type="hidden" value="<%=orders.getCheckinDate()%>" name="checkinDate">
@@ -217,8 +232,10 @@
                             <button class="btn btn-default btn-primary btn-xs">确认离店</button>
                             <%
                             } else {
-                            <%=checkInfo.getCheckCondition()%>
-                            }
+                            %>
+                            <span><%=checkInfo.getCheckCondition()%></span>
+                            <%
+                                }
                             %>
                         </td>
                     </tr>

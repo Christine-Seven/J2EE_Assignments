@@ -32,7 +32,6 @@ public class VipRegisterAction extends BaseAction{
             vipService.registerVip(vip);
 
             request.getSession().setAttribute("id",vip.getVipNum());
-            request.getSession().setAttribute("type",vipService.findVipById(vip.getVipNum()));
             return "success";
         }catch (Exception e){
             e.printStackTrace();

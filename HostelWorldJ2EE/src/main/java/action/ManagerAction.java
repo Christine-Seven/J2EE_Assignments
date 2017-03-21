@@ -87,7 +87,7 @@ public class ManagerAction extends BaseAction {
         List<BalanceSettle> balanceSettles;
         try {
             balanceSettles = managerService.getWaitSettle(sdf.format(date));
-            System.out.println(balanceSettles.size());
+            System.out.println(balanceSettles.size()+"~~~");
             request.setAttribute("balanceSettle",balanceSettles);
             return "settle";
         } catch (ParseException e) {
@@ -96,6 +96,7 @@ public class ManagerAction extends BaseAction {
     }
 
     public String managerSettle(){
+        System.out.println("entered!");
         String managerNum=String.valueOf(request.getSession().getAttribute("id"));
         Date date=new Date();
         SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");

@@ -71,7 +71,7 @@
 </div>
 
 
-<fieldset style="position:absolute;top:100px;left:200px;width: 950px;height: 620px">
+<fieldset style="position:absolute;top:100px;left:200px;width: 1000px;height: 620px">
     <legend>开店申请</legend>
     <table class="table" style="margin: 30px">
         <thead style="background-color: rgba(190, 188, 198, 0.67)">

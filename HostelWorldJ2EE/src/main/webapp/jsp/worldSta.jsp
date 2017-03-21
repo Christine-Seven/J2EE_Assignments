@@ -194,6 +194,9 @@
                         case CANCEL:
                             state = "已取消";
                             break;
+                        case SETTLE:
+                            state="已结算";
+                            break;
                         default:
                             state = "错误状态";
                             break;

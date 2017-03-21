@@ -52,7 +52,7 @@
         </action>
 
         <action name="vipRegister" class="action.VipRegisterAction">
-            <result name="success">/jsp/vipInfo.jsp</result>
+            <result name="success" type="chain">vipInfo</result>
             <result name="error">/jsp/main.jsp</result>
         </action>
 

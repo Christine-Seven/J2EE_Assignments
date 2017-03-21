@@ -13,8 +13,6 @@ import util.OrderConditionEnum;
 import util.SettleConditionEnum;
 
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -78,59 +76,53 @@ public class ManagerServiceImpl implements ManagerService {
     @Override
     public List<BalanceSettle> getWaitSettle(String date) throws ParseException {
         List<Orders> orderses = ordersDao.queryByCondition(OrderConditionEnum.CHECKOUT.toString());
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        Date d = sdf.parse(date);
+//        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+//        Date d = sdf.parse(date);
+//        List<BalanceSettle> balanceSettles=new ArrayList<>();
         for (Orders orders : orderses) {
-            Date checkoutDate = sdf.parse(orders.getCheckoutDate());
-            if (checkoutDate.before(d)) {
-                String hostelNum = orders.getHostelNum();
-                double paidMoney = orders.getPaidMoney();
-                boolean isExist=false;
-                //若数据库中已存在该hostelNum并且结算状态为wait，则将paidMoney加到balance上
-                //若不存在wait状态的hostelNum，则新建一条结算记录，并将其状态置为wait
-               BalanceSettle balanceSettle = balanceSettleDao.getByHostelAndCondition(hostelNum, SettleConditionEnum.WAIT.toString());
-                if (balanceSettle != null) {
-                        double currentBalance = balanceSettle.getBalance();
-                        balanceSettle.setBalance(currentBalance + paidMoney);
-                        balanceSettleDao.update(balanceSettle);
+            String hostelNum = orders.getHostelNum();
+            double paidMoney = orders.getPaidMoney();
+            //若数据库中已存在该hostelNum并且结算状态为wait，则将paidMoney加到balance上
+            //若不存在wait状态的hostelNum，则新建一条结算记录，并将其状态置为wait
+            BalanceSettle balanceSettle = balanceSettleDao.getByHostelAndCondition(hostelNum, SettleConditionEnum.WAIT.toString());
+            if (balanceSettle != null) {
+                double currentBalance = balanceSettle.getBalance();
+                balanceSettle.setBalance(currentBalance + paidMoney);
+                balanceSettleDao.update(balanceSettle);
 
-                        orders.setOrderCondition(OrderConditionEnum.SETTLE.toString());
-                        ordersDao.update(orders);
-                        isExist = true;
-                }
-
-                if (!isExist) {
-                    BalanceSettle settle = new BalanceSettle();
-                    settle.setHostelNum(hostelNum);
-                    settle.setSettleCondition(SettleConditionEnum.WAIT.toString());
-                    settle.setBalance(paidMoney);
-                    settle.setSettleDate(date);
-                    balanceSettleDao.save(settle);
-
-                    orders.setOrderCondition(OrderConditionEnum.SETTLE.toString());
-                    ordersDao.update(orders);
-                }
+                orders.setOrderCondition(OrderConditionEnum.SETTLE.toString());
+                ordersDao.update(orders);
+//                balanceSettles.add(balanceSettle);
+            }else {
+                BalanceSettle settle = new BalanceSettle();
+                settle.setHostelNum(hostelNum);
+                settle.setSettleCondition(SettleConditionEnum.WAIT.toString());
+                settle.setBalance(paidMoney);
+                settle.setSettleDate(date);
+                balanceSettleDao.save(settle);
+//                balanceSettles.add(settle);
+                orders.setOrderCondition(OrderConditionEnum.SETTLE.toString());
+                ordersDao.update(orders);
             }
         }
 
         List<BalanceSettle> balanceSettles = balanceSettleDao.getAll();
-        System.out.println("!!!"+balanceSettles);
         return balanceSettles;
     }
 
 
     @Override
-    public List<BalanceSettle> settleBalance(String date,String managerNum) throws ParseException {
+    public List<BalanceSettle> settleBalance(String date, String managerNum) throws ParseException {
         //查找对应经理的账户
-        Manager manager=managerDao.queryByNum(managerNum);
-        double profit=manager.getProfit();
+        Manager manager = managerDao.queryByNum(managerNum);
+        double profit = manager.getProfit();
         //获得所有wait状态的结算记录，将其balance添加到对应的hostel的profit中
         //并将其状态置为settled
         List<BalanceSettle> balanceSettles = balanceSettleDao.getBalanceSettleByCondition(SettleConditionEnum.WAIT.toString());
         for (BalanceSettle balanceSettle : balanceSettles) {
 
             Hostel hostel = hostelDao.queryHostelByNum(balanceSettle.getHostelNum());
-            double currentBalance = balanceSettle.getBalance()*0.8;
+            int currentBalance =(int) (balanceSettle.getBalance() * 0.8);
             double currentProfit = hostel.getProfit();
             hostel.setProfit(currentProfit + currentBalance);
             hostelDao.updateHostel(hostel);
@@ -138,10 +130,11 @@ public class ManagerServiceImpl implements ManagerService {
             balanceSettle.setSettleCondition(SettleConditionEnum.SETTLED.toString());
             balanceSettleDao.update(balanceSettle);
 
-            profit=profit+balanceSettle.getBalance()*0.2;
+            profit = profit + balanceSettle.getBalance() -currentBalance;
         }
         manager.setProfit(profit);
         managerDao.update(manager);
+
         List<BalanceSettle> settles = balanceSettleDao.getAll();
         return settles;
     }

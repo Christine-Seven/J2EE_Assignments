@@ -67,49 +67,54 @@
     </ul>
 </div>
 <%
-    int total=(int)request.getAttribute("total");
-    double totalMoney=(double) request.getAttribute("totalMoney");
-    HashMap<String,Double> hostel=(HashMap<String,Double>)request.getAttribute("hostels");
-    String jsonObject= JSONObject.toJSONString(hostel);
+    int total = (int) request.getAttribute("total");
+    double totalMoney = (double) request.getAttribute("totalMoney");
+    HashMap<String, Double> hostel = (HashMap<String, Double>) request.getAttribute("hostels");
+    String jsonObject = JSONObject.toJSONString(hostel);
 
 %>
 <div style="position: absolute;top:80px;left:160px;width: 900px;height: 600px;">
-        <div class="row" style="top: 100px;">
-            <div class="col-md-4 col-md-offset-2">
-                <div class=""
-                     style="background: #337AB7;margin-right: 0.8em;box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);transition: 0.5s all;border-radius: 20px">
-                    <div class="col-md-8" style="padding: 10px;">
-                        <h3 style="color: #fff;font-size: 2.5em;font-family: 'Carrois Gothic', sans-serif;"><%=total%>张</h3>
-                        <h4 style="	font-size: 1.2em;color: #fff;margin: 0.3em 0em;font-family: 'Carrois Gothic', sans-serif;">
-                            累计订单</h4>
-                        <p style=" color: #fff;font-size: 0.8em;line-height: 1.8em;">心之所向</p>
-                    </div>
-                    <div class="col-md-4 market-update-right" style="top:25px;font-size: 3em;color:#337AB7;width: 80px;height: 80px;background: #fff;text-align: center;border-radius: 49px;-o-border-radius:49px;line-height: 1.7em;">
-                        <span class="glyphicon glyphicon-list-alt" aria-hidden="true" style="top:10px"></span>
-                    </div>
-                    <div class="clearfix"></div>
+    <div class="row" style="top: 100px;">
+        <div class="col-md-4 col-md-offset-2">
+            <div class=""
+                 style="background: #337AB7;margin-right: 0.8em;box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);transition: 0.5s all;border-radius: 20px">
+                <div class="col-md-8" style="padding: 10px;">
+                    <h3 style="color: #fff;font-size: 2.5em;font-family: 'Carrois Gothic', sans-serif;"><%=total%>张</h3>
+                    <h4 style="	font-size: 1.2em;color: #fff;margin: 0.3em 0em;font-family: 'Carrois Gothic', sans-serif;">
+                        累计订单</h4>
+                    <p style=" color: #fff;font-size: 0.8em;line-height: 1.8em;">心之所向</p>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class=""
-                     style="background: #337AB7;margin-right: 0.8em;box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);transition: 0.5s all;border-radius: 20px">
-                    <div class="col-md-8" style="padding: 10px;">
-                        <h3 style="color: #fff;font-size: 2.5em;font-family: 'Carrois Gothic', sans-serif;">¥<%=totalMoney%></h3>
-                        <h4 style="	font-size: 1.2em;color: #fff;margin: 0.3em 0em;font-family: 'Carrois Gothic', sans-serif;">
-                            累计消费</h4>
-                        <p style=" color: #fff;font-size: 0.8em;line-height: 1.8em;">心之所向</p>
-                    </div>
-                    <div class="col-md-4 market-update-right" style="top:25px;font-size: 3em;color:#337AB7;width: 80px;height: 80px;background: #fff;text-align: center;border-radius: 49px;-o-border-radius:49px;line-height: 1.7em;">
-                        <span class="glyphicon glyphicon-list-alt" aria-hidden="true" style="top:10px"></span>
-                    </div>
-                    <div class="clearfix"></div>
+                <div class="col-md-4 market-update-right"
+                     style="top:25px;font-size: 3em;color:#337AB7;width: 80px;height: 80px;background: #fff;text-align: center;border-radius: 49px;-o-border-radius:49px;line-height: 1.7em;">
+                    <span class="glyphicon glyphicon-list-alt" aria-hidden="true" style="top:10px"></span>
                 </div>
+                <div class="clearfix"></div>
             </div>
         </div>
+        <div class="col-md-4">
+            <div class=""
+                 style="background: #337AB7;margin-right: 0.8em;box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);transition: 0.5s all;border-radius: 20px">
+                <div class="col-md-8" style="padding: 10px;">
+                    <h3 style="color: #fff;font-size: 2.5em;font-family: 'Carrois Gothic', sans-serif;">¥<%=totalMoney%>
+                    </h3>
+                    <h4 style="	font-size: 1.2em;color: #fff;margin: 0.3em 0em;font-family: 'Carrois Gothic', sans-serif;">
+                        累计消费</h4>
+                    <p style=" color: #fff;font-size: 0.8em;line-height: 1.8em;">心之所向</p>
+                </div>
+                <div class="col-md-4 market-update-right"
+                     style="top:25px;font-size: 3em;color:#337AB7;width: 80px;height: 80px;background: #fff;text-align: center;border-radius: 49px;-o-border-radius:49px;line-height: 1.7em;">
+                    <span class="glyphicon glyphicon-list-alt" aria-hidden="true" style="top:10px"></span>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
     <div class="col-md-6 col-md-offset-2">
-        <div id="main" style="width: 600px;height:400px;">
+        <fieldset>
+            <legend>消费情况统计</legend>
+            <div id="main" style="width: 600px;height:400px;"></div>
+        </fieldset>
 
-        </div>
     </div>
 
 </div>
@@ -124,34 +129,93 @@
 
     // 基于准备好的dom，初始化echarts实例
     var myChart = echarts.init(document.getElementById('main'));
-    var hostels=<%=jsonObject%>;
-    var hostel=[];
-    var money=[];
-    for(var item in hostels){
+    var hostels =<%=jsonObject%>;
+    var hostel = [];
+    var money = [];
+    var res = [];
+    for (var item in hostels) {
+        res.push(
+                {
+                    name: item,
+                    value: hostels[item]
+                }
+        );
         hostel.push(item);
         money.push(hostels[item]);
     }
-//    for(var i=0;){
-//        money.push(hostels["string"][item]);
-//    }
+
+    //    for(var i=0;){
+    //        money.push(hostels["string"][item]);
+    //    }
     // 指定图表的配置项和数据
-    var option = {
+    option = {
+        backgroundColor: '#ffffff',
+
         title: {
-            text: '消费统计'
+            text: '消费情况',
+            left: 'center',
+            top: 20,
+            textStyle: {
+                color: '#000000'
+            }
         },
-        tooltip: {},
-        legend: {
-            data: ['消费金额']
+
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
         },
-        xAxis: {
-            data: hostel
+
+        visualMap: {
+            show: false,
+            min: 80,
+            max: 600,
+            inRange: {
+                colorLightness: [0, 1]
+            }
         },
-        yAxis: {},
-        series: [{
-            name: '消费金额',
-            type: 'bar',
-            data: money
-        }]
+        series: [
+            {
+                name: '客栈名称',
+                type: 'pie',
+                radius: '55%',
+                center: ['50%', '50%'],
+                data: res.sort(function (a, b) {
+                    return a.value - b.value
+                }),
+                roseType: 'angle',
+                label: {
+                    normal: {
+                        textStyle: {
+                            color: 'rgba(0,0,0, 0.3)'
+                        }
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        lineStyle: {
+                            color: 'rgba(0, 0, 0, 0.3)'
+                        },
+                        smooth: 0.2,
+                        length: 10,
+                        length2: 20
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        color: '#c23531',
+                        shadowBlur: 200,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                },
+
+                animationType: 'scale',
+                animationEasing: 'elasticOut',
+                animationDelay: function (idx) {
+                    return Math.random() * 200;
+                }
+            }
+        ]
+
     };
 
     // 使用刚指定的配置项和数据显示图表。

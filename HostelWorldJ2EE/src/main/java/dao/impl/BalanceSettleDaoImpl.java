@@ -25,9 +25,10 @@ public class BalanceSettleDaoImpl implements BalanceSettleDao {
 
     @Override
     public List<BalanceSettle> getAll() {
-        String sql="select * from hostelworld.balanceSettle;";
-        List<Object[]> objects=baseDao.querySQL(sql);
-        return this.getBalanceSettle(objects);
+        return baseDao.getAllList(BalanceSettle.class);
+//        String sql="select * from hostelworld.balanceSettle;";
+//        List<Object[]> objects=baseDao.querySQL(sql);
+//        return this.getBalanceSettle(objects);
     }
 
     @Override

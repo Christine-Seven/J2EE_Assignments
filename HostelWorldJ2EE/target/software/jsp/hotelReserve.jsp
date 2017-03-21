@@ -134,11 +134,11 @@
                                         <span name="hostelName"> <%=hostelName%> </span>
                                     </label>
                                     <br>
-                                    <label style="padding: 5px">
-                                        房间类型：
+                                    <%--<label style="padding: 5px">--%>
+                                        <%--房间类型：--%>
                                         <input type="hidden" name="roomType" value=<%=roomVO.getRoomType()%>>
-                                        <span> <%=roomVO.getRoomType()%> </span>
-                                    </label>
+                                        <%--<span> <%=roomVO.getRoomType()%> </span>--%>
+                                    <%--</label>--%>
                                     <br>
                                     <label style="padding:5px">入住日期：<%=checkinDate%></label>
                                     <input type="hidden" name="checkinDate" value=<%=checkinDate%>>
@@ -151,7 +151,7 @@
                                         <span>¥<%=roomVO.getRequiredMoney()%></span>
                                     </label>
                                     <label style="padding: 10px;width: 200px;height: 30px">会员价:
-                                        <span>¥<%=roomVO.getRequiredMoney()*0.8%></span>
+                                        <span>¥<%=(int)roomVO.getRequiredMoney()*0.8%></span>
                                         <input name="requiredMoney" type="hidden" value="<%=roomVO.getRequiredMoney()*0.8%>">
                                     </label>
                                     <label class="form-inline" style="padding: 10px">付款方式：

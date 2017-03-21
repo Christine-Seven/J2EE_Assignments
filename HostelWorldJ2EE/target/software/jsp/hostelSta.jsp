@@ -78,7 +78,7 @@
                 <div class="col-md-8" style="padding-left: 30px;">
                     <h3 style="color: #fff;font-size: 2.5em;font-family: 'Carrois Gothic', sans-serif;">¥<%=totalProfit%></h3>
                     <h4 style="	font-size: 1.2em;color: #fff;margin: 0.3em 0em;font-family: 'Carrois Gothic', sans-serif;">
-                        累计收益</h4>
+                        已结算收益</h4>
                     <p style=" color: #fff;font-size: 0.8em;line-height: 1.8em;">赚了好多！</p>
                 </div>
                 <div class="col-md-4 market-update-right"
@@ -94,7 +94,7 @@
                 <div class="col-md-8" style="padding-left: 30px;">
                     <h3 style="color: #fff;font-size: 2.5em;font-family: 'Carrois Gothic', sans-serif;">¥<%=orderProfit%></h3>
                     <h4 style="	font-size: 1.2em;color: #fff;margin: 0.3em 0em;font-family: 'Carrois Gothic', sans-serif;">
-                        订单收益</h4>
+                        订单总额</h4>
                     <p style=" color: #fff;font-size: 0.8em;line-height: 1.8em;">表现不错！</p>
                 </div>
                 <div class="col-md-4 market-update-right"
@@ -145,6 +145,7 @@
                         case CHECKOUT:state="已离店";break;
                         case OVERDUE:state="已过期";break;
                         case CANCEL:state="已取消";break;
+                        case SETTLE:state="已结算";break;
                         default:state="错误状态";break;
                     }
             %>
