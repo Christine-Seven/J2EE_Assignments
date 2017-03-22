@@ -106,7 +106,7 @@
         </div>
     </div>
     <fieldset style="margin: 80px">
-        <legend>历史订单</legend>
+        <legend>历史入住</legend>
         <table class="table" style="width: 800px">
             <thead style="background-color: rgba(190, 188, 198, 0.67)">
             <tr>

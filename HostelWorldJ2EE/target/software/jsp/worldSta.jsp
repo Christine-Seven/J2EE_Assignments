@@ -138,7 +138,7 @@
 
     <fieldset style="margin-top: 10px;margin-right: 50px;margin-left: 30px">
         <legend>订单统计</legend>
-        <table class="table" style="width: 800px">
+        <table class="table" style="width: 1000px">
             <thead style="background-color: rgba(190, 188, 198, 0.67)">
             <tr>
                 <td>#</td>
@@ -240,29 +240,81 @@
     var myChart = echarts.init(document.getElementById('checkNums'));
     var checkNums=<%=jsonObject%>;
     var hostel=[];
-    var check=[];
     for(var item in checkNums){
-        hostel.push(item);
-        check.push(checkNums[item]);
+        hostel.push({
+            name:item,
+            value:checkNums[item]
+        })
     }
     // 指定图表的配置项和数据
-    var option = {
+    option = {
+        backgroundColor: '#ffffff',
+
         title: {
-            text: '消费统计'
+            text: '消费情况',
+            left: 'center',
+            top: 20,
+            textStyle: {
+                color: '#000000'
+            }
         },
-        tooltip: {},
-        legend: {
-            data: ['消费金额']
+
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
         },
-        xAxis: {
-            data: hostel
+
+        visualMap: {
+            show: false,
+            min: 80,
+            max: 600,
+            inRange: {
+                colorLightness: [0, 1]
+            }
         },
-        yAxis: {},
-        series: [{
-            name: '消费金额',
-            type: 'bar',
-            data: check
-        }]
+        series: [
+            {
+                name: '客栈名称',
+                type: 'pie',
+                radius: '55%',
+                center: ['50%', '50%'],
+                data: hostel.sort(function (a, b) {
+                    return a.value - b.value
+                }),
+                roseType: 'angle',
+                label: {
+                    normal: {
+                        textStyle: {
+                            color: 'rgba(0,0,0, 0.3)'
+                        }
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        lineStyle: {
+                            color: 'rgba(0, 0, 0, 0.3)'
+                        },
+                        smooth: 0.2,
+                        length: 10,
+                        length2: 20
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        color: '#c23531',
+                        shadowBlur: 200,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                },
+
+                animationType: 'scale',
+                animationEasing: 'elasticOut',
+                animationDelay: function (idx) {
+                    return Math.random() * 200;
+                }
+            }
+        ]
+
     };
 
     // 使用刚指定的配置项和数据显示图表。

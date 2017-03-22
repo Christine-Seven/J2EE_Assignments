@@ -109,7 +109,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-6 col-md-offset-2">
+    <div class="col-md-6 col-md-offset-2"  style="top:100px;">
         <fieldset>
             <legend>消费情况统计</legend>
             <div id="main" style="width: 600px;height:400px;"></div>

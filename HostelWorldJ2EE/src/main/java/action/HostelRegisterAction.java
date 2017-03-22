@@ -96,7 +96,7 @@ public class HostelRegisterAction extends BaseAction {
         approval.setHostelNum(hostelNum);
         approval.setApprovalType(ApprovalType.MODIFY.toString());
         approval.setApproveState(ApprovalStateEnum.WAIT.toString());
-        approval.setApplyDate(sdf.format(sdf.format(date)));
+        approval.setApplyDate(sdf.format(date));
         approvalService.save(approval);
 
         request.getSession().setAttribute("hostel",hostel);
