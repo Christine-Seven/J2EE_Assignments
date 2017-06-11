@@ -84,7 +84,7 @@ public class VipReserveAction extends BaseAction {
             String roomType = roomTypeService.find(checkInfo.getRoomTypeId()).getRoomType();
             if (rooms.keySet().contains(roomType)) {
                 int roomNum = rooms.get(roomType) + 1;
-                rooms.replace(roomType, roomNum);
+//                rooms.replace(roomType, roomNum);
             } else {
                 rooms.put(roomType, 1);
             }

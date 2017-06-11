@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - hostelworld@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.1">
+    <root id="1"/>
+    <schema id="2" parent="1" name="hostelworld">
+      <Visible>1</Visible>
+    </schema>
+    <table id="3" parent="2" name="approval"/>
+    <table id="4" parent="2" name="balanceSettle"/>
+    <table id="5" parent="2" name="bankCard"/>
+    <table id="6" parent="2" name="checkInfo"/>
+    <table id="7" parent="2" name="currentSpareRoomInfo"/>
+    <table id="8" parent="2" name="hibernate_sequence"/>
+    <table id="9" parent="2" name="hostel"/>
+    <table id="10" parent="2" name="lodgerInfo"/>
+    <table id="11" parent="2" name="manager"/>
+    <table id="12" parent="2" name="orders"/>
+    <table id="13" parent="2" name="roomPlan"/>
+    <table id="14" parent="2" name="vip"/>
+    <table id="15" parent="2" name="roomType"/>
+    <table id="16" parent="2" name="discountStrategy"/>
+    <column id="17" parent="3" name="approvalNum">
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="18" parent="3" name="hostelNum">
+      <DataType>varchar(7)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="19" parent="3" name="approveDate">
+      <DataType>date|0</DataType>
+    </column>
+    <column id="20" parent="3" name="approvalType">
+      <DataType>enum(&apos;REGISTER&apos;, &apos;MODIFY&apos;)|0</DataType>
+      <DefaultExpression>&apos;REGISTER&apos;</DefaultExpression>
+    </column>
+    <column id="21" parent="3" name="approveState">
+      <DataType>enum(&apos;APPROVE&apos;, &apos;DISAPPROVE&apos;, &apos;WAIT&apos;)|0</DataType>
+      <DefaultExpression>&apos;WAIT&apos;</DefaultExpression>
+    </column>
+    <column id="22" parent="3" name="applyDate">
+      <DataType>date|0</DataType>
+    </column>
+    <key id="23" parent="3" name="PRIMARY">
+      <ColNames>approvalNum</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="24" parent="4" name="settleNum">
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="25" parent="4" name="settleDate">
+      <DataType>date|0</DataType>
+    </column>
+    <column id="26" parent="4" name="balance">
+      <DataType>double|0</DataType>
+    </column>
+    <column id="27" parent="4" name="settleCondition">
+      <DataType>enum(&apos;SETTLED&apos;, &apos;WAIT&apos;)|0</DataType>
+    </column>
+    <column id="28" parent="4" name="hostelNum">
+      <DataType>varchar(7)|0</DataType>
+    </column>
+    <key id="29" parent="4" name="PRIMARY">
+      <ColNames>settleNum</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="30" parent="5" name="bankCardId">
+      <DataType>varchar(19)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="5" name="balance">
+      <DataType>double|0</DataType>
+    </column>
+    <key id="32" parent="5" name="PRIMARY">
+      <ColNames>bankCardId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="33" parent="6" name="hostelNum">
+      <DataType>varchar(7)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="34" parent="6" name="lodgerName">
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="35" parent="6" name="paidMoney">
+      <DataType>double|0</DataType>
+    </column>
+    <column id="36" parent="6" name="checkCondition">
+      <DataType>enum(&apos;CHECKIN&apos;, &apos;CHECKOUT&apos;)|0</DataType>
+    </column>
+    <column id="37" parent="6" name="checkinDate">
+      <DataType>date|0</DataType>
+    </column>
+    <column id="38" parent="6" name="checkoutDate">
+      <DataType>date|0</DataType>
+    </column>
+    <column id="39" parent="6" name="checkNum">
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="40" parent="6" name="roomTypeId">
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="41" parent="6" name="roomNum">
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="42" parent="6" name="orderNum">
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <index id="43" parent="6" name="checkInfo_roomType_id_fk">
+      <ColNames>roomTypeId</ColNames>
+    </index>
+    <key id="44" parent="6" name="PRIMARY">
+      <ColNames>checkNum</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="45" parent="6" name="checkInfo_roomType_id_fk">
+      <ColNames>roomTypeId</ColNames>
+      <RefTableName>roomType</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnUpdate>restrict</OnUpdate>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <column id="46" parent="7" name="hostelNum">
+      <DataType>varchar(7)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="47" parent="7" name="spareNum">
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="48" parent="7" name="id">
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="49" parent="7" name="roomTypeId">
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="50" parent="7" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="51" parent="8" name="next_val">
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="52" parent="9" name="hostelNum">
+      <DataType>varchar(7)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="53" parent="9" name="hostelPassword">
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="54" parent="9" name="profit">
+      <DataType>double|0</DataType>
+    </column>
+    <column id="55" parent="9" name="province">
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="56" parent="9" name="city">
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="57" parent="9" name="address">
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="58" parent="9" name="hostelInfo">
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="59" parent="9" name="approvalState">
+      <DataType>enum(&apos;APPROVE&apos;, &apos;DISAPPROVE&apos;, &apos;WAIT&apos;)|0</DataType>
+    </column>
+    <column id="60" parent="9" name="level">
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="61" parent="9" name="hostelName">
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="62" parent="9" name="applyDate">
+      <DataType>date|0</DataType>
+    </column>
+    <key id="63" parent="9" name="PRIMARY">
+      <ColNames>hostelNum</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="64" parent="10" name="lodgerNum">
+      <DataType>varchar(7)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="65" parent="10" name="lodgerName">
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="66" parent="10" name="idNum">
+      <DataType>varchar(22)|0</DataType>
+    </column>
+    <column id="67" parent="10" name="gender">
+      <DataType>enum(&apos;MALE&apos;, &apos;FEMALE&apos;)|0</DataType>
+    </column>
+    <key id="68" parent="10" name="PRIMARY">
+      <ColNames>lodgerNum</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="69" parent="11" name="managerNum">
+      <DataType>varchar(7)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="70" parent="11" name="managerName">
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="71" parent="11" name="managerPassword">
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="72" parent="11" name="profit">
+      <DataType>double|0</DataType>
+    </column>
+    <key id="73" parent="11" name="PRIMARY">
+      <ColNames>managerNum</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="74" parent="12" name="orderNum">
+      <DataType>varchar(15)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="75" parent="12" name="hostelNum">
+      <DataType>varchar(7)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="76" parent="12" name="vipNum">
+      <DataType>varchar(7)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="77" parent="12" name="roomTypeId">
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="78" parent="12" name="roomNum">
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="79" parent="12" name="requiredMoney">
+      <DataType>double|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="80" parent="12" name="paidMoney">
+      <DataType>double|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="81" parent="12" name="orderCondition">
+      <DataType>enum(&apos;BOOK&apos;, &apos;CHECKIN&apos;, &apos;CHECKOUT&apos;, &apos;OVERDUE&apos;, &apos;CANCEL&apos;, &apos;VALID&apos;, &apos;SETTLE&apos;)|0</DataType>
+      <DefaultExpression>&apos;BOOK&apos;</DefaultExpression>
+    </column>
+    <column id="82" parent="12" name="checkinDate">
+      <DataType>date|0</DataType>
+      <DefaultExpression>&apos;1970-01-01&apos;</DefaultExpression>
+    </column>
+    <column id="83" parent="12" name="checkoutDate">
+      <DataType>date|0</DataType>
+      <DefaultExpression>&apos;1970-01-01&apos;</DefaultExpression>
+    </column>
+    <column id="84" parent="12" name="payMethod">
+      <DataType>enum(&apos;CASH&apos;, &apos;CARD&apos;)|0</DataType>
+    </column>
+    <index id="85" parent="12" name="order_roomType_id_fk">
+      <ColNames>roomTypeId</ColNames>
+    </index>
+    <key id="86" parent="12" name="PRIMARY">
+      <ColNames>orderNum</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="87" parent="12" name="order_roomType_id_fk">
+      <ColNames>roomTypeId</ColNames>
+      <RefTableName>roomType</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnUpdate>restrict</OnUpdate>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <column id="88" parent="13" name="id">
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="89" parent="13" name="hostelNum">
+      <DataType>varchar(7)|0</DataType>
+    </column>
+    <column id="90" parent="13" name="roomTypeId">
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="91" parent="13" name="roomNum">
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="92" parent="13" name="startDate">
+      <DataType>date|0</DataType>
+    </column>
+    <column id="93" parent="13" name="endDate">
+      <DataType>date|0</DataType>
+    </column>
+    <column id="94" parent="13" name="roomPrice">
+      <DataType>double|0</DataType>
+    </column>
+    <column id="95" parent="13" name="date">
+      <DataType>date|0</DataType>
+    </column>
+    <index id="96" parent="13" name="roomInfo_roomType_id_fk">
+      <ColNames>roomTypeId</ColNames>
+    </index>
+    <key id="97" parent="13" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="98" parent="13" name="roomInfo_roomType_id_fk">
+      <ColNames>roomTypeId</ColNames>
+      <RefTableName>roomType</RefTableName>
+      <RefKeyName>PRIMARY</RefKeyName>
+      <RefColNames>id</RefColNames>
+      <OnUpdate>restrict</OnUpdate>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <column id="99" parent="14" name="vipNum">
+      <DataType>varchar(7)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="100" parent="14" name="vipName">
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="101" parent="14" name="vipPassword">
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="102" parent="14" name="bankCardId">
+      <DataType>varchar(19)|0</DataType>
+    </column>
+    <column id="103" parent="14" name="vipPoint">
+      <DataType>double|0</DataType>
+    </column>
+    <column id="104" parent="14" name="money">
+      <DataType>double|0</DataType>
+    </column>
+    <column id="105" parent="14" name="state">
+      <DataType>enum(&apos;ACTIVATE&apos;, &apos;SUSPEND&apos;, &apos;CANCEL&apos;, &apos;REGISTER&apos;)|0</DataType>
+    </column>
+    <column id="106" parent="14" name="activateDate">
+      <DataType>date|0</DataType>
+    </column>
+    <column id="107" parent="14" name="vipLevel">
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="108" parent="14" name="validDate">
+      <DataType>date|0</DataType>
+    </column>
+    <key id="109" parent="14" name="PRIMARY">
+      <ColNames>vipNum</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="110" parent="15" name="id">
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="111" parent="15" name="roomType">
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="112" parent="15" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="113" parent="16" name="vipLevel">
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="114" parent="16" name="discount">
+      <DataType>double|0</DataType>
+    </column>
+    <key id="115" parent="16" name="PRIMARY">
+      <ColNames>vipLevel</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

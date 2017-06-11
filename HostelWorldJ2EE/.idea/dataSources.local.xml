@@ -2,13 +2,19 @@
 <project version="4">
   <component name="dataSourceStorageLocal">
     <data-source name="dataSource" uuid="808a5b3b-761b-4897-8e25-60a9d974fd3d">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
       <first-sync>true</first-sync>
       <user-name>jdbc:mysql://localhost:3306/hostelworld?characterEncoding=utf8</user-name>
-      <user-password>dfd8dfc5dfc5dfde</user-password>
     </data-source>
     <data-source name="MySQL - hostelworld@localhost" uuid="24d74b96-a60f-4995-8eeb-94037dbc7fb1">
+      <database-info product="MySQL" version="5.7.14" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper" />
       <secret-storage>master_key</secret-storage>
       <user-name>root</user-name>
+      <introspection-schemas>*:hostelworld</introspection-schemas>
     </data-source>
   </component>
 </project>

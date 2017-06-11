@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="2573832835">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
     <data-source source="LOCAL" name="dataSource" uuid="808a5b3b-761b-4897-8e25-60a9d974fd3d">
       <driver-ref>123456</driver-ref>
       <imported>true</imported>

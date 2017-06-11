@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="dataSourceStorageLocal">
-    <data-source name="MySQL - hostelworld@localhost" uuid="cbdec35e-b107-440d-a4e4-505d1cbd1ad3">
-      <secret-storage>master_key</secret-storage>
-      <user-name>root</user-name>
-    </data-source>
-  </component>
-</project>
