@@ -5,360 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4a6a2d4-434d-420c-9397-bfb49141c13d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/.idea/artifacts/HostelWorld_war_exploded.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/.idea/compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/.idea/copyright/profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/.idea/dataSources.ids" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/.idea/dataSources.local.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/.idea/dataSources.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/.idea/libraries/Hibernate_4_2_2_4_2_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/.idea/libraries/Spring_4_3_6_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/.idea/libraries/fastjson_1_2_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/.idea/libraries/javax_servlet_jstl_1_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/.idea/libraries/javax_servlet_servlet_api_3_0_alpha_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/.idea/libraries/json_lib_2_2_3_jdk15.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/.idea/libraries/mysql_mysql_connector_java_6_0_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/.idea/libraries/org_apache_maven_surefire_surefire_junit4_2_19_11.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/.idea/libraries/org_apache_struts_struts2_json_plugin_2_2_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/.idea/libraries/org_apache_struts_struts2_spring_plugin_2_0_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/.idea/libraries/org_aspectj_aspectjweaver_1_8_10.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/.idea/libraries/org_springframework_spring_test_4_3_6_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/.idea/libraries/org_springframework_spring_web_4_3_6_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/.idea/libraries/struts2_core_2_2_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/.idea/uiDesigner.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/HostelWorld.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/lib/antlr-2.7.7.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/lib/dom4j-1.6.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/lib/hamcrest-core-1.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/lib/hibernate-commons-annotations-4.0.2.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/lib/hibernate-core-4.2.2.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/lib/hibernate-jpa-2.0-api-1.0.1.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/lib/javassist-3.15.0-GA.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/lib/jboss-logging-3.1.0.GA.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/lib/jboss-transaction-api_1.1_spec-1.0.1.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/lib/junit-4.12.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/action/BaseAction.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/action/HostelApplyAction.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/action/HostelCheckInAction.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/action/HostelCheckOutAction.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/action/HostelModifyInfoAction.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/action/HostelPlanAction.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/action/HostelRegisterAction.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/action/HostelStaInfoAction.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/action/LoginAction.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/action/ManagerApproveAction.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/action/ManagerSettleAction.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/action/VipActiviateAction.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/action/VipCancelCardAction.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/action/VipCancelReserveAction.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/action/VipModifyInfoAction.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/action/VipPayAction.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/action/VipRegisterAction-validation.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/action/VipRegisterAction.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/action/VipReserveAction.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/action/VipStaInfoAction.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/action/WorldStaInfoAction.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/applicationContext.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/dao/ApprovalDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/dao/BalanceSettleDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/dao/BankCardDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/dao/BaseDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/dao/CheckInfoDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/dao/CurrentSpareRoomInfoDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/dao/DiscountStrategyDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/dao/HostelDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/dao/LodgerInfoDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/dao/ManagerDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/dao/OrdersDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/dao/RoomPlanDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/dao/RoomTypeDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/dao/VipDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/dao/impl/ApprovalDaoImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/dao/impl/BalanceSettleDaoImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/dao/impl/BankCardDaoImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/dao/impl/BaseDaoImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/dao/impl/CheckInfoDaoImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/dao/impl/CurrentSpareRoomInfoDaoImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/dao/impl/DiscountStrategyDaoImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/dao/impl/HostelDaoImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/dao/impl/LodgerInfoDaoImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/dao/impl/ManagerDaoImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/dao/impl/OrdersDaoImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/dao/impl/RoomPlanDaoImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/dao/impl/RoomTypeDaoImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/dao/impl/VipDaoImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/model/Approval.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/model/BalanceSettle.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/model/BankCard.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/model/CheckInfo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/model/CurrentSpareRoomInfo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/model/DiscountStrategy.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/model/Hostel.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/model/HostelBalanceStaVO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/model/HostelCheckInStaVO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/model/HostelVipStaVO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/model/LodgerInfo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/model/Manager.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/model/Orders.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/model/RoomPlan.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/model/RoomType.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/model/Vip.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/model/VipStaVO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/model/WorldBalanceStaVO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/model/WorldCheckInStaVO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/model/WorldVipStaVO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/service/ApprovalService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/service/CheckInfoService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/service/CurrentSpareRoomService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/service/DiscountStrategyService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/service/HostelService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/service/HostelStatisticService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/service/ManagerService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/service/OrdersService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/service/RoomPlanService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/service/VipBalanceService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/service/VipService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/service/VipStateService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/service/VipStatisticService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/service/WorldStatisticService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/service/impl/ApprovalServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/service/impl/CheckInfoServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/service/impl/CurrentSpareRoomServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/service/impl/DiscountStrategyServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/service/impl/HostelServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/service/impl/HostelStatisticServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/service/impl/ManagerServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/service/impl/OrdersServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/service/impl/RoomPlanServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/service/impl/VipBalanceServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/service/impl/VipServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/service/impl/VipStateServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/service/impl/VipStatisticServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/service/impl/WorldStatisticServiceImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/struts.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/util/ApprovalStateEnum.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/util/ApprovalType.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/util/CheckConditionEnum.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/util/GenderEnum.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/util/OrderConditionEnum.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/util/RoomTypeEnum.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/util/SettleConditionEnum.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/src/util/VipStateEnum.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/class/logging.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/antlr-2.7.7.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/aopalliance-1.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/asm-3.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/asm-3.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/asm-commons-3.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/asm-commons-3.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/asm-tree-3.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/asm-tree-3.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/aspectjweaver-1.8.10.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/avalon-framework-4.1.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/cdi-api-1.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/classmate-1.3.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/commons-fileupload-1.2.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/commons-fileupload-1.3.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/commons-fileupload-1.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/commons-io-2.0.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/commons-io-2.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/commons-io-2.4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/commons-lang-2.5.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/commons-lang3-3.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/commons-lang3-3.4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/commons-logging-1.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/dom4j-1.6.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/el-api-2.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/fastjson-1.2.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/freemarker-2.3.16.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/freemarker-2.3.19.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/freemarker-2.3.23.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/geronimo-jta_1.1_spec-1.1.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/gson-2.2.4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/hibernate-commons-annotations-5.0.1.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/hibernate-core-5.2.3.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/hibernate-jpa-2.1-api-1.0.0.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/jandex-2.0.0.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/javassist-3.11.0.GA.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/javassist-3.20.0-GA.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/javax.inject-1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/javax.servlet-api-3.0.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/jboss-interceptors-api_1.1_spec-1.0.0.Beta1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/jboss-logging-3.3.0.Final.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/json-lib-2.2.3-jdk15.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/jsp-api-2.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/jsr250-api-1.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/jstl-1.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/junit-4.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/log4j-1.2.12.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/log4j-api-2.5.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/logkit-1.0.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/mysql-connector-java-6.0.5.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/ognl-3.0.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/ognl-3.0.6.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/ognl-3.1.8.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/servlet-api-2.4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/servlet-api-3.0-alpha-1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/spring-aop-4.3.6.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/spring-aspects-4.3.6.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/spring-beans-4.3.6.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/spring-context-4.3.6.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/spring-context-support-4.3.6.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/spring-core-4.3.6.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/spring-expression-4.3.6.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/spring-instrument-4.3.6.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/spring-instrument-tomcat-4.3.6.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/spring-jdbc-4.3.6.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/spring-jms-4.3.6.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/spring-messaging-4.3.6.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/spring-orm-4.3.6.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/spring-oxm-4.3.6.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/spring-test-4.3.6.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/spring-tx-4.3.6.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/spring-web-4.3.6.RELEASE.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/struts2-core-2.2.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/struts2-core-2.3.16.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/struts2-core-2.5.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/struts2-json-plugin-2.2.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/struts2-json-plugin-2.3.16.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/struts2-spring-plugin-2.0.6.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/surefire-api-2.19.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/surefire-junit4-2.19.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/xwork-2.0.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/xwork-core-2.2.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/lib/xwork-core-2.3.16.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/WEB-INF/web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/bootstrap-3.3.7-dist.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/bootstrap-3.3.7-dist/css/bootstrap-theme.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/bootstrap-3.3.7-dist/css/bootstrap-theme.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/bootstrap-3.3.7-dist/css/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/bootstrap-3.3.7-dist/css/bootstrap.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/bootstrap-3.3.7-dist/css/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/bootstrap-3.3.7-dist/css/bootstrap.min.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/bootstrap-3.3.7-dist/js/bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/bootstrap-3.3.7-dist/js/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/bootstrap-3.3.7-dist/js/npm.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/css/AdminLTE.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/css/bootstrap-datetimepicker.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/css/bootstrap-datetimepicker.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/css/bootstrap-theme.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/css/bootstrap-theme.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/css/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/css/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/css/qiqi.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/font/glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/font/glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/font/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/font/glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/img/banner.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/img/bg.JPG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/img/bg1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/img/bg2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/img/bg3.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/img/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/img/logo.psd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/img/pic01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/img/pic02.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/img/pic03.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/img/pic04.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/img/pic05.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/js/bootstrap-datetimepicker.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/js/bootstrap-datetimepicker.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/js/bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/js/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/js/jquery-1.8.3.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/js/npm.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/jsp/ajax.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/jsp/alert.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/jsp/fail.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/jsp/generic.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/jsp/hostelRegister.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/jsp/hostel_login.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/jsp/hotelReserve.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/jsp/hotelReserve.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/jsp/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/jsp/index.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/jsp/login.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/jsp/login.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/jsp/main.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/jsp/main.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/jsp/qiqi.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/jsp/success.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/jsp/try.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/jsp/vipInfo.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/jsp/vipregister.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/mypages/activityexplore.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/mypages/activityjoined.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/mypages/activitymy.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/mypages/administrator.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/mypages/analyse.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/mypages/css/AdminLTE.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/mypages/css/AdminLTE.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/mypages/css/_all-skins.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/mypages/css/blue.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/mypages/css/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/mypages/css/common.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/mypages/css/main.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/mypages/friendsexplore.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/mypages/friendslist.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/mypages/images/u64.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/mypages/images/u847.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/mypages/login.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/mypages/moments.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/mypages/password.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/mypages/plugins/Chart.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/mypages/plugins/app.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/mypages/plugins/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/mypages/plugins/dataTables.bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/mypages/plugins/demo.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/mypages/plugins/fastclick.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/mypages/plugins/icheck.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/mypages/plugins/jquery-2.2.3.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/mypages/plugins/jquery.dataTables.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/mypages/plugins/jquery.slimscroll.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/mypages/profile.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/mypages/register.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../HostelWorld/web/mypages/upload.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../StudentScore/src/filters/CharacterEncodingFilter.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../StudentScore/src/listeners/ContextListener.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../StudentScore/src/listeners/LoginNumListener.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../StudentScore/web/WEB-INF/applicationContext.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/action/BaseAction.class" afterPath="$PROJECT_DIR$/target/classes/action/BaseAction.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/util/Str2Calendar.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/action/HostelAction.class" afterPath="$PROJECT_DIR$/target/classes/action/HostelAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/action/HostelRegisterAction.class" afterPath="$PROJECT_DIR$/target/classes/action/HostelRegisterAction.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/action/LoginAction.class" afterPath="$PROJECT_DIR$/target/classes/action/LoginAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/action/MainAction.class" afterPath="$PROJECT_DIR$/target/classes/action/MainAction.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/action/ManagerAction.class" afterPath="$PROJECT_DIR$/target/classes/action/ManagerAction.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/action/VipInfoAction.class" afterPath="$PROJECT_DIR$/target/classes/action/VipInfoAction.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/action/VipOrderAction.class" afterPath="$PROJECT_DIR$/target/classes/action/VipOrderAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/action/VipRegisterAction.class" afterPath="$PROJECT_DIR$/target/classes/action/VipRegisterAction.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/action/VipReserveAction.class" afterPath="$PROJECT_DIR$/target/classes/action/VipReserveAction.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/action/WorldStaInfoAction.class" afterPath="$PROJECT_DIR$/target/classes/action/WorldStaInfoAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/ApprovalDao.class" afterPath="$PROJECT_DIR$/target/classes/dao/ApprovalDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/BalanceSettleDao.class" afterPath="$PROJECT_DIR$/target/classes/dao/BalanceSettleDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/BankCardDao.class" afterPath="$PROJECT_DIR$/target/classes/dao/BankCardDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/BaseDao.class" afterPath="$PROJECT_DIR$/target/classes/dao/BaseDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/CheckInfoDao.class" afterPath="$PROJECT_DIR$/target/classes/dao/CheckInfoDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/CurrentSpareRoomInfoDao.class" afterPath="$PROJECT_DIR$/target/classes/dao/CurrentSpareRoomInfoDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/DiscountStrategyDao.class" afterPath="$PROJECT_DIR$/target/classes/dao/DiscountStrategyDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/HostelDao.class" afterPath="$PROJECT_DIR$/target/classes/dao/HostelDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/LodgerInfoDao.class" afterPath="$PROJECT_DIR$/target/classes/dao/LodgerInfoDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/ManagerDao.class" afterPath="$PROJECT_DIR$/target/classes/dao/ManagerDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/OrdersDao.class" afterPath="$PROJECT_DIR$/target/classes/dao/OrdersDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/RoomPlanDao.class" afterPath="$PROJECT_DIR$/target/classes/dao/RoomPlanDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/RoomTypeDao.class" afterPath="$PROJECT_DIR$/target/classes/dao/RoomTypeDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/VipDao.class" afterPath="$PROJECT_DIR$/target/classes/dao/VipDao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/impl/ApprovalDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/dao/impl/ApprovalDaoImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/impl/BalanceSettleDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/dao/impl/BalanceSettleDaoImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/impl/BankCardDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/dao/impl/BankCardDaoImpl.class" />
@@ -373,84 +27,27 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/impl/RoomPlanDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/dao/impl/RoomPlanDaoImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/impl/RoomTypeDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/dao/impl/RoomTypeDaoImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/impl/VipDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/dao/impl/VipDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/Approval.class" afterPath="$PROJECT_DIR$/target/classes/model/Approval.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/BalanceSettle.class" afterPath="$PROJECT_DIR$/target/classes/model/BalanceSettle.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/BankCard.class" afterPath="$PROJECT_DIR$/target/classes/model/BankCard.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/CheckInfo.class" afterPath="$PROJECT_DIR$/target/classes/model/CheckInfo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/CurrentSpareRoomInfo.class" afterPath="$PROJECT_DIR$/target/classes/model/CurrentSpareRoomInfo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/DiscountStrategy.class" afterPath="$PROJECT_DIR$/target/classes/model/DiscountStrategy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/Hostel.class" afterPath="$PROJECT_DIR$/target/classes/model/Hostel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/LodgerInfo.class" afterPath="$PROJECT_DIR$/target/classes/model/LodgerInfo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/Manager.class" afterPath="$PROJECT_DIR$/target/classes/model/Manager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/Orders.class" afterPath="$PROJECT_DIR$/target/classes/model/Orders.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/RoomPlan.class" afterPath="$PROJECT_DIR$/target/classes/model/RoomPlan.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/RoomType.class" afterPath="$PROJECT_DIR$/target/classes/model/RoomType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/model/Vip.class" afterPath="$PROJECT_DIR$/target/classes/model/Vip.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/service/ApprovalService.class" afterPath="$PROJECT_DIR$/target/classes/service/ApprovalService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/service/BalanceSettleService.class" afterPath="$PROJECT_DIR$/target/classes/service/BalanceSettleService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/service/CheckInfoService.class" afterPath="$PROJECT_DIR$/target/classes/service/CheckInfoService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/service/CurrentSpareRoomService.class" afterPath="$PROJECT_DIR$/target/classes/service/CurrentSpareRoomService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/service/DiscountStrategyService.class" afterPath="$PROJECT_DIR$/target/classes/service/DiscountStrategyService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/service/HostelService.class" afterPath="$PROJECT_DIR$/target/classes/service/HostelService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/service/ManagerService.class" afterPath="$PROJECT_DIR$/target/classes/service/ManagerService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/service/OrdersService.class" afterPath="$PROJECT_DIR$/target/classes/service/OrdersService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/service/RoomPlanService.class" afterPath="$PROJECT_DIR$/target/classes/service/RoomPlanService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/service/RoomTypeService.class" afterPath="$PROJECT_DIR$/target/classes/service/RoomTypeService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/service/VipBalanceService.class" afterPath="$PROJECT_DIR$/target/classes/service/VipBalanceService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/service/VipService.class" afterPath="$PROJECT_DIR$/target/classes/service/VipService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/service/VipStateService.class" afterPath="$PROJECT_DIR$/target/classes/service/VipStateService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/service/impl/ApprovalServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/service/impl/ApprovalServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/service/impl/BalanceSettleServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/service/impl/BalanceSettleServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/service/impl/CheckInfoServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/service/impl/CheckInfoServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/service/impl/CurrentSpareRoomServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/service/impl/CurrentSpareRoomServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/service/impl/DiscountStrategyServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/service/impl/DiscountStrategyServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/service/impl/HostelServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/service/impl/HostelServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/service/impl/ManagerServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/service/impl/ManagerServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/service/impl/OrdersServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/service/impl/OrdersServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/service/impl/RoomPlanServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/service/impl/RoomPlanServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/service/impl/RoomTypeServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/service/impl/RoomTypeServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/service/impl/VipBalanceServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/service/impl/VipBalanceServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/service/impl/VipServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/service/impl/VipServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/service/impl/VipStateServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/service/impl/VipStateServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/util/ApprovalStateEnum.class" afterPath="$PROJECT_DIR$/target/classes/util/ApprovalStateEnum.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/util/ApprovalType.class" afterPath="$PROJECT_DIR$/target/classes/util/ApprovalType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/util/ApprovalVO.class" afterPath="$PROJECT_DIR$/target/classes/util/ApprovalVO.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/util/CheckConditionEnum.class" afterPath="$PROJECT_DIR$/target/classes/util/CheckConditionEnum.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/util/GenderEnum.class" afterPath="$PROJECT_DIR$/target/classes/util/GenderEnum.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/util/OrderConditionEnum.class" afterPath="$PROJECT_DIR$/target/classes/util/OrderConditionEnum.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/util/OrderVO.class" afterPath="$PROJECT_DIR$/target/classes/util/OrderVO.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/util/PayMethod.class" afterPath="$PROJECT_DIR$/target/classes/util/PayMethod.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/util/RoomPlanVO.class" afterPath="$PROJECT_DIR$/target/classes/util/RoomPlanVO.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/util/RoomState.class" afterPath="$PROJECT_DIR$/target/classes/util/RoomState.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/util/RoomTypeEnum.class" afterPath="$PROJECT_DIR$/target/classes/util/RoomTypeEnum.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/util/RoomVO.class" afterPath="$PROJECT_DIR$/target/classes/util/RoomVO.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/util/SettleConditionEnum.class" afterPath="$PROJECT_DIR$/target/classes/util/SettleConditionEnum.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/util/VipStateEnum.class" afterPath="$PROJECT_DIR$/target/classes/util/VipStateEnum.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/action/BaseAction.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/action/BaseAction.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/action/HostelAction.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/action/HostelAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/action/HostelRegisterAction.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/action/HostelRegisterAction.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/action/LoginAction.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/action/LoginAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/action/MainAction.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/action/MainAction.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/action/ManagerAction.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/action/ManagerAction.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/action/VipInfoAction.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/action/VipInfoAction.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/action/VipOrderAction.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/action/VipOrderAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/action/VipRegisterAction.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/action/VipRegisterAction.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/action/VipReserveAction.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/action/VipReserveAction.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/action/WorldStaInfoAction.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/action/WorldStaInfoAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/ApprovalDao.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/ApprovalDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/BalanceSettleDao.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/BalanceSettleDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/BankCardDao.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/BankCardDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/BaseDao.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/BaseDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/CheckInfoDao.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/CheckInfoDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/CurrentSpareRoomInfoDao.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/CurrentSpareRoomInfoDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/DiscountStrategyDao.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/DiscountStrategyDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/HostelDao.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/HostelDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/LodgerInfoDao.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/LodgerInfoDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/ManagerDao.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/ManagerDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/OrdersDao.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/OrdersDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/RoomPlanDao.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/RoomPlanDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/RoomTypeDao.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/RoomTypeDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/VipDao.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/VipDao.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/impl/ApprovalDaoImpl.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/impl/ApprovalDaoImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/impl/BalanceSettleDaoImpl.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/impl/BalanceSettleDaoImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/impl/BankCardDaoImpl.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/impl/BankCardDaoImpl.class" />
@@ -465,68 +62,28 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/impl/RoomPlanDaoImpl.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/impl/RoomPlanDaoImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/impl/RoomTypeDaoImpl.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/impl/RoomTypeDaoImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/impl/VipDaoImpl.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/impl/VipDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/model/Approval.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/model/Approval.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/model/BalanceSettle.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/model/BalanceSettle.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/model/BankCard.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/model/BankCard.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/model/CheckInfo.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/model/CheckInfo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/model/CurrentSpareRoomInfo.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/model/CurrentSpareRoomInfo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/model/DiscountStrategy.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/model/DiscountStrategy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/model/Hostel.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/model/Hostel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/model/LodgerInfo.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/model/LodgerInfo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/model/Manager.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/model/Manager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/model/Orders.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/model/Orders.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/model/RoomPlan.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/model/RoomPlan.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/model/RoomType.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/model/RoomType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/model/Vip.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/model/Vip.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/ApprovalService.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/ApprovalService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/BalanceSettleService.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/BalanceSettleService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/CheckInfoService.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/CheckInfoService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/CurrentSpareRoomService.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/CurrentSpareRoomService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/DiscountStrategyService.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/DiscountStrategyService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/HostelService.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/HostelService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/ManagerService.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/ManagerService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/OrdersService.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/OrdersService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/RoomPlanService.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/RoomPlanService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/RoomTypeService.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/RoomTypeService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/VipBalanceService.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/VipBalanceService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/VipService.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/VipService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/VipStateService.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/VipStateService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/impl/ApprovalServiceImpl.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/impl/ApprovalServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/impl/BalanceSettleServiceImpl.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/impl/BalanceSettleServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/impl/CheckInfoServiceImpl.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/impl/CheckInfoServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/impl/CurrentSpareRoomServiceImpl.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/impl/CurrentSpareRoomServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/impl/DiscountStrategyServiceImpl.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/impl/DiscountStrategyServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/impl/HostelServiceImpl.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/impl/HostelServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/impl/ManagerServiceImpl.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/impl/ManagerServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/impl/OrdersServiceImpl.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/impl/OrdersServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/impl/RoomPlanServiceImpl.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/impl/RoomPlanServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/impl/RoomTypeServiceImpl.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/impl/RoomTypeServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/impl/VipBalanceServiceImpl.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/impl/VipBalanceServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/impl/VipServiceImpl.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/impl/VipServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/impl/VipStateServiceImpl.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/impl/VipStateServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/ApprovalStateEnum.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/ApprovalStateEnum.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/ApprovalType.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/ApprovalType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/ApprovalVO.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/ApprovalVO.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/CheckConditionEnum.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/CheckConditionEnum.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/GenderEnum.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/GenderEnum.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/OrderConditionEnum.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/OrderConditionEnum.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/OrderVO.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/OrderVO.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/PayMethod.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/PayMethod.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/RoomPlanVO.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/RoomPlanVO.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/RoomState.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/RoomState.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/RoomTypeEnum.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/RoomTypeEnum.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/RoomVO.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/RoomVO.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/SettleConditionEnum.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/SettleConditionEnum.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/VipStateEnum.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/VipStateEnum.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../EJB_Service/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../EJB_Service/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HostelWorldJ2EE.iml" afterPath="$PROJECT_DIR$/HostelWorldJ2EE.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/action/VipReserveAction.java" afterPath="$PROJECT_DIR$/src/main/java/action/VipReserveAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/action/HostelAction.java" afterPath="$PROJECT_DIR$/src/main/java/action/HostelAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/action/VipInfoAction.java" afterPath="$PROJECT_DIR$/src/main/java/action/VipInfoAction.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/service/HostelService.java" afterPath="$PROJECT_DIR$/src/main/java/service/HostelService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/service/impl/HostelServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/service/impl/HostelServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/software/META-INF/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../StudentScore/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../StudentScore/.idea/workspace.xml" />
     </list>
     <ignored path="HostelWorldJ2EE.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -555,7 +112,42 @@
     <favorites_list name="HostelWorldJ2EE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="VipInfoAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/action/VipInfoAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1560">
+              <caret line="115" column="22" lean-forward="false" selection-start-line="115" selection-start-column="22" selection-end-line="115" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HostelAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/action/HostelAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3210">
+              <caret line="223" column="0" lean-forward="false" selection-start-line="223" selection-start-column="0" selection-end-line="223" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HostelServiceImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/impl/HostelServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1231">
+              <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -579,9 +171,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/dao/impl/BaseDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/util/SettleConditionEnum.java" />
-        <option value="$PROJECT_DIR$/src/main/java/service/BalanceSettleService.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/impl/BalanceSettleServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/BalanceSettleDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/BalanceSettle.java" />
@@ -596,7 +185,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/html/vipSta.html" />
         <option value="$PROJECT_DIR$/src/main/java/model/Manager.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/ManagerService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/action/HostelAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/OrdersDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/OrdersService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/html/hostelSta.html" />
@@ -616,7 +204,6 @@
         <option value="$PROJECT_DIR$/src/main/java/service/VipStateService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/struts.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/vipInfo.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/action/VipInfoAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/action/VipRegisterAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/action/ManagerAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/impl/BalanceSettleDaoImpl.java" />
@@ -627,9 +214,14 @@
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/worldSta.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/vipSta.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/hostelSta.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/action/HostelRegisterAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/action/VipReserveAction.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/hostelSta.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/util/Str2Calendar.java" />
+        <option value="$PROJECT_DIR$/src/main/java/action/VipInfoAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/HostelService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/impl/HostelServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/action/HostelAction.java" />
       </list>
     </option>
   </component>
@@ -671,8 +263,8 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -700,6 +292,84 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HostelWorldJ2EE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HostelWorldJ2EE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HostelWorldJ2EE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HostelWorldJ2EE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jsp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HostelWorldJ2EE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HostelWorldJ2EE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -829,6 +499,34 @@
       <predefined_log_file id="idea.log" enabled="true" />
       <method />
     </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method />
+    </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
       <module name="" />
       <option name="TESTING_TYPE" value="0" />
@@ -936,6 +634,9 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Cold Fusion runner description" factoryName="Cold Fusion" custom_browser="" web_path="">
       <method />
     </configuration>
     <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
@@ -1074,6 +775,19 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
@@ -1141,7 +855,7 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-    <configuration default="false" name="HostelWorld" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.77" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.7">
+    <configuration default="false" name="HostelWorld" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.0.M4" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="HostelWorldJ2EE:war exploded">
@@ -1285,11 +999,15 @@
       <workItem from="1490193450461" duration="13000" />
       <workItem from="1492479866367" duration="580000" />
       <workItem from="1494745907991" duration="594000" />
+      <workItem from="1497165144698" duration="7000" />
+      <workItem from="1497271045282" duration="1316000" />
+      <workItem from="1497407815701" duration="14409000" />
+      <workItem from="1497586359364" duration="91000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="247363000" />
+    <option name="totallyTimeSpent" value="263186000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1302,13 +1020,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31450382" sideWeight="0.5226171" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977098" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13731825" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27382874" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1317,24 +1036,24 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977098" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977098" sideWeight="0.4806139" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977098" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977098" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31450382" sideWeight="0.47738287" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977098" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977098" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977098" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16801292" sideWeight="0.48427674" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17770597" sideWeight="0.48427674" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22213247" sideWeight="0.5157233" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977098" sideWeight="0.4806139" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977098" sideWeight="0.4806139" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1399,179 +1118,39 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/action/BaseAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/VipStateService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/VipStatisticService.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/impl/HostelServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/impl/HostelDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/action/LoginAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="45" column="61" lean-forward="false" selection-start-line="45" selection-start-column="61" selection-end-line="45" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/main.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="65" column="41" lean-forward="false" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/VipService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="30" column="37" lean-forward="false" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/impl/BaseDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/impl/BankCardDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/hostelInfo.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-225">
-          <caret line="50" column="47" lean-forward="false" selection-start-line="50" selection-start-column="47" selection-end-line="50" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/62e042ad/24d74b96-a60f-4995-8eeb-94037dbc7fb1/hostelworld.lodgerInfo">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/vipInfo.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="68" column="45" lean-forward="false" selection-start-line="68" selection-start-column="45" selection-end-line="68" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/action/VipInfoAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/action/VipRegisterAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="28" column="31" lean-forward="false" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/managerSettle.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="84" column="17" lean-forward="false" selection-start-line="84" selection-start-column="17" selection-end-line="84" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/impl/ApprovalDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="64" column="47" lean-forward="false" selection-start-line="64" selection-start-column="47" selection-end-line="64" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/util/PayMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/util/OrderVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/62e042ad/24d74b96-a60f-4995-8eeb-94037dbc7fb1/hostelworld.roomType">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/62e042ad/24d74b96-a60f-4995-8eeb-94037dbc7fb1/hostelworld.hibernate_sequence">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/62e042ad/24d74b96-a60f-4995-8eeb-94037dbc7fb1/hostelworld.discountStrategy">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/action/HostelAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2640">
-          <caret line="187" column="0" lean-forward="false" selection-start-line="187" selection-start-column="0" selection-end-line="187" selection-end-column="0" />
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1610,27 +1189,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/struts.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="97" column="60" lean-forward="false" selection-start-line="97" selection-start-column="60" selection-end-line="97" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/vipSta.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="110" column="10" lean-forward="false" selection-start-line="110" selection-start-column="10" selection-end-line="110" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/action/VipOrderAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/checkInfo.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
@@ -1653,117 +1211,110 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/62e042ad/24d74b96-a60f-4995-8eeb-94037dbc7fb1/hostelworld.currentSpareRoomInfo">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/62e042ad/24d74b96-a60f-4995-8eeb-94037dbc7fb1/hostelworld.checkInfo">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/62e042ad/24d74b96-a60f-4995-8eeb-94037dbc7fb1/hostelworld.manager">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/62e042ad/24d74b96-a60f-4995-8eeb-94037dbc7fb1/hostelworld.roomPlan">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/62e042ad/24d74b96-a60f-4995-8eeb-94037dbc7fb1/hostelworld.bankCard">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/62e042ad/24d74b96-a60f-4995-8eeb-94037dbc7fb1/hostelworld.balanceSettle">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/hostelSta.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1785">
-          <caret line="119" column="17" lean-forward="false" selection-start-line="119" selection-start-column="17" selection-end-line="119" selection-end-column="17" />
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/62e042ad/24d74b96-a60f-4995-8eeb-94037dbc7fb1/hostelworld.orders">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/62e042ad/24d74b96-a60f-4995-8eeb-94037dbc7fb1/hostelworld.vip">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/62e042ad/24d74b96-a60f-4995-8eeb-94037dbc7fb1/hostelworld.approval">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1775,14 +1326,14 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/62e042ad/24d74b96-a60f-4995-8eeb-94037dbc7fb1/hostelworld.hostel">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1790,7 +1341,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="25" column="28" lean-forward="false" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1805,9 +1355,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1104">
           <caret line="61" column="30" lean-forward="false" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1819,10 +1366,194 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/impl/ApprovalServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/VipDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-518">
+          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/HostelDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/ManagerDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/ManagerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-713">
+          <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/action/VipOrderAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-50">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/action/WorldStaInfoAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/hostelSta.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-282">
+          <caret line="123" column="30" lean-forward="true" selection-start-line="123" selection-start-column="30" selection-end-line="123" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/vipSta.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-761">
+          <caret line="110" column="10" lean-forward="false" selection-start-line="110" selection-start-column="10" selection-end-line="110" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/ApprovalDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/impl/ApprovalDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="64" column="47" lean-forward="false" selection-start-line="64" selection-start-column="47" selection-end-line="64" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/impl/VipServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-327">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/VipStateService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/VipBalanceService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="40" column="21" lean-forward="true" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/action/VipInfoAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1560">
+          <caret line="115" column="22" lean-forward="false" selection-start-line="115" selection-start-column="22" selection-end-line="115" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/RoomPlanService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/impl/RoomPlanServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/HostelService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="120" column="56" lean-forward="false" selection-start-line="120" selection-start-column="56" selection-end-line="120" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/struts.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="923">
+          <caret line="97" column="60" lean-forward="false" selection-start-line="97" selection-start-column="60" selection-end-line="97" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="69" column="8" lean-forward="false" selection-start-line="69" selection-start-column="8" selection-end-line="69" selection-end-column="8" />
+        <state relative-caret-position="162">
+          <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/action/HostelAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3210">
+          <caret line="223" column="0" lean-forward="false" selection-start-line="223" selection-start-column="0" selection-end-line="223" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/util/Str2Calendar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="18" lean-forward="false" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/VipService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-447">
+          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/impl/HostelServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1231">
+          <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1879,7 +1610,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.7</last-edited>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1896,7 +1627,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

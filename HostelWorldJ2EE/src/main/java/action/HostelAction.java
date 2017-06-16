@@ -9,9 +9,7 @@ import util.OrderConditionEnum;
 import util.RoomPlanVO;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by Seven on 2017/3/2.
@@ -213,20 +211,55 @@ public class HostelAction extends BaseAction {
         return roomPlanVOs;
     }
 
+    //客栈统计信息
     public String hostelSta() {
-        //累计收益 totalProfit 订单消费 orderProfit
-        //订单列表 ordersList
         String hostelNum=String.valueOf(request.getSession().getAttribute("id"));
-        Hostel hostel=hostelService.queryHostelByNum(hostelNum);
-        double totalProfit=hostel.getProfit();
-        double orderProfit=0;
-        List<Orders> ordersList=ordersService.queryByHostel(hostelNum);
-        for(Orders orders:ordersList){
-            orderProfit=orderProfit+orders.getPaidMoney();
+        Map<Integer, Double[]> adrByMonth = hostelService.getAdrByHostel(hostelNum);
+        Map<Integer, Double[]> occByMonth = hostelService.getOccByHostel(hostelNum);
+        Map<Integer, Double[]> revparByMonth = hostelService.getRevparByHostel(hostelNum);
+
+        //每月市场细分指数
+        //TODO
+        Map<Integer,List<Double>> indexBySeason=new HashMap<>();
+
+        //会员等级分布
+        Map<Integer,Integer> vipByLevel=new HashMap<>();
+        //会员等级与消费额的关系
+        Map<Integer,List<Double>> vipByPrice=new HashMap<>();
+
+        List<Orders> ordersList = ordersService.queryByHostel(hostelNum);
+        for (Orders orders:ordersList){
+            Vip vip=vipService.findVipById(orders.getVipNum());
+            double price = orders.getPaidMoney();
+            int level=vip.getVipLevel();
+            if(!vipByLevel.containsKey(level)){
+                vipByLevel.put(level,1);
+
+                List<Double> prices=new ArrayList<>();
+                prices.add(price);
+                vipByPrice.put(level,prices);
+            }else {
+                int num=vipByLevel.get(level);
+                num=num+1;
+                vipByLevel.put(level,num);
+
+                List<Double> prices=vipByPrice.get(level);
+                prices.add(price);
+                vipByPrice.put(level,prices);
+            }
         }
-        request.setAttribute("totalProfit",totalProfit);
-        request.setAttribute("orderProfit",orderProfit);
-        request.setAttribute("ordersList",ordersList);
+
+        request.setAttribute("adrByMonth",adrByMonth);
+        request.setAttribute("occByMonth",occByMonth);
+        request.setAttribute("revparByMonth",revparByMonth);
+        request.setAttribute("vipByLevel",vipByLevel);
+        request.setAttribute("vipByPrice",vipByPrice);
         return "hostelSta";
     }
+
+    private int getPriceLevel(double price){
+        return 0;
+    }
+
+
 }

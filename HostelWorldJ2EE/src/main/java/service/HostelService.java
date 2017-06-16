@@ -3,6 +3,7 @@ package service;
 import model.Hostel;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Seven on 2017/2/23.
@@ -98,5 +99,29 @@ public interface HostelService {
      * @return
      */
     public List<Hostel> queryByApprove(String approveState);
+
+    /**
+     * 根据客栈编号获得其每月平均房价
+     * Integer-->月份，Double[0]-->adr，Double[1]-->实际客房收入
+     * @param hostelNum
+     * @return
+     */
+    public Map<Integer,Double[]> getAdrByHostel(String hostelNum);
+
+    /**
+     *  根据客栈编号获得其每月入住率
+     *  Integer-->月份，Double[0]-->occ，Double[1]-->实际入住订单数
+     * @param hostelNum
+     * @return
+     */
+    public Map<Integer,Double[]> getOccByHostel(String hostelNum);
+
+    /**
+     * 根据客栈编号获得其每月平均每间可售房收入
+     * Integer-->月份，Double[0]-->revpar，Double[1]-->可售房数量
+     * @param hostelNum
+     * @return
+     */
+    public Map<Integer,Double[]> getRevparByHostel(String hostelNum);
 
 }
