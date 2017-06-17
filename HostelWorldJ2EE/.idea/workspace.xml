@@ -5,85 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4a6a2d4-434d-420c-9397-bfb49141c13d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/util/Str2Calendar.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/service/WorldStaService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/service/impl/WorldStaServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/util/PriceRangeEnum.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/action/HostelAction.class" afterPath="$PROJECT_DIR$/target/classes/action/HostelAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/action/LoginAction.class" afterPath="$PROJECT_DIR$/target/classes/action/LoginAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/action/ManagerAction.class" afterPath="$PROJECT_DIR$/target/classes/action/ManagerAction.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/action/VipInfoAction.class" afterPath="$PROJECT_DIR$/target/classes/action/VipInfoAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/action/VipOrderAction.class" afterPath="$PROJECT_DIR$/target/classes/action/VipOrderAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/action/VipReserveAction.class" afterPath="$PROJECT_DIR$/target/classes/action/VipReserveAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/action/WorldStaInfoAction.class" afterPath="$PROJECT_DIR$/target/classes/action/WorldStaInfoAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/impl/ApprovalDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/dao/impl/ApprovalDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/impl/BalanceSettleDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/dao/impl/BalanceSettleDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/impl/BankCardDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/dao/impl/BankCardDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/impl/BaseDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/dao/impl/BaseDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/impl/CheckInfoDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/dao/impl/CheckInfoDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/impl/CurrentSpareRoomInfoDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/dao/impl/CurrentSpareRoomInfoDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/impl/DiscountStrategyDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/dao/impl/DiscountStrategyDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/impl/HostelDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/dao/impl/HostelDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/impl/LodgerInfoDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/dao/impl/LodgerInfoDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/impl/ManagerDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/dao/impl/ManagerDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/impl/OrdersDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/dao/impl/OrdersDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/impl/RoomPlanDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/dao/impl/RoomPlanDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/impl/RoomTypeDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/dao/impl/RoomTypeDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/dao/impl/VipDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/dao/impl/VipDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/service/impl/ManagerServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/service/impl/ManagerServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/service/impl/RoomPlanServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/service/impl/RoomPlanServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/service/impl/VipBalanceServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/service/impl/VipBalanceServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/service/impl/VipStateServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/service/impl/VipStateServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/util/ApprovalStateEnum.class" afterPath="$PROJECT_DIR$/target/classes/util/ApprovalStateEnum.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/util/ApprovalType.class" afterPath="$PROJECT_DIR$/target/classes/util/ApprovalType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/util/CheckConditionEnum.class" afterPath="$PROJECT_DIR$/target/classes/util/CheckConditionEnum.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/util/GenderEnum.class" afterPath="$PROJECT_DIR$/target/classes/util/GenderEnum.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/util/OrderConditionEnum.class" afterPath="$PROJECT_DIR$/target/classes/util/OrderConditionEnum.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/util/PayMethod.class" afterPath="$PROJECT_DIR$/target/classes/util/PayMethod.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/util/RoomState.class" afterPath="$PROJECT_DIR$/target/classes/util/RoomState.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/util/RoomTypeEnum.class" afterPath="$PROJECT_DIR$/target/classes/util/RoomTypeEnum.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/util/SettleConditionEnum.class" afterPath="$PROJECT_DIR$/target/classes/util/SettleConditionEnum.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/util/VipStateEnum.class" afterPath="$PROJECT_DIR$/target/classes/util/VipStateEnum.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/service/HostelService.class" afterPath="$PROJECT_DIR$/target/classes/service/HostelService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/service/impl/HostelServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/service/impl/HostelServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/action/HostelAction.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/action/HostelAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/action/LoginAction.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/action/LoginAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/action/ManagerAction.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/action/ManagerAction.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/action/VipInfoAction.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/action/VipInfoAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/action/VipOrderAction.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/action/VipOrderAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/action/VipReserveAction.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/action/VipReserveAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/action/WorldStaInfoAction.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/action/WorldStaInfoAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/impl/ApprovalDaoImpl.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/impl/ApprovalDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/impl/BalanceSettleDaoImpl.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/impl/BalanceSettleDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/impl/BankCardDaoImpl.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/impl/BankCardDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/impl/BaseDaoImpl.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/impl/BaseDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/impl/CheckInfoDaoImpl.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/impl/CheckInfoDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/impl/CurrentSpareRoomInfoDaoImpl.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/impl/CurrentSpareRoomInfoDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/impl/DiscountStrategyDaoImpl.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/impl/DiscountStrategyDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/impl/HostelDaoImpl.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/impl/HostelDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/impl/LodgerInfoDaoImpl.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/impl/LodgerInfoDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/impl/ManagerDaoImpl.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/impl/ManagerDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/impl/OrdersDaoImpl.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/impl/OrdersDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/impl/RoomPlanDaoImpl.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/impl/RoomPlanDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/impl/RoomTypeDaoImpl.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/impl/RoomTypeDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/impl/VipDaoImpl.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/dao/impl/VipDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/impl/ManagerServiceImpl.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/impl/ManagerServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/impl/RoomPlanServiceImpl.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/impl/RoomPlanServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/impl/VipBalanceServiceImpl.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/impl/VipBalanceServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/impl/VipStateServiceImpl.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/impl/VipStateServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/ApprovalStateEnum.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/ApprovalStateEnum.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/ApprovalType.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/ApprovalType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/CheckConditionEnum.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/CheckConditionEnum.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/GenderEnum.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/GenderEnum.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/OrderConditionEnum.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/OrderConditionEnum.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/PayMethod.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/PayMethod.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/RoomState.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/RoomState.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/RoomTypeEnum.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/RoomTypeEnum.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/SettleConditionEnum.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/SettleConditionEnum.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/VipStateEnum.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/util/VipStateEnum.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/HostelService.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/HostelService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/impl/HostelServiceImpl.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/impl/HostelServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HostelWorldJ2EE.iml" afterPath="$PROJECT_DIR$/HostelWorldJ2EE.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/action/HostelAction.java" afterPath="$PROJECT_DIR$/src/main/java/action/HostelAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/action/VipInfoAction.java" afterPath="$PROJECT_DIR$/src/main/java/action/VipInfoAction.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/service/HostelService.java" afterPath="$PROJECT_DIR$/src/main/java/service/HostelService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/service/impl/HostelServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/service/impl/HostelServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/software/META-INF/MANIFEST.MF" />
     </list>
     <ignored path="HostelWorldJ2EE.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -113,36 +50,84 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="VipInfoAction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/action/VipInfoAction.java">
+      <file leaf-file-name="ManagerService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/ManagerService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1560">
-              <caret line="115" column="22" lean-forward="false" selection-start-line="115" selection-start-column="22" selection-end-line="115" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HostelAction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/action/HostelAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3210">
-              <caret line="223" column="0" lean-forward="false" selection-start-line="223" selection-start-column="0" selection-end-line="223" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HostelServiceImpl.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/service/impl/HostelServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1231">
-              <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+            <state relative-caret-position="324">
+              <caret line="76" column="7" lean-forward="true" selection-start-line="76" selection-start-column="7" selection-end-line="76" selection-end-column="7" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WorldStaInfoAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/action/WorldStaInfoAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HostelService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/HostelService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="202">
+              <caret line="125" column="0" lean-forward="true" selection-start-line="102" selection-start-column="4" selection-end-line="125" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WorldStaService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/WorldStaService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="277">
+              <caret line="103" column="0" lean-forward="false" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WorldStaServiceImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/impl/WorldStaServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#327#328#0" expanded="true" />
+                <element signature="e#354#355#0" expanded="true" />
+                <element signature="e#419#420#0" expanded="true" />
+                <element signature="e#446#447#0" expanded="true" />
+                <element signature="e#514#515#0" expanded="true" />
+                <element signature="e#541#542#0" expanded="true" />
+                <element signature="e#606#607#0" expanded="true" />
+                <element signature="e#633#634#0" expanded="true" />
+                <element signature="e#704#705#0" expanded="true" />
+                <element signature="e#731#732#0" expanded="true" />
+                <element signature="e#799#800#0" expanded="true" />
+                <element signature="e#826#827#0" expanded="true" />
+                <element signature="e#891#892#0" expanded="true" />
+                <element signature="e#918#919#0" expanded="true" />
+                <element signature="e#983#984#0" expanded="true" />
+                <element signature="e#1010#1011#0" expanded="true" />
+                <element signature="e#1076#1077#0" expanded="true" />
+                <element signature="e#1103#1104#0" expanded="true" />
+                <element signature="e#1170#1171#0" expanded="true" />
+                <element signature="e#1197#1198#0" expanded="true" />
+                <element signature="e#1265#1266#0" expanded="true" />
+                <element signature="e#1292#1293#0" expanded="true" />
+                <element signature="e#1375#1376#0" expanded="true" />
+                <element signature="e#1402#1403#0" expanded="true" />
+                <element signature="e#1474#1475#0" expanded="true" />
+                <element signature="e#1501#1502#0" expanded="true" />
+                <element signature="e#1566#1567#0" expanded="true" />
+                <element signature="e#1593#1594#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -152,10 +137,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
-        <option value="Interface" />
         <option value="Jsp File" />
         <option value="HTML File" />
+        <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -171,12 +156,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/service/impl/BalanceSettleServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/BalanceSettleDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/BalanceSettle.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/hostelRegister.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/service/impl/VipServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/main.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/util/ApprovalVO.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/ApprovalDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/ApprovalService.java" />
@@ -219,9 +198,15 @@
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/hostelSta.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/util/Str2Calendar.java" />
         <option value="$PROJECT_DIR$/src/main/java/action/VipInfoAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/util/priceByHotel.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/HostelService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/util/PriceByMonth.java" />
+        <option value="$PROJECT_DIR$/src/main/java/util/PriceRange.java" />
+        <option value="$PROJECT_DIR$/src/main/java/util/PriceRangeEnum.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/impl/HostelServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/action/HostelAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/WorldStaService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/impl/WorldStaServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -294,10 +279,6 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -317,59 +298,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HostelWorldJ2EE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HostelWorldJ2EE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HostelWorldJ2EE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HostelWorldJ2EE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
+              <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -394,6 +323,66 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HostelWorldJ2EE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HostelWorldJ2EE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HostelWorldJ2EE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HostelWorldJ2EE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="action" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -403,7 +392,7 @@
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
@@ -1002,12 +991,12 @@
       <workItem from="1497165144698" duration="7000" />
       <workItem from="1497271045282" duration="1316000" />
       <workItem from="1497407815701" duration="14409000" />
-      <workItem from="1497586359364" duration="91000" />
+      <workItem from="1497586359364" duration="11717000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="263186000" />
+    <option name="totallyTimeSpent" value="274812000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1036,6 +1025,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977098" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977098" sideWeight="0.4806139" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977098" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1053,7 +1043,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977098" sideWeight="0.4806139" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977098" sideWeight="0.4806139" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1118,56 +1107,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="dbDummy://dbtable:/62e042ad/24d74b96-a60f-4995-8eeb-94037dbc7fb1/hostelworld.roomType">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/62e042ad/24d74b96-a60f-4995-8eeb-94037dbc7fb1/hostelworld.hibernate_sequence">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/62e042ad/24d74b96-a60f-4995-8eeb-94037dbc7fb1/hostelworld.discountStrategy">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/vipOrder.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1920">
-          <caret line="16" column="6" lean-forward="false" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/hotelReserve.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="151" column="44" lean-forward="false" selection-start-line="151" selection-start-column="44" selection-end-line="151" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/service/impl/BalanceSettleServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1179,13 +1118,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-554">
           <caret line="27" column="55" lean-forward="false" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/worldSta.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="136" column="15" lean-forward="false" selection-start-line="136" selection-start-column="15" selection-end-line="136" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -1377,6 +1309,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-518">
           <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1395,39 +1328,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/ManagerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-713">
-          <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/action/VipOrderAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-50">
           <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/action/WorldStaInfoAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/hostelSta.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-282">
-          <caret line="123" column="30" lean-forward="true" selection-start-line="123" selection-start-column="30" selection-end-line="123" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/vipSta.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-761">
-          <caret line="110" column="10" lean-forward="false" selection-start-line="110" selection-start-column="10" selection-end-line="110" selection-end-column="10" />
           <folding />
         </state>
       </provider>
@@ -1458,13 +1362,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-327">
           <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/VipStateService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1472,16 +1370,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="40" column="21" lean-forward="true" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/action/VipInfoAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1560">
-          <caret line="115" column="22" lean-forward="false" selection-start-line="115" selection-start-column="22" selection-end-line="115" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1496,13 +1384,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/HostelService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="120" column="56" lean-forward="false" selection-start-line="120" selection-start-column="56" selection-end-line="120" selection-end-column="56" />
         </state>
       </provider>
     </entry>
@@ -1522,23 +1403,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/action/HostelAction.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/util/Str2Calendar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3210">
-          <caret line="223" column="0" lean-forward="false" selection-start-line="223" selection-start-column="0" selection-end-line="223" selection-end-column="0" />
+        <state relative-caret-position="180">
+          <caret line="12" column="18" lean-forward="false" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/util/Str2Calendar.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/hostelPlan.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="18" lean-forward="false" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="293">
+          <caret line="129" column="32" lean-forward="false" selection-start-line="129" selection-start-column="32" selection-end-line="129" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/VipStateService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1546,14 +1433,145 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-447">
           <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/hostelSta.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1845">
+          <caret line="123" column="30" lean-forward="false" selection-start-line="123" selection-start-column="30" selection-end-line="123" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/vipSta.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1469">
+          <caret line="110" column="10" lean-forward="false" selection-start-line="110" selection-start-column="10" selection-end-line="110" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/worldSta.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2040">
+          <caret line="136" column="15" lean-forward="false" selection-start-line="136" selection-start-column="15" selection-end-line="136" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/util/PriceRangeEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="38" lean-forward="false" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/util/PriceByMonth.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="19" lean-forward="true" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/action/VipInfoAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-428">
+          <caret line="112" column="16" lean-forward="true" selection-start-line="112" selection-start-column="16" selection-end-line="112" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/action/HostelAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="268" column="56" lean-forward="true" selection-start-line="268" selection-start-column="56" selection-end-line="268" selection-end-column="56" />
+          <folding>
+            <element signature="e#9667#9676#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/ManagerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="76" column="7" lean-forward="true" selection-start-line="76" selection-start-column="7" selection-end-line="76" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/service/impl/HostelServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1231">
-          <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+        <state relative-caret-position="2685">
+          <caret line="222" column="49" lean-forward="false" selection-start-line="222" selection-start-column="49" selection-end-line="222" selection-end-column="49" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/action/WorldStaInfoAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/HostelService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="125" column="0" lean-forward="true" selection-start-line="102" selection-start-column="4" selection-end-line="125" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/WorldStaService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="103" column="0" lean-forward="false" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/impl/WorldStaServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#327#328#0" expanded="true" />
+            <element signature="e#354#355#0" expanded="true" />
+            <element signature="e#419#420#0" expanded="true" />
+            <element signature="e#446#447#0" expanded="true" />
+            <element signature="e#514#515#0" expanded="true" />
+            <element signature="e#541#542#0" expanded="true" />
+            <element signature="e#606#607#0" expanded="true" />
+            <element signature="e#633#634#0" expanded="true" />
+            <element signature="e#704#705#0" expanded="true" />
+            <element signature="e#731#732#0" expanded="true" />
+            <element signature="e#799#800#0" expanded="true" />
+            <element signature="e#826#827#0" expanded="true" />
+            <element signature="e#891#892#0" expanded="true" />
+            <element signature="e#918#919#0" expanded="true" />
+            <element signature="e#983#984#0" expanded="true" />
+            <element signature="e#1010#1011#0" expanded="true" />
+            <element signature="e#1076#1077#0" expanded="true" />
+            <element signature="e#1103#1104#0" expanded="true" />
+            <element signature="e#1170#1171#0" expanded="true" />
+            <element signature="e#1197#1198#0" expanded="true" />
+            <element signature="e#1265#1266#0" expanded="true" />
+            <element signature="e#1292#1293#0" expanded="true" />
+            <element signature="e#1375#1376#0" expanded="true" />
+            <element signature="e#1402#1403#0" expanded="true" />
+            <element signature="e#1474#1475#0" expanded="true" />
+            <element signature="e#1501#1502#0" expanded="true" />
+            <element signature="e#1566#1567#0" expanded="true" />
+            <element signature="e#1593#1594#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

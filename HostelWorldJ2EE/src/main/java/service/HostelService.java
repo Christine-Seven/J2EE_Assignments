@@ -124,4 +124,18 @@ public interface HostelService {
      */
     public Map<Integer,Double[]> getRevparByHostel(String hostelNum);
 
+    /**
+     * 根据客栈获得会员等级分布
+     * @param hostelNum
+     * @return
+     */
+    public Map<Integer,Integer> getLevelByHostel(String hostelNum);
+
+    /**
+     * 根据客栈获得指定月份的订单价格区间分布
+     * @param hostelNum
+     * @param months
+     * @return
+     */
+    public Map<Integer, Map<String, Integer>> getPriceByMonth(String hostelNum, List<Integer> months);
 }

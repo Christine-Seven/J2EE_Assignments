@@ -223,7 +223,19 @@ public class HostelAction extends BaseAction {
         Map<Integer,List<Double>> indexBySeason=new HashMap<>();
 
         //会员等级分布
-        Map<Integer,Integer> vipByLevel=new HashMap<>();
+        Map<Integer,Integer> vipByLevel=hostelService.getLevelByHostel(hostelNum);
+        //每月消费额区间分布
+        //TODO
+        //月份信息从界面传入，这里为了测试方便
+        List<Integer> months=new ArrayList<Integer>();
+        months.add(1);
+        months.add(2);
+        months.add(3);
+        months.add(4);
+        months.add(5);
+        months.add(6);
+        Map<Integer,Map<String,Integer>> priceByMonth = hostelService.getPriceByMonth(hostelNum,months);
+
         //会员等级与消费额的关系
         Map<Integer,List<Double>> vipByPrice=new HashMap<>();
 
@@ -254,12 +266,11 @@ public class HostelAction extends BaseAction {
         request.setAttribute("revparByMonth",revparByMonth);
         request.setAttribute("vipByLevel",vipByLevel);
         request.setAttribute("vipByPrice",vipByPrice);
+        request.setAttribute("priceByMonth",priceByMonth);
         return "hostelSta";
     }
 
-    private int getPriceLevel(double price){
-        return 0;
-    }
+
 
 
 }
