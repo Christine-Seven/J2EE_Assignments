@@ -1,7 +1,7 @@
 package service;
 
-import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * Created by Seven on 16/06/2017.
@@ -9,11 +9,11 @@ import java.util.Map;
 public interface WorldStaService {
 
     /**
-     * 按季度获得平台平均房价
+     * 按月份获得平台平均房价
      * Integer-->季度，Double[0]-->adr，Double[1]-->实际客房收入
      * @return
      */
-    public Map<Integer,Double[]> getAdrBySeason();
+    public Map<Integer,Double[]> getAdrByMonth();
 
     /**
      * 按城市获得平台平均房价
@@ -23,11 +23,11 @@ public interface WorldStaService {
     public Map<String,Double[]> getAdrByCity();
 
     /**
-     *  按照季度获得平台入住率
+     *  按照月份获得平台入住率
      *  Integer-->季度，Double[0]-->occ，Double[1]-->实际入住订单数
      * @return
      */
-    public Map<Integer,Double[]> getOccBySeason();
+    public Map<Integer,Double[]> getOccByMonth();
 
     /**
      *  按照城市获得平台入住率
@@ -37,11 +37,11 @@ public interface WorldStaService {
     public Map<String,Double[]> getOccByCity();
 
     /**
-     * 按照季度获得平台平均每间可售房收入
+     * 按照月份获得平台平均每间可售房收入
      * Integer-->季度，Double[0]-->revpar，Double[1]-->可售房数量
      * @return
      */
-    public Map<Integer,Double[]> getRevparBySeason();
+    public Map<Integer,Double[]> getRevparByMonth();
 
     /**
      * 按照城市获得平台平均每间可售房收入
@@ -54,7 +54,7 @@ public interface WorldStaService {
      * 按照加盟时间获得客栈营业额分布情况
      * @return
      */
-    public Map<String,Double> getMoneyByTime();
+    public Map<Integer,Double> getMoneyByTime();
 
     /**
      * 按照城市获得营业额分布情况
@@ -66,7 +66,7 @@ public interface WorldStaService {
      * 按照等级获得营业额分布情况
      * @return
      */
-    public Map<String,Double> getMoneyByLevel();
+    public Map<Integer,Double> getMoneyByLevel();
 
     /**
      * 按照月份获得营业额走势
@@ -83,17 +83,17 @@ public interface WorldStaService {
 
     /**
      * 根据订单数目，按月份统计会员活跃程度
-     * Integer -> 月份，Integer -> 活跃会员数目
+     * Integer -> 月份，Set -> 活跃会员列表
      * @return
      */
-    public Map<Integer,Map<Integer,Integer>> getActiveByMonth();
+    public Map<Integer,Set<String>> getActiveByMonth();
 
     /**
      * 查看不同地域的活跃会员占比，近一个季度有消费记录即为活跃会员
-     * String ->城市,List ->活跃会员列表
+     * String ->城市,Set ->活跃会员列表
      * @return
      */
-    public Map<String,List<String>> getActiveByCity();
+    public Map<String,Set<String>> getActiveByCity();
 
     /**
      * 获得平台热门城市，近一个季度

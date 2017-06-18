@@ -234,6 +234,7 @@ public class HostelAction extends BaseAction {
         months.add(4);
         months.add(5);
         months.add(6);
+
         Map<Integer,Map<String,Integer>> priceByMonth = hostelService.getPriceByMonth(hostelNum,months);
 
         //会员等级与消费额的关系

@@ -3,7 +3,8 @@
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="com.alibaba.fastjson.JSON" %>
 <%@ page import="com.alibaba.fastjson.JSONObject" %>
-<%@ page import="com.alibaba.fastjson.JSONPObject" %><%--
+<%@ page import="com.alibaba.fastjson.JSONPObject" %>
+<%@ page import="java.util.Map" %><%--
   Created by IntelliJ IDEA.
   User: Seven
   Date: 19/03/2017
@@ -67,10 +68,10 @@
     </ul>
 </div>
 <%
-    int total = (int) request.getAttribute("total");
-    double totalMoney = (double) request.getAttribute("totalMoney");
-    HashMap<String, Double> hostel = (HashMap<String, Double>) request.getAttribute("hostels");
-    String jsonObject = JSONObject.toJSONString(hostel);
+    Map<Integer, Double > priceByMonth = (HashMap<Integer,Double>) request.getAttribute("priceByMonth");
+    Map<Integer,Integer> timeByMonth = (HashMap<Integer,Integer>) request.getAttribute("timeByMonth");
+    Map<String, Integer> timeByCity = (HashMap<String, Integer>) request.getAttribute("priceByCity");
+    Map<String, Map<String,Integer>> priceByCity = (HashMap<String, Map<String,Integer>>) request.getAttribute("priceByCity");
 
 %>
 <div style="position: absolute;top:80px;left:160px;width: 900px;height: 600px;">

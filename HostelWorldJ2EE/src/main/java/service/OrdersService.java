@@ -3,6 +3,7 @@ package service;
 import model.Orders;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Seven on 2017/2/23.
@@ -88,6 +89,36 @@ public interface OrdersService {
      * @return
      */
     public List<Orders> queryByState(String state);
+
+    /**
+     * 获得所有订单
+     * @return
+     */
+    public List<Orders> queryAll();
+
+    /**
+     * 获得订单集合每月平均房价
+     * Integer-->月份，Double[0]-->adr，Double[1]-->实际客房收入
+     * @param ordersList
+     * @return
+     */
+    public Map<Integer,Double[]> getAdrByMonth(List<Orders> ordersList);
+
+    /**
+     *  获得订单集合每月入住率
+     *  Integer-->月份，Double[0]-->occ，Double[1]-->实际入住订单数
+     * @param ordersList
+     * @return
+     */
+    public Map<Integer,Double[]> getOccByMonth(List<Orders> ordersList);
+
+    /**
+     * 获得订单集合每月平均每间可售房收入
+     * Integer-->月份，Double[0]-->revpar，Double[1]-->可售房数量
+     * @param ordersList
+     * @return
+     */
+    public Map<Integer,Double[]> getRevparByMonth(List<Orders> ordersList);
 
 
 }

@@ -3,6 +3,7 @@ package service;
 import model.Vip;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Seven on 2017/2/15.
@@ -68,6 +69,34 @@ public interface VipService {
      * @return
      */
     public List<Vip> getAllVipList();
+
+    /**
+     * 每月订单总额
+     * @param vipNum
+     * @return
+     */
+    public Map<Integer,Double> getPriceByMonth(String vipNum);
+
+    /**
+     * 每月出行次数
+     * @param vipNum
+     * @return
+     */
+    public Map<Integer,Integer> getTimeByMonth(String vipNum);
+
+    /**
+     * 按城市分布的出行次数
+     * @param vipNum
+     * @return
+     */
+    public Map<String,Integer> getTimeByCity(String vipNum);
+
+    /**
+     * 按城市查看价格分布
+     * @param vipNum
+     * @return
+     */
+    public Map<String,Map<String,Integer>> getPriceByCity(String vipNum);
 
 
 }

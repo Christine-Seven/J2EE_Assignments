@@ -2,7 +2,8 @@
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="util.PayMethod" %>
-<%@ page import="util.OrderConditionEnum" %><%--
+<%@ page import="util.OrderConditionEnum" %>
+<%@ page import="java.util.Map" %><%--
   Created by IntelliJ IDEA.
   User: Seven
   Date: 18/03/2017
@@ -68,7 +69,12 @@
 </div>
 <%
 //    totalProfit orderProfit ordersList
-    double totalProfit=(double) request.getAttribute("totalProfit");
+    Map<Integer, Double[]> adrByMonth=(Map<Integer, Double[]>) request.getAttribute("adrByMonth");
+    Map<Integer, Double[]> occByMonth=(Map<Integer, Double[]>) request.getAttribute("occByMonth");
+    Map<Integer, Double[]> revparByMonth=(Map<Integer, Double[]>) request.getAttribute("revparByMonth");
+    Map<Integer,Integer> vipByLevel=(Map<Integer,Integer>) request.getAttribute("vipByLevel");
+    Map<Integer,Map<String,Integer>> priceByMonth =(Map<Integer,Map<String,Integer>> )request.getAttribute("priceByMonth");
+    Map<Integer,List<Double>> vipByPrice=()
     double orderProfit=(double) request.getAttribute("orderProfit");
 %>
 <div style="position: absolute;top:80px;left:160px;width: 900px;height: 600px;">

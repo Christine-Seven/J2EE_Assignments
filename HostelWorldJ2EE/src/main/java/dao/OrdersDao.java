@@ -70,4 +70,10 @@ public interface OrdersDao {
      * @return
      */
     public List<Orders> queryByCondition(String orderCondition);
+
+    /**
+     * 获得所有订单
+     * @return
+     */
+    public List<Orders> queryAll();
 }

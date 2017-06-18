@@ -89,6 +89,12 @@ public class OrdersDaoImpl implements OrdersDao {
         return this.getOrders(orderses);
     }
 
+    @Override
+    public List<Orders> queryAll() {
+        List<Orders> ordersList= baseDao.getAllList(Orders.class);
+        return ordersList;
+    }
+
     private List<Orders> getOrders(List<Object[]> objects){
         List<Orders> ordersList=new ArrayList<>();
         for(Object[] object:objects){
