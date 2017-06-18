@@ -1,0 +1,94 @@
+<script type="text/javascript">
+
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main'));
+    var hostels = <%=jsonObject%>;
+    var hostel = [];
+    var money = [];
+    var res = [];
+    for (var item in hostels) {
+        res.push(
+            {
+                name: item,
+                value: hostels[item]
+            }
+        );
+        hostel.push(item);
+        money.push(hostels[item]);
+    }
+
+
+    // 指定图表的配置项和数据
+    option = {
+        backgroundColor: '#ffffff',
+
+        title: {
+            text: '消费情况',
+            left: 'center',
+            top: 20,
+            textStyle: {
+                color: '#000000'
+            }
+        },
+
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+
+        visualMap: {
+            show: false,
+            min: 80,
+            max: 600,
+            inRange: {
+                colorLightness: [0, 1]
+            }
+        },
+        series: [
+            {
+                name: '客栈名称',
+                type: 'pie',
+                radius: '55%',
+                center: ['50%', '50%'],
+                data: res.sort(function (a, b) {
+                    return a.value - b.value
+                }),
+                roseType: 'angle',
+                label: {
+                    normal: {
+                        textStyle: {
+                            color: 'rgba(0,0,0, 0.3)'
+                        }
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        lineStyle: {
+                            color: 'rgba(0, 0, 0, 0.3)'
+                        },
+                        smooth: 0.2,
+                        length: 10,
+                        length2: 20
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        color: '#c23531',
+                        shadowBlur: 200,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                },
+
+                animationType: 'scale',
+                animationEasing: 'elasticOut',
+                animationDelay: function (idx) {
+                    return Math.random() * 200;
+                }
+            }
+        ]
+
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+</script>

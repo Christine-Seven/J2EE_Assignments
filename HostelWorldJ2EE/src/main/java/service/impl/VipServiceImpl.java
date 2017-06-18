@@ -95,10 +95,10 @@ public class VipServiceImpl implements VipService {
     }
 
     @Override
-    public Map<Integer, Double> getPriceByMonth(String vipNum) {
+    public Map<String, Double> getPriceByMonth(String vipNum) {
         List<Orders> ordersList = ordersService.queryByVip(vipNum);
         // 每月订单总额
-        Map<Integer, Double> priceByMonth = new HashMap<>();
+        Map<String, Double> priceByMonth = new HashMap<>();
 
         for (Orders orders : ordersList) {
             //获得订单所在月份
@@ -106,10 +106,10 @@ public class VipServiceImpl implements VipService {
             System.out.println("month=" + month);
 
             if (!priceByMonth.containsKey(month)) {
-                priceByMonth.put(month, orders.getPaidMoney());
+                priceByMonth.put(month+"月", orders.getPaidMoney());
             } else {
                 double money = priceByMonth.get(month);
-                priceByMonth.put(month, money + orders.getPaidMoney());
+                priceByMonth.put(month+"月", money + orders.getPaidMoney());
             }
 
         }
@@ -117,20 +117,20 @@ public class VipServiceImpl implements VipService {
     }
 
     @Override
-    public Map<Integer, Integer> getTimeByMonth(String vipNum) {
+    public Map<String, Integer> getTimeByMonth(String vipNum) {
         List<Orders> ordersList = ordersService.queryByVip(vipNum);
         // 每月出行次数
-        Map<Integer, Integer> timeByMonth = new HashMap<>();
+        Map<String, Integer> timeByMonth = new HashMap<>();
 
         for (Orders orders : ordersList) {
             //获得订单所在月份
             int month = getMonthByOrder(orders);
 
             if (!timeByMonth.containsKey(month)) {
-                timeByMonth.put(month, 1);
+                timeByMonth.put(month+"月", 1);
             } else {
                 int time = timeByMonth.get(month);
-                timeByMonth.put(month, time++);
+                timeByMonth.put(month+"月", time++);
             }
         }
         return timeByMonth;
@@ -173,10 +173,11 @@ public class VipServiceImpl implements VipService {
                 Map<String,Integer> priceByRange=priceByCity.get(city);
                 String range=getPriceRange(orders.getPaidMoney()).toString();
                 if(!priceByRange.containsKey(range)){
+                    priceByRange.put(range,1);
+
+                }else{
                     int num=priceByRange.get(range);
                     priceByRange.put(range,num++);
-                }else{
-                    priceByRange.put(range,1);
                 }
                 priceByCity.put(city, priceByRange);
             }
@@ -203,7 +204,7 @@ public class VipServiceImpl implements VipService {
         if (c==null){
             return -1;
         }
-        int month = c.get(Calendar.MONTH);
+        int month = c.get(Calendar.MONTH)+1;
         return month;
     }
 }
