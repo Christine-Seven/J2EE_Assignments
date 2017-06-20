@@ -107,9 +107,10 @@
             <result name="out">/jsp/checkInfo.jsp</result>
         </action>
 
-        <action name="worldSta" class="action.WorldStaInfoAction" method="worldSta">
-            <result name="worldSta">/jsp/worldSta.jsp</result>
-
+        <action name="worldSta_*" class="action.WorldStaInfoAction" method="{1}">
+            <result name="index">/jsp/worldIndexSta.jsp</result>
+            <result name="money">/jsp/worldMoneySta.jsp</result>
+            <result name="people">/jsp/worldPeopleSta.jsp</result>
         </action>
     </package>
 </struts>

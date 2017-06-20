@@ -234,7 +234,7 @@ public class WorldStaServiceImpl implements WorldStaService {
                 moneyBySeason.put(month,money);
             }
         }
-        return null;
+        return moneyBySeason;
     }
 
     @Override

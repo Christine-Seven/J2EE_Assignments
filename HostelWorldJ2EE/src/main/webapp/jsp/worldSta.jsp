@@ -4,7 +4,8 @@
 <%@ page import="util.PayMethod" %>
 <%@ page import="util.OrderConditionEnum" %>
 <%@ page import="java.util.HashMap" %>
-<%@ page import="com.alibaba.fastjson.JSONObject" %><%--
+<%@ page import="com.alibaba.fastjson.JSONObject" %>
+<%@ page import="java.util.Map" %><%--
   Created by IntelliJ IDEA.
   User: Seven
   Date: 19/03/2017
@@ -63,78 +64,14 @@
 
 <div class="navbar navbar-default navbar-fixed" style="width: 150px;height: 620px;top: 50px">
     <ul class="nav nav-pills nav-stacked" style="margin-top: 50px;">
-        <li role="presentation"><a href="manager_getApply.action"><h5 style="padding-left: 20px">审批申请</h5></a>
-        </li>
+        <li role="presentation"><a href="manager_getApply.action"><h5 style="padding-left: 20px">审批申请</h5></a></li>
         <li role="presentation"><a href="manager_getSettle.action"><h5 style="padding-left: 20px">客栈结算</h5></a></li>
-        <li role="presentation" class="active"><a href="worldSta.action"><h5 style="padding-left: 20px">统计信息</h5></a>
-        </li>
+        <li role="presentation" class="active"><a href="worldSta_getIndex.action"><h5 style="padding-left: 20px">指标分析</h5></a></li>
+        <li role="presentation"><a href="worldSta_getMoney.action"><h5 style="padding-left: 20px">营业概览</h5></a></li>
+        <li role="presentation"><a href="worldSta_getPeople.action"><h5 style="padding-left: 20px">成员管理</h5></a></li>
+
     </ul>
 </div>
-<%
-    double totalProfit = (double) request.getAttribute("totalProfit");
-    double hostelProfit = (double) request.getAttribute("hostelProfit");
-    int vipCount = (int) request.getAttribute("vipCount");
-    HashMap<String, Integer> checkNums = (HashMap<String, Integer>) request.getAttribute("checkNums");
-    String jsonObject= JSONObject.toJSONString(checkNums);
-%>
-<div style="position: absolute;top:80px;left:160px;width: 1000px;height: 600px;">
-
-    <div class="row">
-        <div class="col-md-4" style="padding-left: 30px">
-            <div style="background: #337AB7;margin-right: 0.8em;box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);transition: 0.5s all;border-radius: 20px">
-                <div class="col-md-8" style="padding-left: 30px;">
-                    <h3 style="color: #fff;font-size: 2.5em;font-family: 'Carrois Gothic', sans-serif;">¥<%=totalProfit%></h3>
-                    <h4 style="	font-size: 1.2em;color: #fff;margin: 0.3em 0em;font-family: 'Carrois Gothic', sans-serif;">
-                        累计收益</h4>
-                    <p style=" color: #fff;font-size: 0.8em;line-height: 1.8em;">赚了好多！</p>
-                </div>
-                <div class="col-md-4 market-update-right"
-                     style="top:25px;font-size: 3em;color:#337AB7;width: 80px;height: 80px;background: #fff;text-align: center;border-radius: 49px;-o-border-radius:49px;line-height: 1.7em;">
-                    <span class="glyphicon glyphicon-list-alt" aria-hidden="true" style="top:10px"></span>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div style="background: #337AB7;margin-right: 0.8em;box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);transition: 0.5s all;border-radius: 20px">
-                <div class="col-md-8" style="padding-left: 30px;">
-                    <h3 style="color: #fff;font-size: 2.5em;font-family: 'Carrois Gothic', sans-serif;">¥<%=hostelProfit%></h3>
-                    <h4 style="	font-size: 1.2em;color: #fff;margin: 0.3em 0em;font-family: 'Carrois Gothic', sans-serif;">
-                        客栈收益</h4>
-                    <p style=" color: #fff;font-size: 0.8em;line-height: 1.8em;">表现不错！</p>
-                </div>
-                <div class="col-md-4 market-update-right"
-                     style="top:25px;font-size: 3em;color:#337AB7;width: 80px;height: 80px;background: #fff;text-align: center;border-radius: 49px;-o-border-radius:49px;line-height: 1.7em;">
-                    <span class="glyphicon glyphicon-plus" aria-hidden="true" style="top:10px"></span>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div style="background: #337AB7;margin-right: 0.8em;box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);transition: 0.5s all;border-radius: 20px">
-                <div class="col-md-8" style="padding-left: 30px;">
-                    <h3 style="color: #fff;font-size: 2.5em;font-family: 'Carrois Gothic', sans-serif;"><%=vipCount%>位</h3>
-                    <h4 style="	font-size: 1.2em;color: #fff;margin: 0.3em 0em;font-family: 'Carrois Gothic', sans-serif;">
-                        会员总计</h4>
-                    <p style=" color: #fff;font-size: 0.8em;line-height: 1.8em;">表现不错！</p>
-                </div>
-                <div class="col-md-4 market-update-right"
-                     style="top:25px;font-size: 3em;color:#337AB7;width: 80px;height: 80px;background: #fff;text-align: center;border-radius: 49px;-o-border-radius:49px;line-height: 1.7em;">
-                    <span class="glyphicon glyphicon-arrow-up" aria-hidden="true" style="top:10px"></span>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-
-    </div>
-    <fieldset style="margin-top:50px;margin-left: 30px;margin-right: 50px">
-        <legend>客栈入住统计</legend>
-        <div class="col-md-8 col-md-offset-2" id="checkNums" style="height:300px;">
-
-        </div>
-    </fieldset>
 
     <fieldset style="margin-top: 10px;margin-right: 50px;margin-left: 30px">
         <legend>订单统计</legend>
@@ -195,7 +132,7 @@
                             state = "已取消";
                             break;
                         case SETTLE:
-                            state="已结算";
+                            state = "已结算";
                             break;
                         default:
                             state = "错误状态";
@@ -227,99 +164,466 @@
         </table>
     </fieldset>
 
-</div>
 
 
-<script src="js/echarts.simple.min.js"></script>
+
+<script src="js/echarts.min.js"></script>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
-<script type="text/javascript">
-    // 基于准备好的dom，初始化echarts实例
-    var myChart = echarts.init(document.getElementById('checkNums'));
-    var checkNums=<%=jsonObject%>;
-    var hostel=[];
-    for(var item in checkNums){
-        hostel.push({
-            name:item,
-            value:checkNums[item]
-        })
+
+
+
+<script>
+    var moneyByTimePie = echarts.init(document.getElementById("moneyByTime"));
+    var times = [];
+    var moneyByTime = [];
+
+    <%
+    for(int time:moneyByTime.keySet()){
+    %>
+    times.push('已加盟<%=time%>月');
+    moneyByTime.push({
+        name: '已加盟<%=time%>月',
+        value:<%=moneyByTime.get(time)%>
+    });
+    <%
     }
-    // 指定图表的配置项和数据
-    option = {
-        backgroundColor: '#ffffff',
-
+    %>
+    var moneyByTimeOption = {
         title: {
-            text: '消费情况',
-            left: 'center',
-            top: 20,
-            textStyle: {
-                color: '#000000'
-            }
+            text: '加盟时间与营业额',
+            x: 'center'
         },
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b}: {c} ({d}%)"
+        },
+        legend: {
+            x: 'center',
+            y: 'bottom',
+            data: times
+        },
+        series: [{
+            name: '加盟时间',
+            type: 'pie',
+            radius: ['30%', '45%'],
+            avoidLabelOverlap: false,
+            label: {
+                normal: {
+                    show: false,
+                    position: 'center'
+                },
+                emphasis: {
+                    show: true,
+                    textStyle: {
+                        fontSize: '10',
+                        fontWeight: 'bold'
+                    }
+                }
+            },
+            labelLine: {
+                normal: {
+                    show: false
+                }
+            },
+            data: moneyByTime
+        }
+        ]
+    };
+    moneyByTimePie.setOption(moneyByTimeOption);
+    window.onresize = moneyByTimePie.resize;
 
+    var moneyByLevelPie = echarts.init(document.getElementById("moneyByLevel"));
+    var levels = [];
+    var moneyByLevel = [];
+
+    <%
+    for(int level:moneyByLevel.keySet()){
+    %>
+    levels.push('<%=level%>星级');
+    moneyByLevel.push({
+        name: '<%=level%>星级',
+        value:<%=moneyByLevel.get(level)%>
+    });
+    <%
+    }
+    %>
+    var moneyByLevelOption = {
+        title: {
+            text: '客栈等级与营业额',
+            x: 'center'
+        },
         tooltip: {
             trigger: 'item',
             formatter: "{a} <br/>{b} : {c} ({d}%)"
         },
-
-        visualMap: {
-            show: false,
-            min: 80,
-            max: 600,
-            inRange: {
-                colorLightness: [0, 1]
-            }
+        legend: {
+            x: 'center',
+            y: 'bottom',
+            data: levels
         },
         series: [
             {
-                name: '客栈名称',
+                name: '客栈等级',
                 type: 'pie',
-                radius: '55%',
-                center: ['50%', '50%'],
-                data: hostel.sort(function (a, b) {
-                    return a.value - b.value
-                }),
-                roseType: 'angle',
+                radius: ['30%', '45%'],
+                avoidLabelOverlap: false,
                 label: {
                     normal: {
+                        show: false,
+                        position: 'center'
+                    },
+                    emphasis: {
+                        show: true,
                         textStyle: {
-                            color: 'rgba(0,0,0, 0.3)'
+                            fontSize: '10',
+                            fontWeight: 'bold'
                         }
                     }
                 },
                 labelLine: {
                     normal: {
-                        lineStyle: {
-                            color: 'rgba(0, 0, 0, 0.3)'
-                        },
-                        smooth: 0.2,
-                        length: 10,
-                        length2: 20
+                        show: false
                     }
                 },
-                itemStyle: {
-                    normal: {
-                        color: '#c23531',
-                        shadowBlur: 200,
-                        shadowColor: 'rgba(0, 0, 0, 0.5)'
-                    }
-                },
+                data: moneyByLevel
+            }]
+    };
+    moneyByLevelPie.setOption(moneyByLevelOption);
+    window.onresize = moneyByLevelPie.resize;
 
-                animationType: 'scale',
-                animationEasing: 'elasticOut',
-                animationDelay: function (idx) {
-                    return Math.random() * 200;
+    var moneyByCityPie = echarts.init(document.getElementById("moneyByCity"));
+    var cities = [];
+    var moneyByCity = [];
+    <%
+    for(String city:moneyByCity.keySet()){
+    %>
+    cities.push('<%=city%>');
+    moneyByCity.push({
+        name: '<%=city%>',
+        value:<%=moneyByCity.get(city)%>
+    });
+    <%
+    }
+    %>
+    var moneyByCityOption = {
+        title: {
+            text: '城市与营业额',
+            x: 'center'
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+            x: 'center',
+            y: 'bottom',
+            data: cities
+        },
+        series: [
+            {
+                name: '地域分布',
+                type: 'pie',
+                radius: ['30%', '45%'],
+                avoidLabelOverlap: false,
+                label: {
+                    normal: {
+                        show: false,
+                        position: 'center'
+                    },
+                    emphasis: {
+                        show: true,
+                        textStyle: {
+                            fontSize: '10',
+                            fontWeight: 'bold'
+                        }
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data: moneyByCity
+            }
+        ]
+    };
+    moneyByCityPie.setOption(moneyByCityOption);
+    window.onresize = moneyByCityPie.resize;
+</script>
+
+<script>
+    var moneyLines = echarts.init(document.getElementById("moneyLines"));
+    var moneyByMonth = [];
+    var moneyBySeason = [];
+</script>
+
+<script>
+    var moneyLines = echarts.init(document.getElementById("moneyLines"));
+    var months = [];
+    var moneyByMonths = [];
+    <%
+    for(int month:moneyByMonth.keySet()){
+    %>
+    months.push(<%=month%>);
+    moneyByMonths.push(<%=moneyByMonth.get(month)%>);
+    <%
+    }
+    %>
+    var moneyByMonthOption = {
+        title: {
+            text: '每月营业额走势',
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'cross'
+            }
+        },
+        toolbox: {
+            show: true,
+            feature: {
+                saveAsImage: {}
+            }
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap: false,
+            axisLabel: {
+                formatter: '{value} 月'
+            },
+            data: months
+        },
+        yAxis: {
+            type: 'value',
+            axisLabel: {
+                formatter: '{value} 元'
+            },
+            axisPointer: {
+                snap: true
+            }
+        },
+        visualMap: {
+            show: false,
+            dimension: 0,
+            pieces: [{
+                lte: 6,
+                color: 'green'
+            }, {
+                gt: 6,
+                lte: 8,
+                color: 'red'
+            }, {
+                gt: 8,
+                lte: 14,
+                color: 'green'
+            }, {
+                gt: 14,
+                lte: 17,
+                color: 'red'
+            }, {
+                gt: 17,
+                color: 'green'
+            }]
+        },
+        series: [
+            {
+                name: '营业额',
+                type: 'line',
+                smooth: true,
+                data: moneyByMonths,
+                markArea: {
+                    data: [[{
+                        name: '暑期旺季',
+                        xAxis: '6'
+                    }, {
+                        xAxis: '8'
+                    }], [{
+                        name: '国庆旺季',
+                        xAxis: '10'
+                    }, {
+                        xAxis: '10.5'
+                    }]]
                 }
             }
         ]
+    };
+    moneyLines.setOption(moneyByMonthOption);
 
+    var seasons = [];
+    var moneyBySeasons = [];
+
+    <%
+    for(int season:moneyBySeason.keySet()){
+    %>
+    seasons.push(<%=season%>);
+    moneyBySeasons.push(<%=moneyBySeason.get(season)%>);
+    <%
+    }
+    %>
+    var moneyBySeasonOption = {
+        title: {
+            text: '每季度营业额走势',
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'cross'
+            }
+        },
+        toolbox: {
+            show: true,
+            feature: {
+                saveAsImage: {}
+            }
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap: false,
+            axisLabel: {
+                formatter: '第{value}季度'
+            },
+            data: seasons
+        },
+        yAxis: {
+            type: 'value',
+            axisLabel: {
+                formatter: '{value} 元'
+            },
+            axisPointer: {
+                snap: true
+            }
+        },
+        visualMap: {
+            show: false,
+            dimension: 0,
+            pieces: [{
+                lte: 6,
+                color: 'green'
+            }, {
+                gt: 6,
+                lte: 8,
+                color: 'red'
+            }, {
+                gt: 8,
+                lte: 14,
+                color: 'green'
+            }, {
+                gt: 14,
+                lte: 17,
+                color: 'red'
+            }, {
+                gt: 17,
+                color: 'green'
+            }]
+        },
+        series: [
+            {
+                name: '营业额',
+                type: 'line',
+                smooth: true,
+                data: moneyBySeasons,
+            }
+        ]
     };
 
-    // 使用刚指定的配置项和数据显示图表。
-    myChart.setOption(option);
+    function moneyBySeason() {
+        moneyLines.setOption(moneyBySeasonOption);
+    }
+
+    function moneyByMonth() {
+        moneyLines.setOption(moneyByMonthOption);
+    }
+
 </script>
+
+<%--<script type="text/javascript">--%>
+<%--// 基于准备好的dom，初始化echarts实例--%>
+<%--var myChart = echarts.init(document.getElementById('checkNums'));--%>
+<%--var checkNums=<%=jsonObject%>;--%>
+<%--var hostel=[];--%>
+<%--for(var item in checkNums){--%>
+<%--hostel.push({--%>
+<%--name:item,--%>
+<%--value:checkNums[item]--%>
+<%--})--%>
+<%--}--%>
+<%--// 指定图表的配置项和数据--%>
+<%--option = {--%>
+<%--backgroundColor: '#ffffff',--%>
+
+<%--title: {--%>
+<%--text: '消费情况',--%>
+<%--left: 'center',--%>
+<%--top: 20,--%>
+<%--textStyle: {--%>
+<%--color: '#000000'--%>
+<%--}--%>
+<%--},--%>
+
+<%--tooltip: {--%>
+<%--trigger: 'item',--%>
+<%--formatter: "{a} <br/>{b} : {c} ({d}%)"--%>
+<%--},--%>
+
+<%--visualMap: {--%>
+<%--show: false,--%>
+<%--min: 80,--%>
+<%--max: 600,--%>
+<%--inRange: {--%>
+<%--colorLightness: [0, 1]--%>
+<%--}--%>
+<%--},--%>
+<%--series: [--%>
+<%--{--%>
+<%--name: '客栈名称',--%>
+<%--type: 'pie',--%>
+<%--radius: '55%',--%>
+<%--center: ['50%', '50%'],--%>
+<%--data: hostel.sort(function (a, b) {--%>
+<%--return a.value - b.value--%>
+<%--}),--%>
+<%--roseType: 'angle',--%>
+<%--label: {--%>
+<%--normal: {--%>
+<%--textStyle: {--%>
+<%--color: 'rgba(0,0,0, 0.3)'--%>
+<%--}--%>
+<%--}--%>
+<%--},--%>
+<%--labelLine: {--%>
+<%--normal: {--%>
+<%--lineStyle: {--%>
+<%--color: 'rgba(0, 0, 0, 0.3)'--%>
+<%--},--%>
+<%--smooth: 0.2,--%>
+<%--length: 10,--%>
+<%--length2: 20--%>
+<%--}--%>
+<%--},--%>
+<%--itemStyle: {--%>
+<%--normal: {--%>
+<%--color: '#c23531',--%>
+<%--shadowBlur: 200,--%>
+<%--shadowColor: 'rgba(0, 0, 0, 0.5)'--%>
+<%--}--%>
+<%--},--%>
+
+<%--animationType: 'scale',--%>
+<%--animationEasing: 'elasticOut',--%>
+<%--animationDelay: function (idx) {--%>
+<%--return Math.random() * 200;--%>
+<%--}--%>
+<%--}--%>
+<%--]--%>
+
+<%--};--%>
+
+<%--// 使用刚指定的配置项和数据显示图表。--%>
+<%--myChart.setOption(option);--%>
+<%--</script>--%>
 </body>
 
 </html>

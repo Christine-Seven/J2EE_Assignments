@@ -95,15 +95,15 @@ public class VipInfoAction extends BaseAction {
         String vipNum = String.valueOf(request.getSession().getAttribute("id"));
 
         // 每月订单总额
-        Map<String, Double> priceByMonth =vipService.getPriceByMonth(vipNum);
+        Map<Integer, Double> priceByMonth =vipService.getPriceByMonth(vipNum);
         // 每月出行次数
-        Map<String, Integer> timeByMonth = vipService.getTimeByMonth(vipNum);
+        Map<Integer, Integer> timeByMonth = vipService.getTimeByMonth(vipNum);
         // 按城市分布的出行次数
         Map<String, Integer> timeByCity = vipService.getTimeByCity(vipNum);
         // 按城市查看价格分布
         Map<String, Map<String,Integer>> priceByCity = vipService.getPriceByCity(vipNum);
 
-        for(String month:priceByMonth.keySet()){
+        for(Integer month:priceByMonth.keySet()){
             System.out.println("month is "+month);
         }
 

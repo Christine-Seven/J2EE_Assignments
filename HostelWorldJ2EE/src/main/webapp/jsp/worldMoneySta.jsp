@@ -1,10 +1,3 @@
-<%@ page import="model.Orders" %>
-<%@ page import="java.util.List" %>
-<%@ page import="java.util.ArrayList" %>
-<%@ page import="util.PayMethod" %>
-<%@ page import="util.OrderConditionEnum" %>
-<%@ page import="java.util.HashMap" %>
-<%@ page import="com.alibaba.fastjson.JSONObject" %>
 <%@ page import="java.util.Map" %><%--
   Created by IntelliJ IDEA.
   User: Seven
@@ -66,105 +59,43 @@
     <ul class="nav nav-pills nav-stacked" style="margin-top: 50px;">
         <li role="presentation"><a href="manager_getApply.action"><h5 style="padding-left: 20px">审批申请</h5></a></li>
         <li role="presentation"><a href="manager_getSettle.action"><h5 style="padding-left: 20px">客栈结算</h5></a></li>
-        <li role="presentation" class="active"><a href="worldSta_getIndex.action"><h5 style="padding-left: 20px">指标分析</h5></a></li>
-        <li role="presentation"><a href="worldSta_getMoney.action"><h5 style="padding-left: 20px">营业概览</h5></a></li>
+        <li role="presentation"><a href="worldSta_getIndex.action"><h5 style="padding-left: 20px">指标分析</h5></a></li>
+        <li role="presentation" class="active"><a href="worldSta_getMoney.action"><h5 style="padding-left: 20px">
+            营业概览</h5></a></li>
         <li role="presentation"><a href="worldSta_getPeople.action"><h5 style="padding-left: 20px">成员管理</h5></a></li>
-
     </ul>
 </div>
+<%
+    //营业情况概览
+    Map<Integer, Double> moneyByTime = (Map<Integer, Double>) request.getAttribute("moneyByTime");
+    Map<String, Double> moneyByCity = (Map<String, Double>) request.getAttribute("moneyByCity");
+    Map<Integer, Double> moneyByLevel = (Map<Integer, Double>) request.getAttribute("moneyByLevel");
+    Map<Integer, Double> moneyByMonth = (Map<Integer, Double>) request.getAttribute("moneyByMonth");
+    Map<Integer, Double> moneyBySeason = (Map<Integer, Double>) request.getAttribute("moneyBySeason");
 
-    <fieldset style="margin-top: 10px;margin-right: 50px;margin-left: 30px">
-        <legend>订单统计</legend>
-        <table class="table" style="width: 1000px">
-            <thead style="background-color: rgba(190, 188, 198, 0.67)">
-            <tr>
-                <td>#</td>
-                <td>会员编号</td>
-                <td>客栈编号</td>
-                <td>入住日期</td>
-                <td>离店日期</td>
-                <td>应付金额</td>
-                <td>支付方式</td>
-                <td>订单状态</td>
-            </tr>
-            </thead>
-            <tbody>
-            <%
-                List<Orders> ordersMap = (ArrayList<Orders>) request.getAttribute("ordersList");
-                int index = 1;
-                for (Orders orders : ordersMap) {
-                    String vipNum = orders.getVipNum();
-                    String hostelNum = orders.getHostelNum();
-                    String checkinDate = orders.getCheckinDate();
-                    String checkoutDate = orders.getCheckoutDate();
-                    Double requiredMoney = orders.getRequiredMoney();
+%>
+<div style="position: absolute;top:80px;left:160px;width: 1000px;height: 600px;">
 
-                    String method = "";
-                    PayMethod payMethod = PayMethod.valueOf(orders.getPayMethod());
-                    switch (payMethod) {
-                        case CASH:
-                            method = "现金";
-                            break;
-                        case CARD:
-                            method = "会员卡";
-                            break;
-                    }
+    <div style="margin-left: 30px;margin-right: 50px">
+        <legend>营业概览</legend>
+        <div class="row">
+            <div class="col-md-4" id="moneyByTime" style="width: 200px;height: 200px;margin-left:50px"></div>
+            <div class="col-md-4" id="moneyByLevel" style="width: 200px;height: 200px;margin-left:50px"></div>
+            <div class="col-md-4" id="moneyByCity" style="width: 200px;height: 200px;margin-left:50px"></div>
+        </div>
+        <legend style="margin-top: 10px">营业额走势</legend>
+        <div class="btn-group" role="group" aria-label="..." style="margin-top: 10px">
+            <button type="button" class="btn btn-default" onclick="moneyByMonth()">月份</button>
+            <button type="button" class="btn btn-default" onclick="moneyBySeason()">季度</button>
+        </div>
+        <div id="moneyLines" style="width: 600px;height: 400px;margin-left:50px;margin-top: 10px"></div>
+    </div>
 
-                    String state = "";
-                    OrderConditionEnum orderCondition = OrderConditionEnum.valueOf(orders.getOrderCondition());
-                    switch (orderCondition) {
-                        case BOOK:
-                            state = "已预订";
-                            break;
-                        case VALID:
-                            state = "已付款";
-                            break;
-                        case CHECKIN:
-                            state = "已入住";
-                            break;
-                        case CHECKOUT:
-                            state = "已离店";
-                            break;
-                        case OVERDUE:
-                            state = "已过期";
-                            break;
-                        case CANCEL:
-                            state = "已取消";
-                            break;
-                        case SETTLE:
-                            state = "已结算";
-                            break;
-                        default:
-                            state = "错误状态";
-                            break;
-                    }
-            %>
-            <tr>
-                <td><%=index%>
-                </td>
-                <td><%=vipNum%>
-                </td>
-                <td><%=hostelNum%>
-                </td>
-                <td><%=checkinDate%>
-                </td>
-                <td><%=checkoutDate%>
-                </td>
-                <td><%=requiredMoney%>
-                </td>
-                <td><%=method%>
-                </td>
-                <td><%=state%>
-                </td>
-            </tr>
-            <%
-                }
-            %>
-            </tbody>
-        </table>
+    <fieldset style="margin-top:50px;margin-left: 30px;margin-right: 50px">
+        <legend>热门客栈</legend>
+        <div class="col-md-8 col-md-offset-2" id="checkNums" style="height:300px;"></div>
     </fieldset>
-
-
+</div>
 
 
 <script src="js/echarts.min.js"></script>
@@ -172,8 +103,6 @@
 <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
-
-
 
 <script>
     var moneyByTimePie = echarts.init(document.getElementById("moneyByTime"));
@@ -356,25 +285,20 @@
 
 <script>
     var moneyLines = echarts.init(document.getElementById("moneyLines"));
-    var moneyByMonth = [];
-    var moneyBySeason = [];
-</script>
-
-<script>
-    var moneyLines=echarts.init(document.getElementById("moneyLines"));
-    var months=[];
-    var moneyByMonths=[];
+    var months = [];
+    var moneyByMonths = [];
     <%
     for(int month:moneyByMonth.keySet()){
     %>
-        months.push(<%=month%>);
-        moneyByMonths.push(<%=moneyByMonth.get(month)%>);
+    months.push(<%=month%>);
+    moneyByMonths.push(<%=moneyByMonth.get(month)%>);
     <%
     }
     %>
     var moneyByMonthOption = {
         title: {
             text: '每月营业额走势',
+            x: 'center'
         },
         tooltip: {
             trigger: 'axis',
@@ -388,7 +312,7 @@
                 saveAsImage: {}
             }
         },
-        xAxis:  {
+        xAxis: {
             type: 'category',
             boundaryGap: false,
             axisLabel: {
@@ -430,12 +354,12 @@
         },
         series: [
             {
-                name:'营业额',
-                type:'line',
+                name: '营业额',
+                type: 'line',
                 smooth: true,
                 data: moneyByMonths,
                 markArea: {
-                    data: [ [{
+                    data: [[{
                         name: '暑期旺季',
                         xAxis: '6'
                     }, {
@@ -445,15 +369,15 @@
                         xAxis: '10'
                     }, {
                         xAxis: '10.5'
-                    }] ]
+                    }]]
                 }
             }
         ]
     };
     moneyLines.setOption(moneyByMonthOption);
 
-    var seasons=[];
-    var moneyBySeasons=[];
+    var seasons = [];
+    var moneyBySeasons = [];
 
     <%
     for(int season:moneyBySeason.keySet()){
@@ -463,33 +387,34 @@
     <%
     }
     %>
-    var moneyBySeasonOption= {
+    var moneyBySeasonOption = {
         title: {
             text: '每季度营业额走势',
+            x: 'center'
         },
         tooltip: {
             trigger: 'axis',
-                axisPointer: {
+            axisPointer: {
                 type: 'cross'
             }
         },
         toolbox: {
             show: true,
-                feature: {
+            feature: {
                 saveAsImage: {}
             }
         },
-        xAxis:  {
+        xAxis: {
             type: 'category',
-                boundaryGap: false,
-                axisLabel: {
+            boundaryGap: false,
+            axisLabel: {
                 formatter: '第{value}季度'
             },
             data: seasons
         },
         yAxis: {
             type: 'value',
-                axisLabel: {
+            axisLabel: {
                 formatter: '{value} 元'
             },
             axisPointer: {
@@ -498,8 +423,8 @@
         },
         visualMap: {
             show: false,
-                dimension: 0,
-                pieces: [{
+            dimension: 0,
+            pieces: [{
                 lte: 6,
                 color: 'green'
             }, {
@@ -521,8 +446,8 @@
         },
         series: [
             {
-                name:'营业额',
-                type:'line',
+                name: '营业额',
+                type: 'line',
                 smooth: true,
                 data: moneyBySeasons,
             }
@@ -533,97 +458,11 @@
         moneyLines.setOption(moneyBySeasonOption);
     }
 
-    function moneyByMonth(){
+    function moneyByMonth() {
         moneyLines.setOption(moneyByMonthOption);
     }
 
 </script>
 
-<%--<script type="text/javascript">--%>
-<%--// 基于准备好的dom，初始化echarts实例--%>
-<%--var myChart = echarts.init(document.getElementById('checkNums'));--%>
-<%--var checkNums=<%=jsonObject%>;--%>
-<%--var hostel=[];--%>
-<%--for(var item in checkNums){--%>
-<%--hostel.push({--%>
-<%--name:item,--%>
-<%--value:checkNums[item]--%>
-<%--})--%>
-<%--}--%>
-<%--// 指定图表的配置项和数据--%>
-<%--option = {--%>
-<%--backgroundColor: '#ffffff',--%>
-
-<%--title: {--%>
-<%--text: '消费情况',--%>
-<%--left: 'center',--%>
-<%--top: 20,--%>
-<%--textStyle: {--%>
-<%--color: '#000000'--%>
-<%--}--%>
-<%--},--%>
-
-<%--tooltip: {--%>
-<%--trigger: 'item',--%>
-<%--formatter: "{a} <br/>{b} : {c} ({d}%)"--%>
-<%--},--%>
-
-<%--visualMap: {--%>
-<%--show: false,--%>
-<%--min: 80,--%>
-<%--max: 600,--%>
-<%--inRange: {--%>
-<%--colorLightness: [0, 1]--%>
-<%--}--%>
-<%--},--%>
-<%--series: [--%>
-<%--{--%>
-<%--name: '客栈名称',--%>
-<%--type: 'pie',--%>
-<%--radius: '55%',--%>
-<%--center: ['50%', '50%'],--%>
-<%--data: hostel.sort(function (a, b) {--%>
-<%--return a.value - b.value--%>
-<%--}),--%>
-<%--roseType: 'angle',--%>
-<%--label: {--%>
-<%--normal: {--%>
-<%--textStyle: {--%>
-<%--color: 'rgba(0,0,0, 0.3)'--%>
-<%--}--%>
-<%--}--%>
-<%--},--%>
-<%--labelLine: {--%>
-<%--normal: {--%>
-<%--lineStyle: {--%>
-<%--color: 'rgba(0, 0, 0, 0.3)'--%>
-<%--},--%>
-<%--smooth: 0.2,--%>
-<%--length: 10,--%>
-<%--length2: 20--%>
-<%--}--%>
-<%--},--%>
-<%--itemStyle: {--%>
-<%--normal: {--%>
-<%--color: '#c23531',--%>
-<%--shadowBlur: 200,--%>
-<%--shadowColor: 'rgba(0, 0, 0, 0.5)'--%>
-<%--}--%>
-<%--},--%>
-
-<%--animationType: 'scale',--%>
-<%--animationEasing: 'elasticOut',--%>
-<%--animationDelay: function (idx) {--%>
-<%--return Math.random() * 200;--%>
-<%--}--%>
-<%--}--%>
-<%--]--%>
-
-<%--};--%>
-
-<%--// 使用刚指定的配置项和数据显示图表。--%>
-<%--myChart.setOption(option);--%>
-<%--</script>--%>
 </body>
-
 </html>

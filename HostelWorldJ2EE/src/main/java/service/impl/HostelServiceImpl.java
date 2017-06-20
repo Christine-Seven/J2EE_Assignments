@@ -179,7 +179,7 @@ public class HostelServiceImpl implements HostelService {
                 return priceRangeEnums[i];
             }
         }
-        return priceRangeEnums[i+1];
+        return priceRangeEnums[i];
     }
 
     //获得订单所在月份
@@ -188,7 +188,7 @@ public class HostelServiceImpl implements HostelService {
         if (c==null){
             return -1;
         }
-        int month = c.get(Calendar.MONTH);
+        int month = c.get(Calendar.MONTH)+1;
         return month;
     }
 }

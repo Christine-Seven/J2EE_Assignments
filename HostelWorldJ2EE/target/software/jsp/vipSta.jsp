@@ -65,32 +65,49 @@
     </ul>
 </div>
 <%
-    Map<String, Double> priceByMonth = (HashMap<String,Double>) request.getAttribute("priceByMonth");
-    Map<String,Integer> timeByMonth = (HashMap<String,Integer>) request.getAttribute("timeByMonth");
-//    Map<String, Integer> timeByCity = (HashMap<String, Integer>) request.getAttribute("priceByCity");
-//    Map<String, Map<String,Integer>> priceByCity = (HashMap<String, Map<String,Integer>>) request.getAttribute("priceByCity");
+    Map<Integer, Double> priceByMonth = (HashMap<Integer, Double>) request.getAttribute("priceByMonth");
+    Map<Integer, Integer> timeByMonth = (HashMap<Integer, Integer>) request.getAttribute("timeByMonth");
+    Map<String, Integer> timeByCity = (HashMap<String, Integer>) request.getAttribute("timeByCity");
+    Map<String, Map<String, Integer>> priceByCity = (HashMap<String, Map<String, Integer>>) request.getAttribute("priceByCity");
 
-    int length=priceByMonth.size();
-    String[] months=new String[length];
-    double[] prices=new double[length];
-    int[] times=new int[length];
+    int monthLength = priceByMonth.keySet().size();
+    int[] months = new int[monthLength];
+    double[] monthPrices = new double[monthLength];
+    int[] monthTimes = new int[monthLength];
 
-    int i=0;
-    for(String month:priceByMonth.keySet()){
-//        System.out.println("month "+month);
-        months[i]=month;
-        prices[i]=priceByMonth.get(month);
-        times[i]=timeByMonth.get(month);
+    int i = 0;
+    for (int month : priceByMonth.keySet()) {
+        months[i] = month;
+        monthPrices[i] = priceByMonth.get(month);
+        monthTimes[i] = timeByMonth.get(month);
+        i++;
+    }
+
+    int cityLength = timeByCity.keySet().size();
+    String[] cities = new String[cityLength];
+    int[] cityTimes = new int[cityLength];
+    List<Map<String, Integer>> cityPrices = new ArrayList<>();
+    i = 0;
+    for (String city : timeByCity.keySet()) {
+        cities[i] = city;
+        cityTimes[i] = timeByCity.get(city);
+        cityPrices.add(priceByCity.get(city));
         i++;
     }
 
 %>
-<div style="position: absolute;top:80px;left:160px;width: 900px;height: 600px;">
+<div style="position: absolute;top:10px;left:80px;width: 900px;height: 600px;">
 
-    <div class="col-md-6 col-md-offset-2"  style="top:100px;">
+    <div class="col-md-6 col-md-offset-2" style="top:100px;">
         <fieldset>
             <legend>出行消费</legend>
             <div id="timeAndPriceByMonth" style="width: 600px;height:400px;"></div>
+        </fieldset>
+        <fieldset>
+            <legend>常去城市</legend>
+            <div id="timeByCity" style="width: 600px;height:400px;"></div>
+            <p>您在<label id="city"></label>的消费水平如下</p>
+            <div id="priceByCity" style="width:600px;height:400px"></div>
         </fieldset>
 
     </div>
@@ -98,7 +115,7 @@
 </div>
 
 
-<script src="js/echarts.simple.min.js"></script>
+<script src="js/echarts.min.js"></script>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -107,16 +124,16 @@
 <script type="text/javascript">
     // 基于准备好的dom，初始化echarts实例
 
-    var myChart=echarts.init(document.getElementById('timeAndPriceByMonth'));
-    var prices=[];
-    var times=[];
-    var months=[];
+    var myChart = echarts.init(document.getElementById('timeAndPriceByMonth'));
+    var prices = [];
+    var times = [];
+    var months = [];
     <%
-        for(i=0;i<length;i++){
+        for(i=0;i<monthLength;i++){
     %>
-        months[<%=i%>] = '<%=months[i]%>';
-        prices[<%=i%>] = '<%=prices[i]%>';
-        times[<%=i%>] = '<%=times[i]%>';
+    months[<%=i%>] = '<%=months[i]%>';
+    prices[<%=i%>] = '<%=monthPrices[i]%>';
+    times[<%=i%>] = '<%=monthTimes[i]%>';
     <%
     }
     %>
@@ -140,12 +157,12 @@
             }
         },
         legend: {
-            data:['消费金额','出行次数']
+            data: ['消费金额', '出行次数']
         },
         xAxis: [
             {
                 type: 'category',
-                data: months.reverse(),
+                data: months,
                 axisPointer: {
                     type: 'shadow'
                 }
@@ -175,20 +192,154 @@
         ],
         series: [
             {
-                name:'消费金额',
-                type:'bar',
-                data:prices
+                name: '消费金额',
+                type: 'bar',
+                data: prices
             },
             {
-                name:'出行次数',
-                type:'line',
+                name: '出行次数',
+                type: 'line',
                 yAxisIndex: 1,
-                data:times
+                data: times
             }
         ]
     };
 
     myChart.setOption(option);
+</script>
+
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('timeByCity'));
+
+    var cities = [];
+    var times = [];
+    var timeByCity = [];
+    var priceByCity = new Array();
+
+    <%
+    for(i=0;i<cityLength;i++){
+    %>
+    cities[<%=i%>] = '<%=cities[i]%>';
+    times[<%=i%>] =<%=cityTimes[i]%>;
+    timeByCity.push({
+        name: cities[<%=i%>],
+        value: times[<%=i%>]
+    });
+    priceByCity[<%=i%>] = new Array();
+    <%
+    for(String range:cityPrices.get(i).keySet()){
+    %>
+    priceByCity[<%=i%>].push({
+        name: '<%=range%>',
+        value:<%=cityPrices.get(i).get(range)%>
+    })
+    <%
+    }
+    }
+    %>
+
+    var option = {
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b}: {c} ({d}%)"
+        },
+        legend: {
+            orient: 'vertical',
+            x: 'left',
+            data: cities
+        },
+        series: [
+            {
+                name: '出行次数',
+                type: 'pie',
+                selectedMode: 'single',
+                radius: [0, '30%'],
+
+                label: {
+                    normal: {
+                        position: 'inner'
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data: timeByCity
+            },
+            {
+                name: '出行次数',
+                type: 'pie',
+                radius: ['40%', '55%'],
+
+                data: timeByCity
+
+            }
+        ]
+    };
+
+    myChart.setOption(option);
+    myChart.on('click', function (param) {
+        $('#city').text(param.name);
+        console.log(param.dataIndex);
+        priceByCityChart_init(param.dataIndex, priceByCity);
+
+    })
+
+    function priceByCityChart_init(cityIndex, priceByCity) {
+        var priceByCityChart = echarts.init(document.getElementById('priceByCity'));
+
+        var prices = priceByCity[cityIndex];
+        var ranges = [];
+        var numbers = [];
+        var i = 0;
+        for (; i < prices.length; i++) {
+            item = prices[i];
+            ranges[i] = item.name;
+            numbers[i] = item.value;
+            console.log(item.name + " " + item.value);
+        }
+
+        var option = {
+            color: ['#c23531'],
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                    type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                }
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis: [
+                {
+                    type: 'category',
+                    data: ranges,
+                    axisTick: {
+                        alignWithLabel: true
+                    }
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value'
+                }
+            ],
+            series: [
+                {
+                    name: '消费区间分布',
+                    type: 'bar',
+                    barWidth: '60%',
+                    data: numbers
+                }
+            ]
+        };
+        priceByCityChart.setOption(option);
+    }
+
 </script>
 
 </body>

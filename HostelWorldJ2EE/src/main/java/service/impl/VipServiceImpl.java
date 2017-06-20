@@ -95,10 +95,10 @@ public class VipServiceImpl implements VipService {
     }
 
     @Override
-    public Map<String, Double> getPriceByMonth(String vipNum) {
+    public Map<Integer, Double> getPriceByMonth(String vipNum) {
         List<Orders> ordersList = ordersService.queryByVip(vipNum);
         // 每月订单总额
-        Map<String, Double> priceByMonth = new HashMap<>();
+        Map<Integer, Double> priceByMonth = new HashMap<>();
 
         for (Orders orders : ordersList) {
             //获得订单所在月份
@@ -106,10 +106,10 @@ public class VipServiceImpl implements VipService {
             System.out.println("month=" + month);
 
             if (!priceByMonth.containsKey(month)) {
-                priceByMonth.put(month+"月", orders.getPaidMoney());
+                priceByMonth.put(month, orders.getPaidMoney());
             } else {
                 double money = priceByMonth.get(month);
-                priceByMonth.put(month+"月", money + orders.getPaidMoney());
+                priceByMonth.put(month, money + orders.getPaidMoney());
             }
 
         }
@@ -117,20 +117,20 @@ public class VipServiceImpl implements VipService {
     }
 
     @Override
-    public Map<String, Integer> getTimeByMonth(String vipNum) {
+    public Map<Integer, Integer> getTimeByMonth(String vipNum) {
         List<Orders> ordersList = ordersService.queryByVip(vipNum);
         // 每月出行次数
-        Map<String, Integer> timeByMonth = new HashMap<>();
+        Map<Integer, Integer> timeByMonth = new HashMap<>();
 
         for (Orders orders : ordersList) {
             //获得订单所在月份
             int month = getMonthByOrder(orders);
 
             if (!timeByMonth.containsKey(month)) {
-                timeByMonth.put(month+"月", 1);
+                timeByMonth.put(month, 1);
             } else {
                 int time = timeByMonth.get(month);
-                timeByMonth.put(month+"月", time++);
+                timeByMonth.put(month, time++);
             }
         }
         return timeByMonth;
@@ -149,7 +149,8 @@ public class VipServiceImpl implements VipService {
                 timeByCity.put(city, 1);
             } else {
                 int time = timeByCity.get(city);
-                timeByCity.put(city, time++);
+                time = time+1;
+                timeByCity.put(city, time);
             }
         }
         return timeByCity;
@@ -195,7 +196,7 @@ public class VipServiceImpl implements VipService {
                 return priceRangeEnums[i];
             }
         }
-        return priceRangeEnums[i+1];
+        return priceRangeEnums[i];
     }
 
     //获得订单所在月份

@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import service.*;
 import util.CheckConditionEnum;
 import util.OrderConditionEnum;
+import util.PriceRangeEnum;
 import util.RoomPlanVO;
 
 import java.text.SimpleDateFormat;
@@ -213,18 +214,6 @@ public class HostelAction extends BaseAction {
 
     //客栈统计信息
     public String hostelSta() {
-        String hostelNum=String.valueOf(request.getSession().getAttribute("id"));
-        Map<Integer, Double[]> adrByMonth = hostelService.getAdrByHostel(hostelNum);
-        Map<Integer, Double[]> occByMonth = hostelService.getOccByHostel(hostelNum);
-        Map<Integer, Double[]> revparByMonth = hostelService.getRevparByHostel(hostelNum);
-
-        //每月市场细分指数
-        //TODO
-        Map<Integer,List<Double>> indexBySeason=new HashMap<>();
-
-        //会员等级分布
-        Map<Integer,Integer> vipByLevel=hostelService.getLevelByHostel(hostelNum);
-        //每月消费额区间分布
         //TODO
         //月份信息从界面传入，这里为了测试方便
         List<Integer> months=new ArrayList<Integer>();
@@ -234,31 +223,46 @@ public class HostelAction extends BaseAction {
         months.add(4);
         months.add(5);
         months.add(6);
-
+        String hostelNum=String.valueOf(request.getSession().getAttribute("id"));
+        Map<Integer, Double[]> adrByMonth = hostelService.getAdrByHostel(hostelNum);
+        Map<Integer, Double[]> occByMonth = hostelService.getOccByHostel(hostelNum);
+        Map<Integer, Double[]> revparByMonth = hostelService.getRevparByHostel(hostelNum);
+        Map<Integer,Integer> vipByLevel=hostelService.getLevelByHostel(hostelNum);
         Map<Integer,Map<String,Integer>> priceByMonth = hostelService.getPriceByMonth(hostelNum,months);
+        Map<Integer,Integer[]> rangeByMonth=new HashMap<>();
+        for(int month:priceByMonth.keySet()){
+            Map<String,Integer> prices=priceByMonth.get(month);
+            String[] ranges={PriceRangeEnum.LT100.toString(),PriceRangeEnum.LT200.toString(),PriceRangeEnum.LT300.toString(),PriceRangeEnum.LT500.toString(),PriceRangeEnum.MT500.toString()};
+            Integer[] numbers=new Integer[ranges.length];
+            int i=0;
+            System.out.println("month="+month);
+            for(String range:ranges){
+                if(prices.containsKey(range)){
+                    numbers[i]=prices.get(range);
+                }else{
+                    numbers[i]=0;
+                }
+                System.out.println("range="+range+"  "+numbers[i]);
+                i++;
+            }
+            rangeByMonth.put(month,numbers);
+        }
 
-        //会员等级与消费额的关系
-        Map<Integer,List<Double>> vipByPrice=new HashMap<>();
+        //每月市场细分指数
+        //TODO
+        Map<Integer,List<Double>> indexBySeason=new HashMap<>();
 
         List<Orders> ordersList = ordersService.queryByHostel(hostelNum);
         for (Orders orders:ordersList){
             Vip vip=vipService.findVipById(orders.getVipNum());
-            double price = orders.getPaidMoney();
             int level=vip.getVipLevel();
+
             if(!vipByLevel.containsKey(level)){
                 vipByLevel.put(level,1);
-
-                List<Double> prices=new ArrayList<>();
-                prices.add(price);
-                vipByPrice.put(level,prices);
             }else {
                 int num=vipByLevel.get(level);
                 num=num+1;
                 vipByLevel.put(level,num);
-
-                List<Double> prices=vipByPrice.get(level);
-                prices.add(price);
-                vipByPrice.put(level,prices);
             }
         }
 
@@ -266,8 +270,8 @@ public class HostelAction extends BaseAction {
         request.setAttribute("occByMonth",occByMonth);
         request.setAttribute("revparByMonth",revparByMonth);
         request.setAttribute("vipByLevel",vipByLevel);
-        request.setAttribute("vipByPrice",vipByPrice);
-        request.setAttribute("priceByMonth",priceByMonth);
+        request.setAttribute("rangeByMonth",rangeByMonth);
+        request.setAttribute("ordersList",ordersList);
         return "hostelSta";
     }
 

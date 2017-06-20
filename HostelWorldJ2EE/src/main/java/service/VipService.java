@@ -75,14 +75,14 @@ public interface VipService {
      * @param vipNum
      * @return
      */
-    public Map<String,Double> getPriceByMonth(String vipNum);
+    public Map<Integer,Double> getPriceByMonth(String vipNum);
 
     /**
      * 每月出行次数
      * @param vipNum
      * @return
      */
-    public Map<String,Integer> getTimeByMonth(String vipNum);
+    public Map<Integer,Integer> getTimeByMonth(String vipNum);
 
     /**
      * 按城市分布的出行次数

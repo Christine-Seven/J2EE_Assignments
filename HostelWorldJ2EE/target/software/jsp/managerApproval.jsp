@@ -63,10 +63,11 @@
 
 <div class="navbar navbar-default navbar-fixed" style="width: 150px;height: 620px;top: 50px">
     <ul class="nav nav-pills nav-stacked" style="margin-top: 50px;">
-        <li role="presentation" class="active"><a href="manager_getApply.action"><h5 style="padding-left: 20px">审批申请</h5></a>
-        </li>
+        <li role="presentation" class="active"><a href="manager_getApply.action"><h5 style="padding-left: 20px">审批申请</h5></a></li>
         <li role="presentation"><a href="manager_getSettle.action"><h5 style="padding-left: 20px">客栈结算</h5></a></li>
-        <li role="presentation"><a href="worldSta.action"><h5 style="padding-left: 20px">统计信息</h5></a></li>
+        <li role="presentation"><a href="worldSta_getIndex.action"><h5 style="padding-left: 20px">指标分析</h5></a></li>
+        <li role="presentation"><a href="worldSta_getMoney.action"><h5 style="padding-left: 20px">营业概览</h5></a></li>
+        <li role="presentation"><a href="worldSta_getPeople.action"><h5 style="padding-left: 20px">成员管理</h5></a></li>
     </ul>
 </div>
 
