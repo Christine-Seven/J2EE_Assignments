@@ -62,15 +62,16 @@
         <li role="presentation"><a href="manager_getSettle.action"><h5 style="padding-left: 20px">客栈结算</h5></a></li>
         <li role="presentation"><a href="worldSta_getIndex.action"><h5 style="padding-left: 20px">指标分析</h5></a></li>
         <li role="presentation"><a href="worldSta_getMoney.action"><h5 style="padding-left: 20px">营业概览</h5></a></li>
-        <li role="presentation" class="active"><a href="worldSta_getPeople.action"><h5 style="padding-left: 20px">成员管理</h5></a></li>
+        <li role="presentation" class="active"><a href="worldSta_getPeople.action"><h5 style="padding-left: 20px">
+            成员管理</h5></a></li>
 
     </ul>
 </div>
 <%
-    Map<Integer,Set<String>> activeByMonth= (Map<Integer,Set<String>>) request.getAttribute("activeByMonth");
-    Map<String,Set<String>> activeByCity=  (Map<String,Set<String>>) request.getAttribute("activeByCity");
-    Map<String,Integer> cityByTime=(Map<String,Integer>) request.getAttribute("cityByTime");
-    Map<String,Integer> checkNums=(Map<String,Integer>) request.getAttribute("checkNums");
+    Map<Integer, Set<String>> activeByMonth = (Map<Integer, Set<String>>) request.getAttribute("activeByMonth");
+    Map<String, Set<String>> activeByCity = (Map<String, Set<String>>) request.getAttribute("activeByCity");
+    Map<String, Integer> cityByTime = (Map<String, Integer>) request.getAttribute("cityByTime");
+    Map<String, Integer> checkNums = (Map<String, Integer>) request.getAttribute("checkNums");
 %>
 <div style="position: absolute;top:80px;left:160px;width: 1000px;height: 600px;">
 
@@ -88,20 +89,20 @@
 <script src="js/bootstrap.min.js"></script>
 
 <script>
-    var worldPeople=echarts.init(document.getElementById("worldPeople"));
-    var allNumberByMonth=0;
-    var allNumberByCity=0;
+    var worldPeople = echarts.init(document.getElementById("worldPeople"));
+    var allNumberByMonth = 0;
+    var allNumberByCity = 0;
 
-    var months=[];
-    var numberByMonth=[];
-    var numberByCity=[];
+    var months = [];
+    var numberByMonth = [];
+    var numberByCity = [];
 
     <%
     for(int month:activeByMonth.keySet()){
     %>
-        months.push(<%=month%>);
-        numberByMonth.push(<%=activeByMonth.get(month).size()%>);
-        allNumberByMonth=allNumberByMonth+<%=activeByMonth.get(month).size()%>;
+    months.push(<%=month%>);
+    numberByMonth.push(<%=activeByMonth.get(month).size()%>);
+    allNumberByMonth = allNumberByMonth +<%=activeByMonth.get(month).size()%>;
     <%
     }
     %>
@@ -110,10 +111,10 @@
     for(String city:activeByCity.keySet()){
     %>
     numberByCity.push({
-        name:'<%=city%>',
+        name: '<%=city%>',
         value:<%=activeByCity.get(city).size()%>
     });
-    allNumberByCity=allNumberByCity+<%=activeByCity.get(city).size()%>;
+    allNumberByCity = allNumberByCity +<%=activeByCity.get(city).size()%>;
     <%
     }
     %>

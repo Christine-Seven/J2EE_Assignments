@@ -5,42 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4a6a2d4-434d-420c-9397-bfb49141c13d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/worldIndexSta.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/worldMoneySta.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/worldPeopleSta.jsp" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/js/echarts.simple.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/software/js/echarts.simple.min.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/action/HostelAction.class" afterPath="$PROJECT_DIR$/target/classes/action/HostelAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/action/VipInfoAction.class" afterPath="$PROJECT_DIR$/target/classes/action/VipInfoAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/action/WorldStaInfoAction.class" afterPath="$PROJECT_DIR$/target/classes/action/WorldStaInfoAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/service/VipService.class" afterPath="$PROJECT_DIR$/target/classes/service/VipService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/service/impl/HostelServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/service/impl/HostelServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/service/impl/VipServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/service/impl/VipServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/action/HostelAction.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/action/HostelAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/action/VipInfoAction.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/action/VipInfoAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/action/WorldStaInfoAction.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/action/WorldStaInfoAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/VipService.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/VipService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/impl/HostelServiceImpl.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/impl/HostelServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/impl/VipServiceImpl.class" afterPath="$PROJECT_DIR$/target/software/WEB-INF/classes/service/impl/VipServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/action/HostelAction.java" afterPath="$PROJECT_DIR$/src/main/java/action/HostelAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/action/VipInfoAction.java" afterPath="$PROJECT_DIR$/src/main/java/action/VipInfoAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/action/WorldStaInfoAction.java" afterPath="$PROJECT_DIR$/src/main/java/action/WorldStaInfoAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/service/VipService.java" afterPath="$PROJECT_DIR$/src/main/java/service/VipService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/service/impl/HostelServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/service/impl/HostelServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/service/impl/VipServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/service/impl/VipServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/service/impl/WorldStaServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/service/impl/WorldStaServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/struts.xml" afterPath="$PROJECT_DIR$/src/main/resources/struts.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/html/pie.html" afterPath="$PROJECT_DIR$/src/main/webapp/html/pie.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/jsp/hostelSta.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/hostelSta.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/jsp/managerApproval.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/managerApproval.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/jsp/managerSettle.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/managerSettle.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/jsp/vipSta.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/vipSta.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/jsp/worldSta.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/worldSta.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/html/pie.html" afterPath="$PROJECT_DIR$/target/software/html/pie.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/jsp/hostelSta.jsp" afterPath="$PROJECT_DIR$/target/software/jsp/hostelSta.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/jsp/vipSta.jsp" afterPath="$PROJECT_DIR$/target/software/jsp/vipSta.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/software/jsp/worldSta.jsp" afterPath="$PROJECT_DIR$/target/software/jsp/worldSta.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/jsp/worldMoneySta.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/worldMoneySta.jsp" />
     </list>
     <ignored path="HostelWorldJ2EE.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -82,10 +47,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="worldSta.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="worldSta.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/worldSta.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
+            <state relative-caret-position="947">
               <caret line="362" column="0" lean-forward="false" selection-start-line="362" selection-start-column="0" selection-end-line="539" selection-end-column="9" />
               <folding>
                 <element signature="n#style#0;n#fieldset#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -154,12 +119,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="worldMoneySta.jsp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="worldMoneySta.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/worldMoneySta.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1280">
-              <caret line="85" column="41" lean-forward="false" selection-start-line="85" selection-start-column="41" selection-end-line="85" selection-end-column="41" />
+            <state relative-caret-position="59">
+              <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
               <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#legend#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -167,12 +133,12 @@
                 <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#fieldset#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#script#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="e#6764#6815#0#JSP" expanded="false" />
-                <element signature="e#6958#6973#0#JSP" expanded="false" />
-                <element signature="e#8316#8368#0#JSP" expanded="false" />
-                <element signature="e#10813#11324#0#HTML" expanded="false" />
-                <element signature="e#12161#12176#0#JSP" expanded="false" />
-                <element signature="e#12961#13472#0#HTML" expanded="false" />
+                <element signature="e#6782#6833#0#JSP" expanded="false" />
+                <element signature="e#6976#6991#0#JSP" expanded="false" />
+                <element signature="e#8334#8386#0#JSP" expanded="false" />
+                <element signature="e#10831#11342#0#HTML" expanded="false" />
+                <element signature="e#12179#12194#0#JSP" expanded="false" />
+                <element signature="e#12979#13490#0#HTML" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -251,8 +217,8 @@
         <option value="$PROJECT_DIR$/src/main/java/service/impl/WorldStaServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/worldPeopleSta.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/worldIndexSta.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/worldMoneySta.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/worldSta.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/worldMoneySta.jsp" />
       </list>
     </option>
   </component>
@@ -1098,12 +1064,12 @@
       <workItem from="1497847805156" duration="23686000" />
       <workItem from="1497933117817" duration="9142000" />
       <workItem from="1497945785317" duration="757000" />
-      <workItem from="1497970984324" duration="8486000" />
+      <workItem from="1497970984324" duration="8639000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="339608000" />
+    <option name="totallyTimeSpent" value="339761000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1138,7 +1104,7 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977098" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977098" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39389312" sideWeight="0.47738287" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39389312" sideWeight="0.47738287" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977098" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977098" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1987076" sideWeight="0.48427674" order="0" side_tool="false" content_ui="combo" />
@@ -1583,31 +1549,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/worldMoneySta.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1280">
-          <caret line="85" column="41" lean-forward="false" selection-start-line="85" selection-start-column="41" selection-end-line="85" selection-end-column="41" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#legend#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#fieldset#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#script#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#6764#6815#0#JSP" expanded="false" />
-            <element signature="e#6958#6973#0#JSP" expanded="false" />
-            <element signature="e#8316#8368#0#JSP" expanded="false" />
-            <element signature="e#10813#11324#0#HTML" expanded="false" />
-            <element signature="e#12161#12176#0#JSP" expanded="false" />
-            <element signature="e#12961#13472#0#HTML" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/worldSta.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
+        <state relative-caret-position="947">
           <caret line="362" column="0" lean-forward="false" selection-start-line="362" selection-start-column="0" selection-end-line="539" selection-end-column="9" />
           <folding>
             <element signature="n#style#0;n#fieldset#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1626,6 +1570,29 @@
             <element signature="e#14032#14047#0#JSP" expanded="false" />
             <element signature="e#14078#15509#0#HTML" expanded="false" />
             <marker date="1497979928000" expanded="false" signature="14808:15319" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/worldMoneySta.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#legend#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#fieldset#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#script#3;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#6782#6833#0#JSP" expanded="false" />
+            <element signature="e#6976#6991#0#JSP" expanded="false" />
+            <element signature="e#8334#8386#0#JSP" expanded="false" />
+            <element signature="e#10831#11342#0#HTML" expanded="false" />
+            <element signature="e#12179#12194#0#JSP" expanded="false" />
+            <element signature="e#12979#13490#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>

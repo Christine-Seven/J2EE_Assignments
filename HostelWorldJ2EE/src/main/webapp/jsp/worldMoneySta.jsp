@@ -55,7 +55,7 @@
     </div>
 </nav>
 
-<div class="navbar navbar-default navbar-fixed" style="width: 150px;height: 620px;top: 50px">
+<div class="navbar navbar-default navbar-fixed" style="width: 150px;height: 900px;top: 50px">
     <ul class="nav nav-pills nav-stacked" style="margin-top: 50px;">
         <li role="presentation"><a href="manager_getApply.action"><h5 style="padding-left: 20px">审批申请</h5></a></li>
         <li role="presentation"><a href="manager_getSettle.action"><h5 style="padding-left: 20px">客栈结算</h5></a></li>
@@ -84,7 +84,7 @@
             <div class="col-md-4" id="moneyByCity" style="width: 200px;height: 200px;margin-left:50px"></div>
         </div>
         <legend style="margin-top: 10px">营业额走势</legend>
-        <div class="btn-group" role="group" aria-label="..." style="margin-top: 10px">
+        <div class="btn-group" role="group" aria-label="..." style="margin-top: 10px;margin-left: 10px">
             <button type="button" class="btn btn-default" onclick="moneyByMonth()">月份</button>
             <button type="button" class="btn btn-default" onclick="moneyBySeason()">季度</button>
         </div>

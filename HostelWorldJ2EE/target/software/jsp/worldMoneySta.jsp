@@ -55,12 +55,13 @@
     </div>
 </nav>
 
-<div class="navbar navbar-default navbar-fixed" style="width: 150px;height: 620px;top: 50px">
+<div class="navbar navbar-default navbar-fixed" style="width: 150px;height: 900px;top: 50px">
     <ul class="nav nav-pills nav-stacked" style="margin-top: 50px;">
         <li role="presentation"><a href="manager_getApply.action"><h5 style="padding-left: 20px">审批申请</h5></a></li>
         <li role="presentation"><a href="manager_getSettle.action"><h5 style="padding-left: 20px">客栈结算</h5></a></li>
         <li role="presentation"><a href="worldSta_getIndex.action"><h5 style="padding-left: 20px">指标分析</h5></a></li>
-        <li role="presentation" class="active"><a href="worldSta_getMoney.action"><h5 style="padding-left: 20px">营业概览</h5></a></li>
+        <li role="presentation" class="active"><a href="worldSta_getMoney.action"><h5 style="padding-left: 20px">
+            营业概览</h5></a></li>
         <li role="presentation"><a href="worldSta_getPeople.action"><h5 style="padding-left: 20px">成员管理</h5></a></li>
     </ul>
 </div>
@@ -83,7 +84,7 @@
             <div class="col-md-4" id="moneyByCity" style="width: 200px;height: 200px;margin-left:50px"></div>
         </div>
         <legend style="margin-top: 10px">营业额走势</legend>
-        <div class="btn-group" role="group" aria-label="..." style="margin-top: 10px">
+        <div class="btn-group" role="group" aria-label="..." style="margin-top: 10px;margin-left: 10px">
             <button type="button" class="btn btn-default" onclick="moneyByMonth()">月份</button>
             <button type="button" class="btn btn-default" onclick="moneyBySeason()">季度</button>
         </div>
@@ -283,9 +284,9 @@
 </script>
 
 <script>
-    var moneyLines=echarts.init(document.getElementById("moneyLines"));
-    var months=[];
-    var moneyByMonths=[];
+    var moneyLines = echarts.init(document.getElementById("moneyLines"));
+    var months = [];
+    var moneyByMonths = [];
     <%
     for(int month:moneyByMonth.keySet()){
     %>
@@ -297,7 +298,7 @@
     var moneyByMonthOption = {
         title: {
             text: '每月营业额走势',
-            x:'center'
+            x: 'center'
         },
         tooltip: {
             trigger: 'axis',
@@ -311,7 +312,7 @@
                 saveAsImage: {}
             }
         },
-        xAxis:  {
+        xAxis: {
             type: 'category',
             boundaryGap: false,
             axisLabel: {
@@ -353,12 +354,12 @@
         },
         series: [
             {
-                name:'营业额',
-                type:'line',
+                name: '营业额',
+                type: 'line',
                 smooth: true,
                 data: moneyByMonths,
                 markArea: {
-                    data: [ [{
+                    data: [[{
                         name: '暑期旺季',
                         xAxis: '6'
                     }, {
@@ -368,15 +369,15 @@
                         xAxis: '10'
                     }, {
                         xAxis: '10.5'
-                    }] ]
+                    }]]
                 }
             }
         ]
     };
     moneyLines.setOption(moneyByMonthOption);
 
-    var seasons=[];
-    var moneyBySeasons=[];
+    var seasons = [];
+    var moneyBySeasons = [];
 
     <%
     for(int season:moneyBySeason.keySet()){
@@ -386,10 +387,10 @@
     <%
     }
     %>
-    var moneyBySeasonOption= {
+    var moneyBySeasonOption = {
         title: {
             text: '每季度营业额走势',
-            x:'center'
+            x: 'center'
         },
         tooltip: {
             trigger: 'axis',
@@ -403,7 +404,7 @@
                 saveAsImage: {}
             }
         },
-        xAxis:  {
+        xAxis: {
             type: 'category',
             boundaryGap: false,
             axisLabel: {
@@ -445,8 +446,8 @@
         },
         series: [
             {
-                name:'营业额',
-                type:'line',
+                name: '营业额',
+                type: 'line',
                 smooth: true,
                 data: moneyBySeasons,
             }
@@ -457,7 +458,7 @@
         moneyLines.setOption(moneyBySeasonOption);
     }
 
-    function moneyByMonth(){
+    function moneyByMonth() {
         moneyLines.setOption(moneyByMonthOption);
     }
 

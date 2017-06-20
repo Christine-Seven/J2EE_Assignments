@@ -361,14 +361,14 @@
 </script>
 
 <script>
-    var moneyLines=echarts.init(document.getElementById("moneyLines"));
-    var months=[];
-    var moneyByMonths=[];
+    var moneyLines = echarts.init(document.getElementById("moneyLines"));
+    var months = [];
+    var moneyByMonths = [];
     <%
     for(int month:moneyByMonth.keySet()){
     %>
-        months.push(<%=month%>);
-        moneyByMonths.push(<%=moneyByMonth.get(month)%>);
+    months.push(<%=month%>);
+    moneyByMonths.push(<%=moneyByMonth.get(month)%>);
     <%
     }
     %>
@@ -388,7 +388,7 @@
                 saveAsImage: {}
             }
         },
-        xAxis:  {
+        xAxis: {
             type: 'category',
             boundaryGap: false,
             axisLabel: {
@@ -430,12 +430,12 @@
         },
         series: [
             {
-                name:'营业额',
-                type:'line',
+                name: '营业额',
+                type: 'line',
                 smooth: true,
                 data: moneyByMonths,
                 markArea: {
-                    data: [ [{
+                    data: [[{
                         name: '暑期旺季',
                         xAxis: '6'
                     }, {
@@ -445,15 +445,15 @@
                         xAxis: '10'
                     }, {
                         xAxis: '10.5'
-                    }] ]
+                    }]]
                 }
             }
         ]
     };
     moneyLines.setOption(moneyByMonthOption);
 
-    var seasons=[];
-    var moneyBySeasons=[];
+    var seasons = [];
+    var moneyBySeasons = [];
 
     <%
     for(int season:moneyBySeason.keySet()){
@@ -463,33 +463,33 @@
     <%
     }
     %>
-    var moneyBySeasonOption= {
+    var moneyBySeasonOption = {
         title: {
             text: '每季度营业额走势',
         },
         tooltip: {
             trigger: 'axis',
-                axisPointer: {
+            axisPointer: {
                 type: 'cross'
             }
         },
         toolbox: {
             show: true,
-                feature: {
+            feature: {
                 saveAsImage: {}
             }
         },
-        xAxis:  {
+        xAxis: {
             type: 'category',
-                boundaryGap: false,
-                axisLabel: {
+            boundaryGap: false,
+            axisLabel: {
                 formatter: '第{value}季度'
             },
             data: seasons
         },
         yAxis: {
             type: 'value',
-                axisLabel: {
+            axisLabel: {
                 formatter: '{value} 元'
             },
             axisPointer: {
@@ -498,8 +498,8 @@
         },
         visualMap: {
             show: false,
-                dimension: 0,
-                pieces: [{
+            dimension: 0,
+            pieces: [{
                 lte: 6,
                 color: 'green'
             }, {
@@ -521,8 +521,8 @@
         },
         series: [
             {
-                name:'营业额',
-                type:'line',
+                name: '营业额',
+                type: 'line',
                 smooth: true,
                 data: moneyBySeasons,
             }
@@ -533,7 +533,7 @@
         moneyLines.setOption(moneyBySeasonOption);
     }
 
-    function moneyByMonth(){
+    function moneyByMonth() {
         moneyLines.setOption(moneyByMonthOption);
     }
 
