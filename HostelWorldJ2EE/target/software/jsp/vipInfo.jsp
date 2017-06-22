@@ -61,7 +61,7 @@
     <ul class="nav nav-pills nav-stacked" style="margin-top: 50px;">
         <li role="presentation" class="active"><a href="vipInfo.action"><h5 style="padding-left: 15px">我的资料</h5></a></li>
         <li role="presentation"><a href="vipOrder.action"><h5 style="padding-left: 15px">我的订单</h5></a></li>
-        <li role="presentation"><a href="vipSta.action"><h5 style="padding-left: 15px">统计信息</h5></a></li>
+        <li role="presentation"><a href="vipSta.action"><h5 style="padding-left: 15px">出行概览</h5></a></li>
     </ul>
 </div>
 

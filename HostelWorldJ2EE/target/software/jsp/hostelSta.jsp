@@ -3,7 +3,8 @@
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="util.PayMethod" %>
 <%@ page import="util.OrderConditionEnum" %>
-<%@ page import="java.util.Map" %><%--
+<%@ page import="java.util.Map" %>
+<%--
   Created by IntelliJ IDEA.
   User: Seven
   Date: 18/03/2017
@@ -58,121 +59,43 @@
     </div>
 </nav>
 
-<div class="navbar navbar-default navbar-fixed" style="width: 150px;height: 620px;top: 50px">
-    <ul class="nav nav-pills nav-stacked" style="margin-top: 50px;">
-        <li role="presentation"><a href="hostelRegister_getInfo.action"><h5
-                style="padding-left: 20px">基本资料</h5></a></li>
-        <li role="presentation"><a href="hostel_getPlan.action"><h5 style="padding-left: 20px">房间计划</h5></a></li>
-        <li role="presentation"><a href="hostel_getCheckInfo.action"><h5 style="padding-left: 20px">入住登记</h5></a></li>
-        <li role="presentation" class="active"><a href="hostel_hostelSta.action"><h5 style="padding-left: 20px">
-            统计信息</h5></a></li>
-    </ul>
+<div class="navbar navbar-default navbar-fixed" style="width: 150px;height: 900px;top: 50px">
+    <div class="navbar navbar-default navbar-fixed" style="width: 150px;height: 620px;top: 50px">
+        <ul class="nav nav-pills nav-stacked" style="margin-top: 50px;">
+            <li role="presentation"><a href="hostelRegister_getInfo.action"><h5
+                    style="padding-left: 20px">基本资料</h5></a></li>
+            <li role="presentation"><a href="hostel_getPlan.action"><h5 style="padding-left: 20px">房间计划</h5></a></li>
+            <li role="presentation"><a href="hostel_getCheckInfo.action"><h5 style="padding-left: 20px">入住登记</h5></a></li>
+            <li role="presentation"><a href="hostel_hostelHistory.action"><h5 style="padding-left: 20px">历史入住</h5></a></li>
+            <li role="presentation" class="active"><a href="hostel_hostelSta.action"><h5 style="padding-left: 20px">营业概览</h5></a></li>
+            <li role="presentation"><a href="hostel_hostelVip.action"><h5 style="padding-left: 20px">会员统计</h5></a></li>
+
+        </ul>
+    </div>
 </div>
 <%
     //    totalProfit orderProfit ordersList
     Map<Integer, Double[]> adrByMonth = (Map<Integer, Double[]>) request.getAttribute("adrByMonth");
     Map<Integer, Double[]> occByMonth = (Map<Integer, Double[]>) request.getAttribute("occByMonth");
     Map<Integer, Double[]> revparByMonth = (Map<Integer, Double[]>) request.getAttribute("revparByMonth");
-    Map<Integer, Integer> vipByLevel = (Map<Integer, Integer>) request.getAttribute("vipByLevel");
     Map<Integer, Integer[]> rangeByMonth = (Map<Integer, Integer[]>) request.getAttribute("rangeByMonth");
+    Map<Integer,Double[]> indexByMonth=(Map<Integer,Double[]>) request.getAttribute("indexByMonth");
 %>
-<div style="position:absolute;top:80px;left:160px;width: 900px;height: 600px;">
-    <div style="margin-left:80px;margin-bottom: 80px">
+
+<div style="position:absolute;top:70px;left:160px;width: 900px;height: 600px;">
+    <div style="margin-left:30px;margin-bottom: 80px">
         <legend>营业情况</legend>
         <div id="hostelIndex" style="width: 800px;height: 400px;margin-left: 50px"></div>
-        <legend>会员等级分布</legend>
-        <div id="vipLevel" style="width:600px;height: 300px;margin-left: 50px"></div>
-        <legend>会员消费水平</legend>
-        <div id="vipPrice" style="width: 600px;height: 300px;margin-left: 50px"></div>
+        <p style="font-size: 16px;font-family: 'Microsoft Sans Serif', sans-serif;color: #002a80;margin-left: 50px">
+            <br>
+            下图为三个指标对应的细分市场指数统计，具体解释如下:<br>
+            平均房价指数 : <b>高于100</b>说明达到细分市场整体水平，<b>低于100</b>说明未达到细分市场整体水平。<br>
+            市场渗透指数 : 该指数用于衡量酒店<b>在某个细分市场所占有的份额</b>。<br>
+            收入指数 : 该指数用于计算酒店在市场中<b>每间可售客房收入的应得市场份额</b>，<br>
+            <b>高于100</b>说明达到应得市场份额。<br>
+        </p>
+        <div id="indexByMonth"style="width: 800px;height: 400px;margin-left: 40px;margin-top: 40px"></div>
     </div>
-
-    <div style="margin: 80px">
-        <legend>历史入住</legend>
-        <table class="table" style="width: 800px">
-            <thead style="background-color: rgba(190, 188, 198, 0.67)">
-            <tr>
-                <td>#</td>
-                <td>会员编号</td>
-                <td>入住日期</td>
-                <td>离店日期</td>
-                <td>应付金额</td>
-                <td>支付方式</td>
-                <td>订单状态</td>
-            </tr>
-            </thead>
-            <tbody>
-            <%
-                List<Orders> ordersMap = (ArrayList<Orders>) request.getAttribute("ordersList");
-                int index = 1;
-                for (Orders orders : ordersMap) {
-                    String vipNum = orders.getVipNum();
-                    String checkinDate = orders.getCheckinDate();
-                    String checkoutDate = orders.getCheckoutDate();
-                    Double requiredMoney = orders.getRequiredMoney();
-
-                    String method = "";
-                    PayMethod payMethod = PayMethod.valueOf(orders.getPayMethod());
-                    switch (payMethod) {
-                        case CASH:
-                            method = "现金";
-                            break;
-                        case CARD:
-                            method = "会员卡";
-                            break;
-                    }
-
-                    String state = "";
-                    OrderConditionEnum orderCondition = OrderConditionEnum.valueOf(orders.getOrderCondition());
-                    switch (orderCondition) {
-                        case BOOK:
-                            state = "已预订";
-                            break;
-                        case VALID:
-                            state = "已付款";
-                            break;
-                        case CHECKIN:
-                            state = "已入住";
-                            break;
-                        case CHECKOUT:
-                            state = "已离店";
-                            break;
-                        case OVERDUE:
-                            state = "已过期";
-                            break;
-                        case CANCEL:
-                            state = "已取消";
-                            break;
-                        case SETTLE:
-                            state = "已结算";
-                            break;
-                        default:
-                            state = "错误状态";
-                            break;
-                    }
-            %>
-            <tr>
-                <td><%=index%>
-                </td>
-                <td><%=vipNum%>
-                </td>
-                <td><%=checkinDate%>
-                </td>
-                <td><%=checkoutDate%>
-                </td>
-                <td><%=requiredMoney%>
-                </td>
-                <td><%=method%>
-                </td>
-                <td><%=state%>
-                </td>
-            </tr>
-            <%
-                }
-            %>
-            </tbody>
-        </table>
-    </div>
-
 </div>
 
 <script src="js/echarts.min.js"></script>
@@ -197,9 +120,9 @@
     %>
 
     months[<%=i%>] = <%=month%>+'月';
-    adrs[<%=i%>] =<%=adr%>;
-    occs[<%=i%>] =<%=occ%>;
-    revpars[<%=i%>] =<%=revpar%>;
+    adrs[<%=i%>] =(<%=adr%>).toFixed(2);
+    occs[<%=i%>] =(<%=occ*100%>).toFixed(2);
+    revpars[<%=i%>] =(<%=revpar%>).toFixed(2);
     <%
         i++;
     }
@@ -208,6 +131,10 @@
     var colors = ['#5793f3', '#d14a61', '#675bba'];
     var option = {
         color: colors,
+        title:{
+          text:'客栈自身营业指标分析',
+            x:'center'
+        },
         tooltip: {
             trigger: 'axis',
             axisPointer: {
@@ -225,7 +152,8 @@
             }
         },
         legend: {
-            data: ['平均房价', '入住率', '平均每间可售房收入']
+            data: ['平均房价', '入住率', '平均每间可售房收入'],
+            y:'bottom'
         },
         xAxis: [
             {
@@ -241,8 +169,8 @@
                 type: 'value',
                 name: '入住率',
                 min: 0,
-                max: 1,
-                interval: 0.1,
+                max: 10,
+                interval: 0.5,
                 position: 'right',
                 axisLine: {
                     lineStyle: {
@@ -250,14 +178,14 @@
                     }
                 },
                 axisLabel: {
-                    formatter: '{value} '
+                    formatter: '{value}% '
                 }
             },
             {
                 type: 'value',
                 name: '平均房价',
                 min: 0,
-                max: 1000,
+                max: 500,
                 position: 'right',
                 offset: 80,
                 axisLine: {
@@ -273,7 +201,7 @@
                 type: 'value',
                 name: '平均每间可售房收入',
                 min: 0,
-                max: 2,
+                max: 30,
                 position: 'left',
                 axisLine: {
                     lineStyle: {
@@ -310,56 +238,133 @@
 </script>
 
 <script>
-    var vipLevel = echarts.init(document.getElementById('vipLevel'));
-    var viplevels = [];
-    var levels = [];
+    var indexByMonthLine=echarts.init(document.getElementById("indexByMonth"));
+    var monthsIndex = [];
+    var adrsIndex = [];
+    var occsIndex = [];
+    var revparsIndex = [];
     <%
-        for(int level:vipByLevel.keySet()){
+    for(int month:indexByMonth.keySet()){
+        double adrIndex=indexByMonth.get(month)[0];
+        double occIndex=indexByMonth.get(month)[1];
+        double revparIndex=indexByMonth.get(month)[2];
     %>
-    levels.push('<%=level%>' + '级会员');
-    viplevels.push({
-        name: <%=level%>+'级会员',
-        value:<%=vipByLevel.get(level)%>
-    });
+        monthsIndex.push(<%=month%>);
+        adrsIndex.push((<%=adrIndex*100%>).toFixed(2));
+        occsIndex.push((<%=occIndex*100%>).toFixed(2));
+        revparsIndex.push((<%=revparIndex*100%>).toFixed(2));
     <%
     }
     %>
-
-    option = {
-        tooltip: {
-            trigger: 'item',
-            formatter: "{a} <br/>{b} : {c} ({d}%)"
+    var indexOption={
+        color: colors,
+        title:{
+            text:'细分市场营业指标分析',
+            x:'center'
         },
-        legend: {
-            data: levels
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'cross'
+            }
+        },
+        grid: {
+            right: '20%'
         },
         toolbox: {
-            show: true,
             feature: {
-                mark: {show: true},
                 dataView: {show: true, readOnly: false},
-                magicType: {
-                    show: true,
-                    type: ['pie']
-                },
                 restore: {show: true},
                 saveAsImage: {show: true}
             }
         },
-        calculable: true,
+        legend: {
+            show:false,
+            data: ['平均房价指数', '市场渗透指数', '收入指数']
+        },
+        xAxis: [
+            {
+                type: 'category',
+                axisTick: {
+                    alignWithLabel: true
+                },
+                data: monthsIndex
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value',
+                name: '市场渗透指数',
+                min: 0,
+                max: 150,
+                interval: 10,
+                position: 'right',
+                axisLine: {
+                    lineStyle: {
+                        color: colors[0]
+                    }
+                },
+                axisLabel: {
+                    formatter: '{value}% '
+                }
+            },
+            {
+                type: 'value',
+                name: '平均房价指数',
+                min: 0,
+                max: 150,
+                position: 'right',
+                offset: 80,
+                axisLine: {
+                    lineStyle: {
+                        color: colors[1]
+                    }
+                },
+                axisLabel: {
+                    formatter: '{value} %'
+                }
+            },
+            {
+                type: 'value',
+                name: '收入指数',
+                min: 0,
+                max: 150,
+                position: 'left',
+                axisLine: {
+                    lineStyle: {
+                        color: colors[2]
+                    }
+                },
+                axisLabel: {
+                    formatter: '{value} %'
+                }
+            }
+        ],
         series: [
             {
-                name: '等级分布饼状图',
-                type: 'pie',
-                radius: [30, 110],
-                center: ['50%', '40%'],
-                roseType: 'area',
-                data: viplevels
-            }]
+                name: '市场渗透指数',
+                type: 'bar',
+                data: occsIndex
+            },
+            {
+                name: '平均房价指数',
+                type: 'bar',
+                yAxisIndex: 1,
+                data: adrsIndex
+            },
+            {
+                name: '收入指数',
+                type: 'line',
+                yAxisIndex: 2,
+                data: revparsIndex
+            }
+        ]
     };
 
-    vipLevel.setOption(option);
+    indexByMonthLine.setOption(indexOption);
 </script>
+
+
 
 <%--<script>--%>
     <%--var vipPrice = echarts.init(document.getElementById('vipPrice'));--%>

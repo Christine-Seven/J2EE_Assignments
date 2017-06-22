@@ -138,4 +138,11 @@ public interface HostelService {
      * @return
      */
     public Map<Integer, Map<String, Integer>> getPriceByMonth(String hostelNum, List<Integer> months);
+
+    /**
+     * 获得市场细分指数 adrIndex, occIndex,revparIndex
+     * @param hostelNum
+     * @return
+     */
+    public Map<Integer,Double[]> getIndexByMonth(String hostelNum);
 }

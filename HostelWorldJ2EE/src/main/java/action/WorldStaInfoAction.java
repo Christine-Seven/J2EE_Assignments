@@ -116,7 +116,7 @@ public class WorldStaInfoAction extends BaseAction {
         List<Hostel> hostels=hostelService.queryAll();
         Map<String,Integer> checkNums=new HashMap<>();
         for(Hostel hostel:hostels){
-            int checkNum=checkInfoService.getCheckInfoByHostel(hostel.getHostelNum()).size();
+            int checkNum=ordersService.queryByHostel(hostel.getHostelNum()).size();
             checkNums.put(hostel.getHostelName(),checkNum);
         }
         checkNums=sortByValue(checkNums);

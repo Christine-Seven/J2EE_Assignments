@@ -6,10 +6,7 @@ import model.Orders;
 import model.Vip;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import service.HostelService;
-import service.OrdersService;
-import service.RoomPlanService;
-import service.VipService;
+import service.*;
 import util.PriceRangeEnum;
 import util.Str2Calendar;
 
@@ -31,6 +28,8 @@ public class HostelServiceImpl implements HostelService {
     private RoomPlanService roomPlanService;
     @Autowired
     private VipService vipService;
+    @Autowired
+    private WorldStaService worldStaService;
 
     @Override
     public boolean checkHostel(String hostelNum) {
@@ -169,10 +168,28 @@ public class HostelServiceImpl implements HostelService {
         return priceByMonth;
     }
 
+    @Override
+    public Map<Integer, Double[]> getIndexByMonth(String hostelNum) {
+        Map<Integer,Double[]> indexByMonth=new HashMap<>();
+        Map<Integer,Double[]> worldAdrs=worldStaService.getAdrByMonth();
+        Map<Integer,Double[]> worldOccs=worldStaService.getOccByMonth();
+        Map<Integer,Double[]> worldRevpars=worldStaService.getRevparByMonth();
+
+        for(int month:worldAdrs.keySet()){
+            double adr=(this.getAdrByHostel(hostelNum).get(month)[0]/worldAdrs.get(month)[0]);
+            double occ=(this.getOccByHostel(hostelNum).get(month)[0]/worldOccs.get(month)[0]);
+            double revpar=(this.getRevparByHostel(hostelNum).get(month)[0]/worldRevpars.get(month)[0]);
+            Double[] indexes={adr,occ,revpar};
+            indexByMonth.put(month,indexes);
+        }
+
+        return indexByMonth;
+    }
+
     //获得价格所属区间
     private PriceRangeEnum getPriceRange(double price){
         int[] ranges={100,200,300,500};
-        PriceRangeEnum[] priceRangeEnums={PriceRangeEnum.LT100,PriceRangeEnum.LT200,PriceRangeEnum.LT300,PriceRangeEnum.LT500,PriceRangeEnum.MT500};
+        PriceRangeEnum[] priceRangeEnums={PriceRangeEnum.少于一百,PriceRangeEnum.一百至两百,PriceRangeEnum.两百至三百,PriceRangeEnum.三百至五百,PriceRangeEnum.多于五百};
         int i=0;
         for(;i<ranges.length;i++){
             if(price<ranges[i]) {

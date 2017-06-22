@@ -336,7 +336,10 @@ public class WorldStaServiceImpl implements WorldStaService {
 
     //获得加盟时间,以月为单位
     private int getTime(String date) {
-        return 0;
+        Calendar calendar=Calendar.getInstance();
+        Calendar dateC=Str2Calendar.str2Calendar(date);
+        int month=Math.abs(calendar.get(Calendar.MONTH)-dateC.get(Calendar.MONTH));
+        return month;
     }
 
     //获得订单所在月份
@@ -345,7 +348,7 @@ public class WorldStaServiceImpl implements WorldStaService {
         if (c==null){
             return -1;
         }
-        int month = c.get(Calendar.MONTH);
+        int month = c.get(Calendar.MONTH)+1;
         return month;
     }
 

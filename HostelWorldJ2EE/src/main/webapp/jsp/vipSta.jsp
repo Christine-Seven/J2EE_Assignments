@@ -57,11 +57,11 @@
     </div>
 </nav>
 
-<div class="navbar navbar-default navbar-fixed" style="width: 150px;height: 620px;top: 50px">
+<div class="navbar navbar-default navbar-fixed" style="width: 150px;height: 920px;top: 50px">
     <ul class="nav nav-pills nav-stacked" style="margin-top: 50px;">
         <li role="presentation"><a href="vipInfo.action"><h5 style="padding-left: 15px">我的资料</h5></a></li>
         <li role="presentation"><a href="vipOrder.action"><h5 style="padding-left: 15px">我的订单</h5></a></li>
-        <li role="presentation" class="active"><a href="vipSta.action"><h5 style="padding-left: 15px">统计信息</h5></a></li>
+        <li role="presentation" class="active"><a href="vipSta.action"><h5 style="padding-left: 15px">出行概览</h5></a></li>
     </ul>
 </div>
 <%
@@ -163,6 +163,9 @@
             {
                 type: 'category',
                 data: months,
+                axisLabel: {
+                    formatter: '{value}月份 '
+                },
                 axisPointer: {
                     type: 'shadow'
                 }
@@ -173,8 +176,8 @@
                 type: 'value',
                 name: '消费金额',
                 min: 0,
-                max: 1000,
-                interval: 100,
+                max: 10000,
+                interval: 500,
                 axisLabel: {
                     formatter: '{value} 元'
                 }
@@ -183,8 +186,8 @@
                 type: 'value',
                 name: '出行次数',
                 min: 0,
-                max: 20,
-                interval: 2,
+                max: 30,
+                interval: 3,
                 axisLabel: {
                     formatter: '{value} 次'
                 }
@@ -257,7 +260,8 @@
 
                 label: {
                     normal: {
-                        position: 'inner'
+                        position: 'inner',
+                        show:false
                     }
                 },
                 labelLine: {

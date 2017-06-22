@@ -57,7 +57,7 @@
     </div>
 </nav>
 
-<div class="navbar navbar-default navbar-fixed" style="width: 150px;height: 620px;top: 50px">
+<div class="navbar navbar-default navbar-fixed" style="width: 150px;height: 920px;top: 50px">
     <ul class="nav nav-pills nav-stacked" style="margin-top: 50px;">
         <li role="presentation"><a href="manager_getApply.action"><h5 style="padding-left: 20px">审批申请</h5></a></li>
         <li role="presentation"><a href="manager_getSettle.action"><h5 style="padding-left: 20px">客栈结算</h5></a></li>
@@ -147,6 +147,15 @@
             <button type="button" class="btn btn-default" onclick="indexByCity()">城市</button>
         </div>
         <div id="worldIndex" style="width: 800px;height: 400px;margin-left: 50px"></div>
+        <div>
+            <p style="font-size: 16px;font-family: 'Microsoft Sans Serif', sans-serif;color: #002a80;margin-left: 30px">
+                <br>
+                平台平均房价指数(元) = 所有客栈总收入／所有客栈实际售出客房数<br>
+                平台入住率(%) = 实际售出客房数量／可售房数量<br>
+                平台平均每间可售房收入(元) = 所有客栈总收入／所有客栈可售房总数<br>
+                这三个指标反映了 <b>平台总体的经营业绩水平</b><br>
+            </p>
+        </div>
     </div>
 </div>
 
@@ -173,9 +182,9 @@
     %>
 
     months[<%=i%>] = <%=month%>+'月';
-    adrsByMonths[<%=i%>] =<%=adr%>;
-    occsByMonths[<%=i%>] =<%=occ%>;
-    revparsByMonths[<%=i%>] =<%=revpar%>;
+    adrsByMonths[<%=i%>] =(<%=adr%>).toFixed(2);
+    occsByMonths[<%=i%>] =(<%=occ*100%>).toFixed(2);
+    revparsByMonths[<%=i%>] =(<%=revpar%>).toFixed(2);
     <%
         i++;
     }
@@ -195,9 +204,9 @@
     %>
 
     cities[<%=i%>] = '<%=city%>';
-    adrsByCities[<%=i%>] =<%=adr%>;
-    occsByCities[<%=i%>] =<%=occ%>;
-    revparsByCities[<%=i%>] =<%=revpar%>;
+    adrsByCities[<%=i%>] =(<%=adr%>).toFixed(2);
+    occsByCities[<%=i%>] =(<%=occ*100%>).toFixed(2);
+    revparsByCities[<%=i%>] =(<%=revpar%>).toFixed(2);
     <%
         i++;
     }
@@ -207,6 +216,10 @@
 
     var optionByMonth = {
         color: colors,
+        title:{
+            text:'平台月份营业指标分析',
+            x:'center'
+        },
         tooltip: {
             trigger: 'axis',
             axisPointer: {
@@ -224,7 +237,8 @@
             }
         },
         legend: {
-            data: ['平均房价', '入住率', '平均每间可售房收入']
+            data: ['平均房价', '入住率', '平均每间可售房收入'],
+            y:'bottom'
         },
         xAxis: [
             {
@@ -240,8 +254,8 @@
                 type: 'value',
                 name: '入住率',
                 min: 0,
-                max: 1,
-                interval: 0.1,
+                max: 30,
+                interval: 5,
                 position: 'right',
                 axisLine: {
                     lineStyle: {
@@ -249,14 +263,14 @@
                     }
                 },
                 axisLabel: {
-                    formatter: '{value} '
+                    formatter: '{value}% '
                 }
             },
             {
                 type: 'value',
                 name: '平均房价',
                 min: 0,
-                max: 1000,
+                max: 500,
                 position: 'right',
                 offset: 80,
                 axisLine: {
@@ -272,7 +286,7 @@
                 type: 'value',
                 name: '平均每间可售房收入',
                 min: 0,
-                max: 2,
+                max: 100,
                 position: 'left',
                 axisLine: {
                     lineStyle: {
@@ -307,6 +321,10 @@
 
     var optionByCity = {
         color: colors,
+        title:{
+            text:'平台地域营业指标分析',
+            x:'center'
+        },
         tooltip: {
             trigger: 'axis',
             axisPointer: {
@@ -324,7 +342,8 @@
             }
         },
         legend: {
-            data: ['平均房价', '入住率', '平均每间可售房收入']
+            data: ['平均房价', '入住率', '平均每间可售房收入'],
+            y:'bottom'
         },
         xAxis: [
             {
@@ -340,8 +359,8 @@
                 type: 'value',
                 name: '入住率',
                 min: 0,
-                max: 1,
-                interval: 0.1,
+                max: 8,
+                interval: 0.5,
                 position: 'right',
                 axisLine: {
                     lineStyle: {
@@ -349,14 +368,14 @@
                     }
                 },
                 axisLabel: {
-                    formatter: '{value} '
+                    formatter: '{value}% '
                 }
             },
             {
                 type: 'value',
                 name: '平均房价',
                 min: 0,
-                max: 1000,
+                max: 500,
                 position: 'right',
                 offset: 80,
                 axisLine: {
@@ -372,7 +391,7 @@
                 type: 'value',
                 name: '平均每间可售房收入',
                 min: 0,
-                max: 50,
+                max: 30,
                 position: 'left',
                 axisLine: {
                     lineStyle: {

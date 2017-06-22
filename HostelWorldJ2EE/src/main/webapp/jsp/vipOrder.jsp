@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/dataTables.bootstrap.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -65,7 +66,7 @@
     <ul class="nav nav-pills nav-stacked" style="margin-top: 50px;">
         <li role="presentation"><a href="vipInfo.action"><h5 style="padding-left: 15px">我的资料</h5></a></li>
         <li role="presentation" class="active"><a href="vipOrder.action"><h5 style="padding-left: 15px">我的订单</h5></a></li>
-        <li role="presentation"><a href="vipSta.action"><h5 style="padding-left: 15px">统计信息</h5></a></li>
+        <li role="presentation"><a href="vipSta.action"><h5 style="padding-left: 15px">出行概览</h5></a></li>
 
     </ul>
 </div>
@@ -78,7 +79,7 @@
         <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
         </input>
     </div>
-    <table class="table" style="margin: 30px">
+    <table id="orderTable" class="table" style="margin: 30px">
         <thead style="background-color: rgba(190, 188, 198, 0.67)">
         <tr>
             <td>#</td>
@@ -165,6 +166,15 @@
 <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.dataTables.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('#orderTable').DataTable({
+            pageTotal:15
+        });
+    });
+</script>
 </body>
 
 </html>

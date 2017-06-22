@@ -212,6 +212,13 @@ public class HostelAction extends BaseAction {
         return roomPlanVOs;
     }
 
+    public String hostelHistory(){
+        String hostelNum=String.valueOf(request.getSession().getAttribute("id"));
+        List<Orders> ordersList = ordersService.queryByHostel(hostelNum);
+        request.setAttribute("ordersList",ordersList);
+        return "hostelHistory";
+    }
+
     //客栈统计信息
     public String hostelSta() {
         //TODO
@@ -223,16 +230,54 @@ public class HostelAction extends BaseAction {
         months.add(4);
         months.add(5);
         months.add(6);
+
         String hostelNum=String.valueOf(request.getSession().getAttribute("id"));
         Map<Integer, Double[]> adrByMonth = hostelService.getAdrByHostel(hostelNum);
         Map<Integer, Double[]> occByMonth = hostelService.getOccByHostel(hostelNum);
         Map<Integer, Double[]> revparByMonth = hostelService.getRevparByHostel(hostelNum);
+
+        //每月市场细分指数
+        //TODO
+        Map<Integer,Double[]> indexByMonth=hostelService.getIndexByMonth(hostelNum);
+
+        request.setAttribute("adrByMonth",adrByMonth);
+        request.setAttribute("occByMonth",occByMonth);
+        request.setAttribute("revparByMonth",revparByMonth);
+        request.setAttribute("indexByMonth",indexByMonth);
+
+
+        return "hostelSta";
+    }
+
+    public String hostelVip(){
+        String hostelNum=String.valueOf(request.getSession().getAttribute("id"));
         Map<Integer,Integer> vipByLevel=hostelService.getLevelByHostel(hostelNum);
+        List<Orders> ordersList = ordersService.queryByHostel(hostelNum);
+        for (Orders orders:ordersList){
+            Vip vip=vipService.findVipById(orders.getVipNum());
+            int level=vip.getVipLevel();
+
+            if(!vipByLevel.containsKey(level)){
+                vipByLevel.put(level,1);
+            }else {
+                int num=vipByLevel.get(level);
+                num=num+1;
+                vipByLevel.put(level,num);
+            }
+        }
+        List<Integer> months=new ArrayList<Integer>();
+        months.add(1);
+        months.add(2);
+        months.add(3);
+        months.add(4);
+        months.add(5);
+        months.add(6);
+
         Map<Integer,Map<String,Integer>> priceByMonth = hostelService.getPriceByMonth(hostelNum,months);
         Map<Integer,Integer[]> rangeByMonth=new HashMap<>();
         for(int month:priceByMonth.keySet()){
             Map<String,Integer> prices=priceByMonth.get(month);
-            String[] ranges={PriceRangeEnum.LT100.toString(),PriceRangeEnum.LT200.toString(),PriceRangeEnum.LT300.toString(),PriceRangeEnum.LT500.toString(),PriceRangeEnum.MT500.toString()};
+            String[] ranges={PriceRangeEnum.少于一百.toString(),PriceRangeEnum.一百至两百.toString(),PriceRangeEnum.两百至三百.toString(),PriceRangeEnum.三百至五百.toString(),PriceRangeEnum.多于五百.toString()};
             Integer[] numbers=new Integer[ranges.length];
             int i=0;
             System.out.println("month="+month);
@@ -247,35 +292,10 @@ public class HostelAction extends BaseAction {
             }
             rangeByMonth.put(month,numbers);
         }
-
-        //每月市场细分指数
-        //TODO
-        Map<Integer,List<Double>> indexBySeason=new HashMap<>();
-
-        List<Orders> ordersList = ordersService.queryByHostel(hostelNum);
-        for (Orders orders:ordersList){
-            Vip vip=vipService.findVipById(orders.getVipNum());
-            int level=vip.getVipLevel();
-
-            if(!vipByLevel.containsKey(level)){
-                vipByLevel.put(level,1);
-            }else {
-                int num=vipByLevel.get(level);
-                num=num+1;
-                vipByLevel.put(level,num);
-            }
-        }
-
-        request.setAttribute("adrByMonth",adrByMonth);
-        request.setAttribute("occByMonth",occByMonth);
-        request.setAttribute("revparByMonth",revparByMonth);
         request.setAttribute("vipByLevel",vipByLevel);
         request.setAttribute("rangeByMonth",rangeByMonth);
-        request.setAttribute("ordersList",ordersList);
-        return "hostelSta";
+        return "hostelVip";
     }
-
-
 
 
 }

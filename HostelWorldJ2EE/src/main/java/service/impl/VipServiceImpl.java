@@ -130,7 +130,8 @@ public class VipServiceImpl implements VipService {
                 timeByMonth.put(month, 1);
             } else {
                 int time = timeByMonth.get(month);
-                timeByMonth.put(month, time++);
+                time=time+1;
+                timeByMonth.put(month, time);
             }
         }
         return timeByMonth;
@@ -178,7 +179,8 @@ public class VipServiceImpl implements VipService {
 
                 }else{
                     int num=priceByRange.get(range);
-                    priceByRange.put(range,num++);
+                    num=num+1;
+                    priceByRange.put(range,num);
                 }
                 priceByCity.put(city, priceByRange);
             }
@@ -189,7 +191,7 @@ public class VipServiceImpl implements VipService {
     //获得价格所属区间
     private PriceRangeEnum getPriceRange(double price){
         int[] ranges={100,200,300,500};
-        PriceRangeEnum[] priceRangeEnums={PriceRangeEnum.LT100,PriceRangeEnum.LT200,PriceRangeEnum.LT300,PriceRangeEnum.LT500,PriceRangeEnum.MT500};
+        PriceRangeEnum[] priceRangeEnums={PriceRangeEnum.少于一百,PriceRangeEnum.一百至两百,PriceRangeEnum.两百至三百,PriceRangeEnum.三百至五百,PriceRangeEnum.多于五百};
         int i=0;
         for(;i<ranges.length;i++){
             if(price<ranges[i]) {

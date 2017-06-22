@@ -73,28 +73,50 @@
     Map<Integer, Double> moneyByMonth = (Map<Integer, Double>) request.getAttribute("moneyByMonth");
     Map<Integer, Double> moneyBySeason = (Map<Integer, Double>) request.getAttribute("moneyBySeason");
 
+
 %>
 <div style="position: absolute;top:80px;left:160px;width: 1000px;height: 600px;">
 
     <div style="margin-left: 30px;margin-right: 50px">
         <legend>营业概览</legend>
         <div class="row">
-            <div class="col-md-4" id="moneyByTime" style="width: 200px;height: 200px;margin-left:50px"></div>
-            <div class="col-md-4" id="moneyByLevel" style="width: 200px;height: 200px;margin-left:50px"></div>
-            <div class="col-md-4" id="moneyByCity" style="width: 200px;height: 200px;margin-left:50px"></div>
+            <div class="col-md-7">
+                <div class="col-md-4" id="moneyByTime" style="width: 300px;height: 200px;margin-left:50px"></div>
+                <div class="col-md-4" id="moneyByLevel" style="width: 300px;height: 200px;margin-left:50px;margin-top: 20px"></div>
+                <div class="col-md-4" id="moneyByCity" style="width: 300px;height: 200px;margin-left:50px;margin-top: 20px"></div>
+            </div>
+            <div class="col-md-5">
+                <p style="font-size: 16px;font-family: 'Microsoft Sans Serif', sans-serif;color: #002a80">
+                    <br>
+                    营业额 = <b>订单实付金额的总和</b><br><br>左图从<b>加盟时间、客栈等级、地域分布</b><br>
+                    三个维度对营业额情况进行了简单的分析。<br><br>
+                    可以看出，<b>三星级</b>客栈营业额占比最高<br>
+                    三星级客栈价位中等，目标人群较为广泛。<br>
+                    平台应多多引进此类客栈。<br><br>
+                    而在地域维度，<b>南京</b>和<b>淮安</b>两所城市的营业额占比较高。
+                </p>
+            </div>
         </div>
         <legend style="margin-top: 10px">营业额走势</legend>
-        <div class="btn-group" role="group" aria-label="..." style="margin-top: 10px;margin-left: 10px">
-            <button type="button" class="btn btn-default" onclick="moneyByMonth()">月份</button>
-            <button type="button" class="btn btn-default" onclick="moneyBySeason()">季度</button>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="btn-group" role="group" aria-label="..." style="margin-top: 10px;margin-left: 10px">
+                    <button type="button" class="btn btn-default" onclick="moneyByMonth()">月份</button>
+                    <button type="button" class="btn btn-default" onclick="moneyBySeason()">季度</button>
+                </div>
+                <div id="moneyLines" style="width: 600px;height: 400px;margin-left:50px;margin-top: 10px"></div>
+            </div>
+            <div class="col-md-4">
+                <p style="font-size: 16px;font-family: 'Microsoft Sans Serif', sans-serif;color: #002a80">
+                    <br>
+                    左图从<b>月份、季度</b>两个维度分析营业额的走势情况。可以看出，总体营业额较为<b>稳定</b>。<br><br>
+                    在春节旺季和清明节前后，达到了一个<b>小高峰</b>。<br>
+                </p>
+            </div>
         </div>
-        <div id="moneyLines" style="width: 600px;height: 400px;margin-left:50px;margin-top: 10px"></div>
+
     </div>
 
-    <fieldset style="margin-top:50px;margin-left: 30px;margin-right: 50px">
-        <legend>热门客栈</legend>
-        <div class="col-md-8 col-md-offset-2" id="checkNums" style="height:300px;"></div>
-    </fieldset>
 </div>
 
 
@@ -115,14 +137,14 @@
     times.push('已加盟<%=time%>月');
     moneyByTime.push({
         name: '已加盟<%=time%>月',
-        value:<%=moneyByTime.get(time)%>
+        value:(<%=moneyByTime.get(time)%>).toFixed(2)
     });
     <%
     }
     %>
     var moneyByTimeOption = {
         title: {
-            text: '加盟时间与营业额',
+            text: '加盟时间-营业额占比',
             x: 'center'
         },
         tooltip: {
@@ -174,14 +196,14 @@
     levels.push('<%=level%>星级');
     moneyByLevel.push({
         name: '<%=level%>星级',
-        value:<%=moneyByLevel.get(level)%>
+        value:(<%=moneyByLevel.get(level)%>).toFixed(2)
     });
     <%
     }
     %>
     var moneyByLevelOption = {
         title: {
-            text: '客栈等级与营业额',
+            text: '客栈等级-营业额占比',
             x: 'center'
         },
         tooltip: {
@@ -232,14 +254,14 @@
     cities.push('<%=city%>');
     moneyByCity.push({
         name: '<%=city%>',
-        value:<%=moneyByCity.get(city)%>
+        value: (<%=moneyByCity.get(city)%>).toFixed(2)
     });
     <%
     }
     %>
     var moneyByCityOption = {
         title: {
-            text: '城市与营业额',
+            text: '地域-营业额占比',
             x: 'center'
         },
         tooltip: {
@@ -291,7 +313,7 @@
     for(int month:moneyByMonth.keySet()){
     %>
     months.push(<%=month%>);
-    moneyByMonths.push(<%=moneyByMonth.get(month)%>);
+    moneyByMonths.push((<%=moneyByMonth.get(month)%>).toFixed(2));
     <%
     }
     %>
@@ -304,12 +326,6 @@
             trigger: 'axis',
             axisPointer: {
                 type: 'cross'
-            }
-        },
-        toolbox: {
-            show: true,
-            feature: {
-                saveAsImage: {}
             }
         },
         xAxis: {
@@ -360,15 +376,10 @@
                 data: moneyByMonths,
                 markArea: {
                     data: [[{
-                        name: '暑期旺季',
-                        xAxis: '6'
+                        name: '春节旺季',
+                        xAxis: '1'
                     }, {
-                        xAxis: '8'
-                    }], [{
-                        name: '国庆旺季',
-                        xAxis: '10'
-                    }, {
-                        xAxis: '10.5'
+                        xAxis: '2'
                     }]]
                 }
             }
@@ -383,7 +394,7 @@
     for(int season:moneyBySeason.keySet()){
     %>
     seasons.push(<%=season%>);
-    moneyBySeasons.push(<%=moneyBySeason.get(season)%>);
+    moneyBySeasons.push((<%=moneyBySeason.get(season)%>).toFixed(2));
     <%
     }
     %>
@@ -396,12 +407,6 @@
             trigger: 'axis',
             axisPointer: {
                 type: 'cross'
-            }
-        },
-        toolbox: {
-            show: true,
-            feature: {
-                saveAsImage: {}
             }
         },
         xAxis: {
@@ -450,6 +455,9 @@
                 type: 'line',
                 smooth: true,
                 data: moneyBySeasons,
+                markArea: {
+                    show:false
+                }
             }
         ]
     };

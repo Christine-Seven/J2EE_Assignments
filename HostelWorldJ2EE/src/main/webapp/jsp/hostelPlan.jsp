@@ -66,7 +66,10 @@
                 style="padding-left: 20px">基本资料</h5></a></li>
         <li role="presentation" class="active"><a href="hostel_getPlan.action"><h5 style="padding-left: 20px">房间计划</h5></a></li>
         <li role="presentation"><a href="hostel_getCheckInfo.action"><h5 style="padding-left: 20px">入住登记</h5></a></li>
-        <li role="presentation"><a href="hostel_hostelSta.action"><h5 style="padding-left: 20px">统计信息</h5></a></li>
+        <li role="presentation"><a href="hostel_hostelHistory.action"><h5 style="padding-left: 20px">历史入住</h5></a></li>
+        <li role="presentation"><a href="hostel_hostelSta.action"><h5 style="padding-left: 20px">营业概览</h5></a></li>
+        <li role="presentation"><a href="hostel_hostelVip.action"><h5 style="padding-left: 20px">会员统计</h5></a></li>
+
     </ul>
 </div>
 

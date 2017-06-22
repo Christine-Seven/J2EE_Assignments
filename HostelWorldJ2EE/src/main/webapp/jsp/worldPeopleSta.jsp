@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="css/semantic.min.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -56,7 +56,7 @@
     </div>
 </nav>
 
-<div class="navbar navbar-default navbar-fixed" style="width: 150px;height: 620px;top: 50px">
+<div class="navbar navbar-default navbar-fixed" style="width: 150px;height: 600px;top: 50px">
     <ul class="nav nav-pills nav-stacked" style="margin-top: 50px;">
         <li role="presentation"><a href="manager_getApply.action"><h5 style="padding-left: 20px">审批申请</h5></a></li>
         <li role="presentation"><a href="manager_getSettle.action"><h5 style="padding-left: 20px">客栈结算</h5></a></li>
@@ -73,20 +73,96 @@
     Map<String, Integer> cityByTime = (Map<String, Integer>) request.getAttribute("cityByTime");
     Map<String, Integer> checkNums = (Map<String, Integer>) request.getAttribute("checkNums");
 %>
-<div style="position: absolute;top:80px;left:160px;width: 1000px;height: 600px;">
 
-    <div style="margin-left: 30px;margin-right: 50px">
-        <legend>成员管理</legend>
+<div class="container">
+    <div style="position:absolute;top:80px;left:160px;width: 1000px;height: 600px;">
+        <div class="col-md-7" style="margin-left: 30px;margin-right: 10px;margin-top: 10px;">
+            <legend>成员管理</legend>
+            <div id="worldPeople" style="width: 600px;height: 350px;margin-left: 30px"></div>
+            <div>
+                <p style="font-family: 'Microsoft Sans Serif', sans-serif;font-size: 16px;color: #002a80">
+                    <br>
+                    活跃会员的标准: <b>在最近的一个季度内有消费／订单产生。</b><br>
+                    <br>
+                    上图展现了活跃会员在时间和地域两个维度的分布。
+                    <br>
+                    可以看到，<b>一月</b>和<b>四月</b>的活跃会员较多，而活跃会员最常去的城市为<b> 淮安 </b>
+                    <br>
+                </p>
+            </div>
+        </div>
+        <div class="col-md-4" style="margin-left: 10px">
+            <div style="margin-left: 30px;margin-top: 10px">
+                <div style="margin-top:10px;margin-left: 10px;margin-right: 10px;">
+                    <h4 style="font-size: 24px;font-family: 'Yuanti TC', sans-serif">热门城市</h4>
+                    <div id="cityByTime">
+                        <table class="ui very basic right aligned table">
+                            <tbody>
+                            <%
+                                int i=0;
+                                for(String city:cityByTime.keySet()){
+                                    if(i>=5){
+                                        break;
+                                    }
+                                    int times=cityByTime.get(city);
+                            %>
+                            <tr>
+                                <td class="left aligned"><span style="background-color: #28a4c9;padding: 5px;border-radius: 1px"><%=i+1%></span></td>
+                                <td class="left aligned"><h5 style="font-style: italic"><%=city%></h5></td>
+                                <td class="right aligned"><h5 style="font-style: italic"><%=times%></h5></td>
+                            </tr>
+                            <%
+                                    i++;
+                                }
+                            %>
 
-        <div id="worldPeople" style="width: 800px;height: 400px;margin-left: 50px"></div>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div style="margin-top:10px;margin-left: 10px;margin-right: 10px;">
+                    <h4 style="font-size: 24px;font-family: 'Yuanti TC', sans-serif">热门客栈</h4>
+                    <div id="checkNums">
+                        <table class="ui very basic right aligned table">
+                            <tbody>
+                            <%
+                                i=0;
+                                for(String hostel:checkNums.keySet()){
+                                    if(i>=5){
+                                        break;
+                                    }
+                                    int times=checkNums.get(hostel);
+                            %>
+                            <tr>
+                                <td class="left aligned"><span style="background-color: #28a4c9;padding: 5px;border-radius: 1px"><%=i+1%></span></td>
+                                <td class="left aligned"><h5 style="font-style: italic"><%=hostel%></h5></td>
+                                <td class="right aligned"><h5 style="font-style: italic"><%=times%></h5></td>
+                            </tr>
+                            <%
+                                    i++;
+                                }
+                            %>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
     </div>
 </div>
+
 
 <script src="js/echarts.min.js"></script>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
+<script src="js/semantic.min.js"></script>
 
 <script>
     var worldPeople = echarts.init(document.getElementById("worldPeople"));
@@ -101,7 +177,7 @@
     for(int month:activeByMonth.keySet()){
     %>
     months.push(<%=month%>);
-    numberByMonth.push(<%=activeByMonth.get(month).size()%>);
+    numberByMonth.push((<%=activeByMonth.get(month).size()%>));
     allNumberByMonth = allNumberByMonth +<%=activeByMonth.get(month).size()%>;
     <%
     }
@@ -135,16 +211,9 @@
             x: '75%',
             textAlign: 'center'
         }],
-        grid: [{
-            top: 50,
-            width: '50%',
-            bottom: '45%',
-            left: 10,
-            containLabel: true
-        }],
         xAxis: [{
             type: 'value',
-            max: allNumberByMonth,
+            max: allNumberByMonth / 2,
             splitLine: {
                 show: false
             }
